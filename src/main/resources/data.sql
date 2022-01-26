@@ -21,7 +21,7 @@ CREATE TABLE TB_REL_EMPRESA_EMPLEADO(
 	id_relacion VARCHAR2(36) NOT NULL UNIQUE,
 	id_empresa VARCHAR2(36) NOT NULL,
 	id_empleado VARCHAR2(36) NOT NULL,
-	tipo_puesto VARCHAR2(50) NOT NULL,
+	tipo_puesto VARCHAR2(50),
 	fecha_alta DATE NOT NULL,
 	fecha_baja DATE,
 	PRIMARY KEY(id_relacion),
