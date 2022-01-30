@@ -1,11 +1,12 @@
 package spear.of.ares.service;
 
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionInsertarEmpleadoDTO;
+import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaEliminarEmpleadoDTO;
+import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaInsertarEmpleadoDTO;
+import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaListarEmpleadosDTO;
+import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaModificarEmpleadoDTO;
+import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaObtenerEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionModificarEmpleado;
-import spear.of.ares.model.dto.Empleado.Peticion.RespuestaEliminarEmpleadoDTO;
-import spear.of.ares.model.dto.Empleado.Peticion.RespuestaListarEmpleadosDTO;
-import spear.of.ares.model.dto.Empleado.Peticion.RespuestaModificarEmpleadoDTO;
-import spear.of.ares.model.dto.Empleado.Peticion.RespuestaObtenerEmpleadoDTO;
 
 /**
  * 
@@ -14,7 +15,7 @@ import spear.of.ares.model.dto.Empleado.Peticion.RespuestaObtenerEmpleadoDTO;
  */
 public interface IGestionEmpresaService {
 
-	public PeticionInsertarEmpleadoDTO insertarEmpleado(PeticionInsertarEmpleadoDTO peticionDTO);
+	public RespuestaInsertarEmpleadoDTO insertarEmpleado(PeticionInsertarEmpleadoDTO peticionDTO);
 	public RespuestaModificarEmpleadoDTO modificarEmpleado(PeticionModificarEmpleado peticionDTO);
 	public RespuestaListarEmpleadosDTO listarEmpleados();
 	public RespuestaObtenerEmpleadoDTO obtenerEmpleadoPorId(String idEmpleado);

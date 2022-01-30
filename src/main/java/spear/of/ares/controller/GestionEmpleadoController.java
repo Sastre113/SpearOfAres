@@ -3,6 +3,8 @@ package spear.of.ares.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.http.RequestEntity;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,12 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import spear.of.ares.model.dto.RespuestaDTO;
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionInsertarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionModificarEmpleado;
-import spear.of.ares.model.dto.Empleado.Peticion.RespuestaEliminarEmpleadoDTO;
-import spear.of.ares.model.dto.Empleado.Peticion.RespuestaListarEmpleadosDTO;
-import spear.of.ares.model.dto.Empleado.Peticion.RespuestaModificarEmpleadoDTO;
-import spear.of.ares.model.dto.Empleado.Peticion.RespuestaObtenerEmpleadoDTO;
+import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaEliminarEmpleadoDTO;
+import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaInsertarEmpleadoDTO;
+import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaListarEmpleadosDTO;
+import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaModificarEmpleadoDTO;
+import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaObtenerEmpleadoDTO;
 import spear.of.ares.service.IGestionEmpresaService;
 
 /**
@@ -35,8 +39,14 @@ public class GestionEmpleadoController {
 	 * TODO: Capturar excepciones
 	 */
 	@PostMapping(path = "/insertarEmpleado", produces = MediaType.APPLICATION_JSON_VALUE)
-	public PeticionInsertarEmpleadoDTO insertarEmpleado(@RequestBody PeticionInsertarEmpleadoDTO peticionDTO) {
-		return this.gestionEmpresaService.insertarEmpleado(peticionDTO);
+	public ResponseEntity<RespuestaInsertarEmpleadoDTO> insertarEmpleado(@RequestBody PeticionInsertarEmpleadoDTO peticionDTO) {
+		
+		try {
+			return ResponseEntity.ok(this.gestionEmpresaService.insertarEmpleado(peticionDTO));	
+		} catch (Exception e) {
+			return null;
+		}
+		 
 	}
 
 	@PostMapping(path = "/modificarEmpleado", produces = MediaType.APPLICATION_JSON_VALUE)
