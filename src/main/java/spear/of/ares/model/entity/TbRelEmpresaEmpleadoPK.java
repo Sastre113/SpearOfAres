@@ -11,7 +11,9 @@ import javax.persistence.Embeddable;
 import lombok.Data;
 
 /**
- * @author Miguel
+ * 
+ * @author Miguel Á. Sastre <sastre113@gmail.com>
+ * @version 1:37:06 - 30/01/2022
  *
  */
 @Embeddable

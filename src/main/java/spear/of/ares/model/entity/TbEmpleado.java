@@ -10,9 +10,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * 
+ * @author Miguel Á. Sastre <sastre113@gmail.com>
+ * @version 1:36:46 - 30/01/2022
+ *
+ */
 @Entity
 @Table(name = "TB_EMPLEADO")
-
 public class TbEmpleado {
 
 	@Id

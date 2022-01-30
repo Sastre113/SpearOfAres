@@ -3,10 +3,9 @@
  */
 package spear.of.ares.model.dto.Empleado.Peticion;
 
-import java.util.Date;
+import javax.validation.constraints.NotNull;
 
-import javax.validation.constraints.NotBlank;
-
+import spear.of.ares.model.dto.Empleado.EmpleadoDTO;
 
 /**
  * 
@@ -16,33 +15,20 @@ import javax.validation.constraints.NotBlank;
  */
 public class PeticionInsertarEmpleadoDTO {
 
-	@NotBlank
-	private String dni;
-	@NotBlank
-	private String nombre;
-	private Date fechaNacimiento;
+	@NotNull
+	private EmpleadoDTO empleado;
+	
+	public PeticionInsertarEmpleadoDTO() {}
 
-	public String getDni() {
-		return dni;
+	public PeticionInsertarEmpleadoDTO(@NotNull EmpleadoDTO empleado) {
+		this.empleado = empleado;
 	}
 
-	public void setDni(String dni) {
-		this.dni = dni;
+	public EmpleadoDTO getEmpleado() {
+		return empleado;
 	}
 
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public Date getFechaNacimiento() {
-		return fechaNacimiento;
-	}
-
-	public void setFechaNacimiento(Date fechaNacimiento) {
-		this.fechaNacimiento = fechaNacimiento;
+	public void setEmpleado(EmpleadoDTO empleado) {
+		this.empleado = empleado;
 	}
 }

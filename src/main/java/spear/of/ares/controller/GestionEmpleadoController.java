@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import spear.of.ares.model.dto.RespuestaDTO;
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionInsertarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionModificarEmpleado;
 import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaEliminarEmpleadoDTO;
@@ -24,7 +23,8 @@ import spear.of.ares.service.IGestionEmpresaService;
 
 /**
  * 
- * @author Miguel Á. Sastre <sastre113@gmail.com> Creado 22:24:42 - 26/01/2022
+ * @author Miguel Á. Sastre <sastre113@gmail.com>
+ * @version 1:49:34 - 30/01/2022
  *
  */
 
@@ -35,18 +35,14 @@ public class GestionEmpleadoController {
 	@Autowired
 	private IGestionEmpresaService gestionEmpresaService;
 
-	/*
-	 * TODO: Capturar excepciones
-	 */
 	@PostMapping(path = "/insertarEmpleado", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<RespuestaInsertarEmpleadoDTO> insertarEmpleado(@RequestBody PeticionInsertarEmpleadoDTO peticionDTO) {
-		
+	public ResponseEntity<RespuestaInsertarEmpleadoDTO> insertarEmpleado(RequestEntity<PeticionInsertarEmpleadoDTO> peticionDTO) {	
 		try {
-			return ResponseEntity.ok(this.gestionEmpresaService.insertarEmpleado(peticionDTO));	
+			return ResponseEntity.ok(this.gestionEmpresaService.insertarEmpleado(peticionDTO.getBody()));	
 		} catch (Exception e) {
-			return null;
-		}
-		 
+			System.out.println(e.getMessage());	
+			return ResponseEntity.badRequest().build();
+		}	 
 	}
 
 	@PostMapping(path = "/modificarEmpleado", produces = MediaType.APPLICATION_JSON_VALUE)

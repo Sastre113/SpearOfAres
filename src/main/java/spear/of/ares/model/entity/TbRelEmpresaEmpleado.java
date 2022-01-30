@@ -12,6 +12,12 @@ import javax.persistence.Table;
 
 import lombok.Data;
 
+/**
+ * 
+ * @author Miguel Á. Sastre <sastre113@gmail.com>
+ * @version 1:37:00 - 30/01/2022
+ *
+ */
 @Entity
 @Table(name="TB_REL_EMPRESA_EMPLEADO")
 @Data

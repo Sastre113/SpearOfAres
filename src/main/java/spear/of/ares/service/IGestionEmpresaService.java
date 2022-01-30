@@ -11,6 +11,7 @@ import spear.of.ares.model.dto.Empleado.Peticion.PeticionModificarEmpleado;
 /**
  * 
  * @author Miguel Á. Sastre <sastre113@gmail.com>
+ * @version 1:36:28 - 30/01/2022
  *
  */
 public interface IGestionEmpresaService {
