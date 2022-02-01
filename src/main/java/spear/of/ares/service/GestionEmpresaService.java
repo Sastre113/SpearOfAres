@@ -37,16 +37,23 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 	public RespuestaInsertarEmpleadoDTO insertarEmpleado(PeticionInsertarEmpleadoDTO peticionDTO) {
 
 		Validator vali = Validation.buildDefaultValidatorFactory().getValidator();
-		Set<ConstraintViolation<EmpleadoDTO>> error = vali.validate(peticionDTO.getEmpleado(), null);
+		Set<ConstraintViolation<EmpleadoDTO>> error = vali.validate(peticionDTO.getEmpleado());
 		
-		TbEmpleado empleadoEntity = this.maptoEntity(peticionDTO);
-		this.empleadoDAO.save(empleadoEntity);
+		RespuestaInsertarEmpleadoDTO respuesta = new RespuestaInsertarEmpleadoDTO();
+		if(error.isEmpty()) {
+			TbEmpleado empleadoEntity = this.maptoEntity(peticionDTO);
+			this.empleadoDAO.save(empleadoEntity);
+			respuesta.setCodigo("0");
+			respuesta.setMensaje("Inserción con exito!");
+			respuesta.setIdEmpleado(empleadoEntity.getIdEmpleado());
+		} else {
+			respuesta.setCodigo("-1");
+			StringBuilder msgError = new StringBuilder("Error: ");
+			error.forEach(constraintVioltation -> msgError.append(String.format("{%s: %s}", constraintVioltation.getPropertyPath(), constraintVioltation.getMessage())));
+			respuesta.setMensaje(msgError.toString());
+		}
 		
-		RespuestaInsertarEmpleadoDTO respuesta = new RespuestaInsertarEmpleadoDTO();	
-		respuesta.setCodigo("0");
-		respuesta.setMensaje("Inserción con exito!");
-		respuesta.setIdEmpleado(empleadoEntity.getIdEmpleado());
-		
+	
 		return respuesta;
 	}
 	
