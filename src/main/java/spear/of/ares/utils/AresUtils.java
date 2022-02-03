@@ -19,11 +19,11 @@ public final class AresUtils {
 				.validate(peticionDTO);
 
 		if (!errores.isEmpty()) {
-			StringBuilder msgError = new StringBuilder("Bad Request: ");
+			StringBuilder msgError = new StringBuilder("");
 			errores.forEach(constraintVioltation -> msgError.append(String.format("{%s: %s}",
 					constraintVioltation.getPropertyPath(), constraintVioltation.getMessage())));
 			
-			throw new AresException(AresNotificacion.PT_ERR_VALIDACION);
+			throw new AresException(AresNotificacion.PT_ERR_VALIDACION, msgError.toString());
 		}
 	}
 }

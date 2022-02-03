@@ -41,7 +41,7 @@ public class GestionEmpleadoController {
 		try {
 			return ResponseEntity.ok(this.gestionEmpresaService.insertarEmpleado(peticionDTO.getBody()));	
 		} catch (AresException e) {
-			return ResponseEntity.status(400).body(e.mapError(RespuestaInsertarEmpleadoDTO.class));
+			return ResponseEntity.status(e.getHttpStatus()).body(e.mapError(RespuestaInsertarEmpleadoDTO.class));
 		}	 
 	}
 

@@ -1,11 +1,6 @@
 package spear.of.ares.service;
 
-import java.util.Set;
 import java.util.UUID;
-
-import javax.validation.ConstraintViolation;
-import javax.validation.Validation;
-import javax.validation.Validator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,8 +42,8 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 		TbEmpleado empleadoEntity = this.maptoEntity(peticionDTO);
 		this.empleadoDAO.save(empleadoEntity);
 		
-		
-		RespuestaInsertarEmpleadoDTO respuesta = (RespuestaInsertarEmpleadoDTO) AresNotificacion.OK.construir();
+		// TODO: DOWNCAST de un objeto generico 
+		RespuestaInsertarEmpleadoDTO respuesta = AresNotificacion.OK.construir(RespuestaInsertarEmpleadoDTO.class);
 		respuesta.setIdEmpleado(empleadoEntity.getIdEmpleado());
 
 		return respuesta;
