@@ -6,6 +6,7 @@ package spear.of.ares.excepcion;
 import java.lang.reflect.InvocationTargetException;
 
 import spear.of.ares.model.dto.RespuestaDTO;
+import spear.of.ares.utils.AresNotificacion;
 
 /**
  * @author Miguel Á. Sastre <sastre113@gmail.com>
@@ -18,7 +19,11 @@ public class AresException extends Exception {
 	private RespuestaDTO respuesta;
 
 	public AresException() {
-		this("-1","Error genérico");
+		this(AresNotificacion.ERROR_GENERICO.construir());
+	}
+	
+	public AresException(AresNotificacion notificacion) {
+		this(notificacion.construir());
 	}
 	
 	public AresException(RespuestaDTO respuesta) {

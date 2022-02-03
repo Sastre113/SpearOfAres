@@ -1,4 +1,4 @@
-package spear.of.ares;
+package spear.of.ares.utils;
 
 import java.util.Set;
 
@@ -6,8 +6,6 @@ import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 
 import spear.of.ares.excepcion.AresException;
-import spear.of.ares.model.dto.RespuestaDTO;
-
 /**
  * 
  * @author Miguel Á. Sastre <sastre113@gmail.com>
@@ -15,12 +13,6 @@ import spear.of.ares.model.dto.RespuestaDTO;
  *
  */
 public final class AresUtils {
-
-	protected <T extends RespuestaDTO> T construirRespuesta(String codigo, String msg, Class<T> objetoRespuesta) {
-		RespuestaDTO respuesta = new RespuestaDTO();
-
-		return null;
-	}
 
 	public static <T> void validarPeticion(T peticionDTO) throws AresException {
 		Set<ConstraintViolation<T>> errores = Validation.buildDefaultValidatorFactory().getValidator()
@@ -31,8 +23,7 @@ public final class AresUtils {
 			errores.forEach(constraintVioltation -> msgError.append(String.format("{%s: %s}",
 					constraintVioltation.getPropertyPath(), constraintVioltation.getMessage())));
 			
-			throw new AresException("400", msgError.toString());
+			throw new AresException(AresNotificacion.PT_ERR_VALIDACION);
 		}
-
 	}
 }

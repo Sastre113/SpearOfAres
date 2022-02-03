@@ -10,7 +10,6 @@ import javax.validation.Validator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import spear.of.ares.AresUtils;
 import spear.of.ares.dao.IEmpleadoDAO;
 import spear.of.ares.excepcion.AresException;
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionInsertarEmpleadoDTO;
@@ -21,6 +20,8 @@ import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaListarEmpleadosDTO;
 import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaModificarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaObtenerEmpleadoDTO;
 import spear.of.ares.model.entity.TbEmpleado;
+import spear.of.ares.utils.AresNotificacion;
+import spear.of.ares.utils.AresUtils;
 
 /**
  * 
@@ -36,13 +37,18 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 
 	@Override
 	public RespuestaInsertarEmpleadoDTO insertarEmpleado(PeticionInsertarEmpleadoDTO peticionDTO) throws AresException {
+		/*
+		 * TODO: Método que valide todo los objetos dentro de la petición, así solo
+		 * necesitar una llamada a validarPeticion.
+		 */
+		AresUtils.validarPeticion(peticionDTO);
 		AresUtils.validarPeticion(peticionDTO.getEmpleado());
 		
-		RespuestaInsertarEmpleadoDTO respuesta = new RespuestaInsertarEmpleadoDTO();
 		TbEmpleado empleadoEntity = this.maptoEntity(peticionDTO);
 		this.empleadoDAO.save(empleadoEntity);
-		respuesta.setCodigo("0");
-		respuesta.setMensaje("Inserción con exito!");
+		
+		
+		RespuestaInsertarEmpleadoDTO respuesta = (RespuestaInsertarEmpleadoDTO) AresNotificacion.OK.construir();
 		respuesta.setIdEmpleado(empleadoEntity.getIdEmpleado());
 
 		return respuesta;

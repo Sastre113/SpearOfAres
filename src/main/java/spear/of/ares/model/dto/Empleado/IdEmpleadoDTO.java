@@ -9,7 +9,7 @@ package spear.of.ares.model.dto.Empleado;
  *
  */
 public class IdEmpleadoDTO {
-
+	
 	private String idEmpleado;
 	
 	public IdEmpleadoDTO() {

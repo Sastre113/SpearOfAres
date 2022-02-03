@@ -3,11 +3,14 @@ package spear.of.ares.model.dto.Empleado;
 import java.util.Date;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 
 public class EmpleadoDTO extends IdEmpleadoDTO {
 
-	@NotNull
+	@NotNull @Size(min = 9, max = 9)
 	private String dni;
+	@NotNull @Size(max = 40) 
 	private String nombre;
 	private Date fechaNacimiento;
 	
