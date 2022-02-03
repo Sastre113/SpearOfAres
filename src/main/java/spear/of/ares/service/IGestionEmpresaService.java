@@ -1,5 +1,6 @@
 package spear.of.ares.service;
 
+import spear.of.ares.excepcion.AresException;
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionInsertarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaEliminarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaInsertarEmpleadoDTO;
@@ -16,7 +17,7 @@ import spear.of.ares.model.dto.Empleado.Peticion.PeticionModificarEmpleado;
  */
 public interface IGestionEmpresaService {
 
-	public RespuestaInsertarEmpleadoDTO insertarEmpleado(PeticionInsertarEmpleadoDTO peticionDTO);
+	public RespuestaInsertarEmpleadoDTO insertarEmpleado(PeticionInsertarEmpleadoDTO peticionDTO) throws AresException;
 	public RespuestaModificarEmpleadoDTO modificarEmpleado(PeticionModificarEmpleado peticionDTO);
 	public RespuestaListarEmpleadosDTO listarEmpleados();
 	public RespuestaObtenerEmpleadoDTO obtenerEmpleadoPorId(String idEmpleado);

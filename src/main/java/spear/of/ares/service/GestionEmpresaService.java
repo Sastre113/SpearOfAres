@@ -10,8 +10,9 @@ import javax.validation.Validator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import spear.of.ares.AresUtils;
 import spear.of.ares.dao.IEmpleadoDAO;
-import spear.of.ares.model.dto.Empleado.EmpleadoDTO;
+import spear.of.ares.excepcion.AresException;
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionInsertarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionModificarEmpleado;
 import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaEliminarEmpleadoDTO;
@@ -32,31 +33,21 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 
 	@Autowired
 	private IEmpleadoDAO empleadoDAO;
-	
-	@Override
-	public RespuestaInsertarEmpleadoDTO insertarEmpleado(PeticionInsertarEmpleadoDTO peticionDTO) {
 
-		Validator vali = Validation.buildDefaultValidatorFactory().getValidator();
-		Set<ConstraintViolation<EmpleadoDTO>> error = vali.validate(peticionDTO.getEmpleado());
+	@Override
+	public RespuestaInsertarEmpleadoDTO insertarEmpleado(PeticionInsertarEmpleadoDTO peticionDTO) throws AresException {
+		AresUtils.validarPeticion(peticionDTO.getEmpleado());
 		
 		RespuestaInsertarEmpleadoDTO respuesta = new RespuestaInsertarEmpleadoDTO();
-		if(error.isEmpty()) {
-			TbEmpleado empleadoEntity = this.maptoEntity(peticionDTO);
-			this.empleadoDAO.save(empleadoEntity);
-			respuesta.setCodigo("0");
-			respuesta.setMensaje("Inserción con exito!");
-			respuesta.setIdEmpleado(empleadoEntity.getIdEmpleado());
-		} else {
-			respuesta.setCodigo("-1");
-			StringBuilder msgError = new StringBuilder("Error: ");
-			error.forEach(constraintVioltation -> msgError.append(String.format("{%s: %s}", constraintVioltation.getPropertyPath(), constraintVioltation.getMessage())));
-			respuesta.setMensaje(msgError.toString());
-		}
-		
-	
+		TbEmpleado empleadoEntity = this.maptoEntity(peticionDTO);
+		this.empleadoDAO.save(empleadoEntity);
+		respuesta.setCodigo("0");
+		respuesta.setMensaje("Inserción con exito!");
+		respuesta.setIdEmpleado(empleadoEntity.getIdEmpleado());
+
 		return respuesta;
 	}
-	
+
 	@Override
 	public RespuestaModificarEmpleadoDTO modificarEmpleado(PeticionModificarEmpleado peticionDTO) {
 		// TODO Auto-generated method stub
@@ -81,21 +72,20 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 		return null;
 	}
 
-	
 	/*
 	 * 
 	 * Mapeadores
 	 * 
 	 */
-	
+
 	private TbEmpleado maptoEntity(PeticionInsertarEmpleadoDTO peticionDTO) {
 		TbEmpleado empleadoEntity = new TbEmpleado();
-		
+
 		empleadoEntity.setIdEmpleado(UUID.randomUUID().toString());
 		empleadoEntity.setDni(peticionDTO.getEmpleado().getDni());
 		empleadoEntity.setNombre(peticionDTO.getEmpleado().getNombre());
 		empleadoEntity.setFechaNacimiento(peticionDTO.getEmpleado().getFechaNacimiento());
-		
+
 		return empleadoEntity;
 	}
 }

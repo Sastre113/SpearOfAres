@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import spear.of.ares.excepcion.AresException;
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionInsertarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionModificarEmpleado;
 import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaEliminarEmpleadoDTO;
@@ -39,9 +40,8 @@ public class GestionEmpleadoController {
 	public ResponseEntity<RespuestaInsertarEmpleadoDTO> insertarEmpleado(RequestEntity<PeticionInsertarEmpleadoDTO> peticionDTO) {	
 		try {
 			return ResponseEntity.ok(this.gestionEmpresaService.insertarEmpleado(peticionDTO.getBody()));	
-		} catch (Exception e) {
-			System.out.println(e.getMessage());	
-			return ResponseEntity.badRequest().build();
+		} catch (AresException e) {
+			return ResponseEntity.status(400).body(e.mapError(RespuestaInsertarEmpleadoDTO.class));
 		}	 
 	}
 

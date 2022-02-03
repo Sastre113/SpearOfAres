@@ -8,10 +8,19 @@ package spear.of.ares.model.dto;
  * @version 21:54:38 - 29/01/2022
  *
  */
-public abstract class RespuestaDTO {
+public class RespuestaDTO {
 
 	private String codigo;
 	private String mensaje;
+
+	public RespuestaDTO() {
+		
+	}
+	
+	public RespuestaDTO(String codigo, String mensaje) {
+		this.codigo = codigo;
+		this.mensaje = mensaje;
+	}
 
 	public String getCodigo() {
 		return codigo;
