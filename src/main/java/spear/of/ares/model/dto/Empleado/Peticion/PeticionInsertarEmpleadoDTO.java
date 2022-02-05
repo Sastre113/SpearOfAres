@@ -18,12 +18,6 @@ public class PeticionInsertarEmpleadoDTO {
 	@NotNull
 	private EmpleadoDTO empleado;
 	
-	public PeticionInsertarEmpleadoDTO() {}
-
-	public PeticionInsertarEmpleadoDTO(@NotNull EmpleadoDTO empleado) {
-		this.empleado = empleado;
-	}
-
 	public EmpleadoDTO getEmpleado() {
 		return empleado;
 	}

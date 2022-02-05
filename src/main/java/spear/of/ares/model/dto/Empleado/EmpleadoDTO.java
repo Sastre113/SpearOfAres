@@ -14,15 +14,6 @@ public class EmpleadoDTO extends IdEmpleadoDTO {
 	private String nombre;
 	private Date fechaNacimiento;
 	
-	public EmpleadoDTO() {
-	}
-
-	public EmpleadoDTO(@NotNull String dni, String nombre, Date fechaNacimiento) {
-		this.dni = dni;
-		this.nombre = nombre;
-		this.fechaNacimiento = fechaNacimiento;
-	}
-	
 	public String getDni() {
 		return dni;
 	}

@@ -7,6 +7,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.springframework.http.HttpStatus;
 
+import spear.of.ares.excepcion.AresException;
 import spear.of.ares.model.dto.RespuestaDTO;
 
 /**
@@ -29,27 +30,43 @@ public enum AresNotificacion {
 		this.httpStatus = httpStatus;
 		this.msg = msg;
 	}
-
+	
 	public RespuestaDTO construir() {
-		return new RespuestaDTO(String.valueOf(this.codigo), this.msg);
+		return this.construir("");
 	}
 	
-	public RespuestaDTO construir(String msg) {
-		return new RespuestaDTO(String.valueOf(this.codigo), msg);
+	public RespuestaDTO construir(String msgExtendido) {
+		RespuestaDTO respuestaDTO = new RespuestaDTO();
+		
+		respuestaDTO.setCodigo(this.getCodigoStr());
+		respuestaDTO.setMensaje(this.msg);
+		respuestaDTO.setMensajeExtendido(msgExtendido);
+		
+		return respuestaDTO;
 	}
 	
-	public <T extends RespuestaDTO> T construir(Class<T> clazz){
+	
+	public <T extends RespuestaDTO> T construir(Class<T> clazz) throws AresException{
 		return this.construir(clazz, this.msg);
 	}
 	
-	public <T extends RespuestaDTO> T construir(Class<T> clazz, String msg){
+	public <T extends RespuestaDTO> T construir(Class<T> clazz, String msg) throws AresException{
 		try {
-			return clazz.getDeclaredConstructor(String.class, String.class, String.class).newInstance(this.getCodigo(), this.getMsg(), msg);
-		} catch (NoSuchMethodException | SecurityException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
+			
+			T objetoT = clazz.getConstructor().newInstance();
+			objetoT.setCodigo(this.getCodigoStr());
+			objetoT.setMensaje(this.msg);
+			objetoT.setMensajeExtendido(msg);
+			
+			return objetoT;
+		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
+				| NoSuchMethodException | SecurityException e) {
+			throw new AresException(e);
 		}
+	}
+	
+	public String getCodigoStr() {
+		return String.valueOf(this.codigo);
 	}
 
 	public int getCodigo() {

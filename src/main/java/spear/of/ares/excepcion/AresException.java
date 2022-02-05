@@ -26,6 +26,10 @@ public class AresException extends Exception {
 		httpStatus = AresNotificacion.ERROR_GENERICO.getHttpStatus();
 	}
 	
+	public AresException(Exception e) {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public AresException(AresNotificacion notificacion) {
 		this(notificacion.construir());
 		httpStatus = notificacion.getHttpStatus();
@@ -48,7 +52,7 @@ public class AresException extends Exception {
 		this.respuesta = new RespuestaDTO(codigoError, msgError, msgExtendido);
 	}
 	
-	
+
 	public RespuestaDTO getRespuesta() {
 		return respuesta;
 	}

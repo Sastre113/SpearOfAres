@@ -12,9 +12,6 @@ public class IdEmpleadoDTO {
 	
 	private String idEmpleado;
 	
-	public IdEmpleadoDTO() {
-	}
-
 	public String getIdEmpleado() {
 		return idEmpleado;
 	}

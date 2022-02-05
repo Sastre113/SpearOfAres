@@ -14,21 +14,6 @@ public class RespuestaDTO {
 	private String mensaje;
 	private String mensajeExtendido;
 
-	public RespuestaDTO() {
-
-	}
-
-	public RespuestaDTO(String codigo, String mensaje) {
-		this.codigo = codigo;
-		this.mensaje = mensaje;
-	}
-
-	public RespuestaDTO(String codigo, String mensaje, String mensajeExtendido) {
-		this.codigo = codigo;
-		this.mensaje = mensaje;
-		this.mensajeExtendido = mensajeExtendido;
-	}
-
 	public String getCodigo() {
 		return codigo;
 	}
