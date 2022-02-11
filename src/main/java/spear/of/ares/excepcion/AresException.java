@@ -27,12 +27,11 @@ public class AresException extends Exception {
 	}
 	
 	public AresException(Exception e) {
-		// TODO Auto-generated constructor stub
+		//TODO
 	}
 	
 	public AresException(AresNotificacion notificacion) {
-		this(notificacion.construir());
-		httpStatus = notificacion.getHttpStatus();
+		this(notificacion.construir(), null);
 	}
 	
 	public AresException(AresNotificacion notificacion, String msgExtendido) {
@@ -40,16 +39,38 @@ public class AresException extends Exception {
 		httpStatus = notificacion.getHttpStatus();
 	}
 	
-	public AresException(RespuestaDTO respuesta) {
+	private AresException(RespuestaDTO respuesta) {
 		this(respuesta.getCodigo(), respuesta.getMensaje(), respuesta.getMensajeExtendido());
 	}
 	
-	public AresException(RespuestaDTO respuesta, String msgExtendido) {
+	private AresException(RespuestaDTO respuesta, String msgExtendido) {
 		this(respuesta.getCodigo(), respuesta.getMensaje(), msgExtendido);
 	}
 
-	public AresException(String codigoError, String msgError, String msgExtendido) {
-		this.respuesta = new RespuestaDTO(codigoError, msgError, msgExtendido);
+	private AresException(String codigoError, String msg, String msgExtendido) {
+		RespuestaDTO respuesta = new RespuestaDTO();
+		
+		respuesta.setCodigo(codigoError);
+		respuesta.setMensaje(msg);
+		respuesta.setMensajeExtendido(msgExtendido);
+		
+		this.respuesta = respuesta;
+	}
+	
+	public <T extends RespuestaDTO> T mapError(Class<T> clazz) {
+		T error = null;
+		
+		try {	
+			error = clazz.getDeclaredConstructor().newInstance();
+			error.setCodigo(this.getRespuesta().getCodigo());
+			error.setMensaje(this.getRespuesta().getMensaje());
+			error.setMensajeExtendido(this.getRespuesta().getMensajeExtendido());
+		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
+				| NoSuchMethodException | SecurityException e) {
+			e.printStackTrace();
+		}
+
+		return error;
 	}
 	
 
@@ -68,21 +89,4 @@ public class AresException extends Exception {
 	public void setHttpStatus(HttpStatus httpStatus) {
 		this.httpStatus = httpStatus;
 	}
-
-	public <T extends RespuestaDTO> T mapError(Class<T> clazz) {
-		T error = null;
-		
-		try {	
-			error = clazz.getDeclaredConstructor().newInstance();
-			error.setCodigo(this.getRespuesta().getCodigo());
-			error.setMensaje(this.getRespuesta().getMensaje());
-			error.setMensajeExtendido(this.getRespuesta().getMensajeExtendido());
-		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
-				| NoSuchMethodException | SecurityException e) {
-			e.printStackTrace();
-		}
-
-		return error;
-	}
-
 }
