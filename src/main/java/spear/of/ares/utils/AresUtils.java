@@ -17,7 +17,7 @@ public final class AresUtils {
 	public static <T> void validarPeticion(T peticionDTO) throws AresException {
 		Set<ConstraintViolation<T>> errores = Validation.buildDefaultValidatorFactory().getValidator()
 				.validate(peticionDTO);
-
+		
 		if (!errores.isEmpty()) {
 			StringBuilder msgError = new StringBuilder("");
 			errores.forEach(constraintVioltation -> msgError.append(String.format("{%s: %s}",

@@ -42,7 +42,6 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 		TbEmpleado empleadoEntity = this.maptoEntity(peticionDTO);
 		this.empleadoDAO.save(empleadoEntity);
 		
-		// TODO: DOWNCAST de un objeto generico 
 		RespuestaInsertarEmpleadoDTO respuesta = AresNotificacion.OK.construir(RespuestaInsertarEmpleadoDTO.class);
 		respuesta.setIdEmpleado(empleadoEntity.getIdEmpleado());
 
