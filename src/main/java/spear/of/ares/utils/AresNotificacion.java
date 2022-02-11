@@ -51,12 +51,16 @@ public enum AresNotificacion {
 	}
 	
 	public <T extends RespuestaDTO> T construir(Class<T> clazz, String msg) throws AresException{
+		return this.construir(clazz, msg, null);
+	}
+	
+	public <T extends RespuestaDTO> T construir(Class<T> clazz, String msg, String msgExtendido) throws AresException{
 		try {
 			
 			T objetoT = clazz.getConstructor().newInstance();
 			objetoT.setCodigo(this.getCodigoStr());
-			objetoT.setMensaje(this.msg);
-			objetoT.setMensajeExtendido(msg);
+			objetoT.setMensaje(msg);
+			objetoT.setMensajeExtendido(msgExtendido);
 			
 			return objetoT;
 		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
