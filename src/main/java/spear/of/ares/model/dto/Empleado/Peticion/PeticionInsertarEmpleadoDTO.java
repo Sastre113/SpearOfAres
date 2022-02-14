@@ -3,6 +3,7 @@
  */
 package spear.of.ares.model.dto.Empleado.Peticion;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import spear.of.ares.model.dto.Empleado.EmpleadoDTO;
@@ -15,7 +16,7 @@ import spear.of.ares.model.dto.Empleado.EmpleadoDTO;
  */
 public class PeticionInsertarEmpleadoDTO {
 
-	@NotNull
+	@Valid @NotNull
 	private EmpleadoDTO empleado;
 	
 	public EmpleadoDTO getEmpleado() {

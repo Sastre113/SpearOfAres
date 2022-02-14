@@ -2,6 +2,10 @@ package spear.of.ares.service;
 
 import java.util.UUID;
 
+import javax.validation.Validation;
+import javax.validation.Validator;
+import javax.validation.ValidatorFactory;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,7 +41,6 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 		 * necesitar una llamada a validarPeticion.
 		 */
 		AresUtils.validarPeticion(peticionDTO);
-		AresUtils.validarPeticion(peticionDTO.getEmpleado());
 		
 		TbEmpleado empleadoEntity = this.maptoEntity(peticionDTO);
 		
