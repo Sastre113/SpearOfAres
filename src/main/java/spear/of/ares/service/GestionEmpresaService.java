@@ -2,7 +2,10 @@ package spear.of.ares.service;
 
 import java.util.UUID;
 
-import org.mapstruct.factory.Mappers;
+import javax.validation.Validation;
+import javax.validation.Validator;
+import javax.validation.ValidatorFactory;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +19,6 @@ import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaListarEmpleadosDTO;
 import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaModificarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaObtenerEmpleadoDTO;
 import spear.of.ares.model.entity.TbEmpleado;
-import spear.of.ares.service.mapper.EmpleadoMapper;
 import spear.of.ares.utils.AresNotificacion;
 import spear.of.ares.utils.AresUtils;
 
@@ -32,9 +34,6 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 	@Autowired
 	private IEmpleadoDAO empleadoDAO;
 	
-	@Autowired
-	private EmpleadoMapper empleadoMapper = Mappers.getMapper(EmpleadoMapper.class);
-
 	@Override
 	public RespuestaInsertarEmpleadoDTO insertarEmpleado(PeticionInsertarEmpleadoDTO peticionDTO) throws AresException {
 		/*
@@ -42,9 +41,7 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 		 * necesitar una llamada a validarPeticion.
 		 */
 		AresUtils.validarPeticion(peticionDTO);
-		AresUtils.validarPeticion(peticionDTO.getEmpleado());
 		
-		TbEmpleado empleado =  empleadoMapper.dtoToEntity(peticionDTO.getEmpleado());
 		TbEmpleado empleadoEntity = this.maptoEntity(peticionDTO);
 		
 		this.empleadoDAO.save(empleadoEntity);
