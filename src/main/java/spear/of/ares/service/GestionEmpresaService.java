@@ -2,10 +2,6 @@ package spear.of.ares.service;
 
 import java.util.UUID;
 
-import javax.validation.Validation;
-import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -36,10 +32,6 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 	
 	@Override
 	public RespuestaInsertarEmpleadoDTO insertarEmpleado(PeticionInsertarEmpleadoDTO peticionDTO) throws AresException {
-		/*
-		 * TODO: Método que valide todo los objetos dentro de la petición, así solo
-		 * necesitar una llamada a validarPeticion.
-		 */
 		AresUtils.validarPeticion(peticionDTO);
 		
 		TbEmpleado empleadoEntity = this.maptoEntity(peticionDTO);

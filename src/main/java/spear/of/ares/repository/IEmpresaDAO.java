@@ -1,4 +1,4 @@
-package spear.of.ares.dao;
+package spear.of.ares.repository;
 
 import java.util.List;
 import java.util.Optional;
