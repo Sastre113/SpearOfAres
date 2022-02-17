@@ -4,9 +4,11 @@ import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import spear.of.ares.dao.IEmpleadoDAO;
 import spear.of.ares.excepcion.AresException;
+import spear.of.ares.model.dto.Empleado.EmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionInsertarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionModificarEmpleado;
 import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaEliminarEmpleadoDTO;
@@ -43,6 +45,19 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 
 		return respuesta;
 	}
+	
+	@Override
+	public RespuestaObtenerEmpleadoDTO obtenerEmpleadoPorId(String idEmpleado) throws AresException {
+		
+		if(!StringUtils.hasLength(idEmpleado)) {
+			throw new AresException(AresNotificacion.PT_ERR_VALIDACION);
+		}
+		
+		RespuestaObtenerEmpleadoDTO respuesta = AresNotificacion.OK.construir(RespuestaObtenerEmpleadoDTO.class);
+		respuesta.setEmpleadoDTO(this.mapEntityToDTO(this.empleadoDAO.findById(idEmpleado).get()));
+		
+		return respuesta;
+	}
 
 	@Override
 	public RespuestaModificarEmpleadoDTO modificarEmpleado(PeticionModificarEmpleado peticionDTO) {
@@ -56,11 +71,7 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 		return null;
 	}
 
-	@Override
-	public RespuestaObtenerEmpleadoDTO obtenerEmpleadoPorId(String idEmpleado) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 	@Override
 	public RespuestaEliminarEmpleadoDTO eliminarEmpleado(String idEmpleado) {
@@ -83,5 +94,16 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 		empleadoEntity.setFechaNacimiento(peticionDTO.getEmpleado().getFechaNacimiento());
 
 		return empleadoEntity;
+	}
+	
+	private EmpleadoDTO mapEntityToDTO(TbEmpleado empleadoEntity) {
+		EmpleadoDTO empleadoDTO = new EmpleadoDTO();
+		
+		empleadoDTO.setIdEmpleado(empleadoEntity.getIdEmpleado());
+		empleadoDTO.setDni(empleadoEntity.getDni());
+		empleadoDTO.setFechaNacimiento(empleadoEntity.getFechaNacimiento());
+		empleadoDTO.setNombre(empleadoEntity.getNombre());
+		
+		return empleadoDTO;
 	}
 }

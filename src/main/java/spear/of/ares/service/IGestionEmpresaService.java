@@ -20,7 +20,7 @@ public interface IGestionEmpresaService {
 	public RespuestaInsertarEmpleadoDTO insertarEmpleado(PeticionInsertarEmpleadoDTO peticionDTO) throws AresException;
 	public RespuestaModificarEmpleadoDTO modificarEmpleado(PeticionModificarEmpleado peticionDTO);
 	public RespuestaListarEmpleadosDTO listarEmpleados();
-	public RespuestaObtenerEmpleadoDTO obtenerEmpleadoPorId(String idEmpleado);
+	public RespuestaObtenerEmpleadoDTO obtenerEmpleadoPorId(String idEmpleado) throws AresException;
 	public RespuestaEliminarEmpleadoDTO eliminarEmpleado(String idEmpleado);
 
 }
