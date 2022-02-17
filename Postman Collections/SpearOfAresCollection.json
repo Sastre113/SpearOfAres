@@ -10,7 +10,7 @@
       "item": [
         {
           "name": "InsertarEmpleado",
-          "_postman_id": "189fbf7e-a2a6-410b-9666-ba9977165ea7",
+          "id": "189fbf7e-a2a6-410b-9666-ba9977165ea7",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -125,7 +125,7 @@
         },
         {
           "name": "ObtenerEmpleadoById",
-          "_postman_id": "8c7c9a3a-b34e-4883-8147-f42192632256",
+          "id": "8c7c9a3a-b34e-4883-8147-f42192632256",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -134,15 +134,30 @@
             "header": [],
             "url": null
           },
-          "response": []
+          "response": [
+            {
+              "id": "36c26396-a8a0-4e9e-a214-500d1e31156f",
+              "name": "ObtenerEmpleadoById",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": null
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": null
+            }
+          ]
         }
       ],
-      "_postman_id": "26b98f7c-985b-404f-8260-fab13ff01a8a"
+      "id": "26b98f7c-985b-404f-8260-fab13ff01a8a"
     },
     {
       "name": "FeingClientTester",
       "item": [],
-      "_postman_id": "6f8d5204-49a2-4171-a06b-229140165db8"
+      "id": "6f8d5204-49a2-4171-a06b-229140165db8"
     }
   ],
   "event": [
@@ -169,7 +184,7 @@
   ],
   "variable": [
     {
-      "id": "655f789e-3e88-4ab0-8a48-b467347b9bd8",
+      "id": "558407b0-f965-4891-ab26-e2f7f8dcd968",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
