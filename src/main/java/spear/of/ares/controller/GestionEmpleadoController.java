@@ -56,8 +56,12 @@ public class GestionEmpleadoController {
 	}
 
 	@GetMapping(path = "/obtenerEmpleadoPorId", produces = MediaType.APPLICATION_JSON_VALUE)
-	public RespuestaObtenerEmpleadoDTO obtenerEmpleadoPorId(@RequestParam String idEmpleado) {
-		return this.gestionEmpresaService.obtenerEmpleadoPorId(idEmpleado);
+	public ResponseEntity<RespuestaObtenerEmpleadoDTO> obtenerEmpleadoPorId(@RequestParam String idEmpleado) {
+		try {
+			return ResponseEntity.ok(this.gestionEmpresaService.obtenerEmpleadoPorId(idEmpleado));	
+		} catch (AresException e) {
+			return ResponseEntity.status(e.getHttpStatus()).body(e.mapError(RespuestaObtenerEmpleadoDTO.class));
+		}	
 	}
 
 	@GetMapping(path = "/eliminarEmpleado", produces = MediaType.APPLICATION_JSON_VALUE)
