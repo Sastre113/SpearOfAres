@@ -218,19 +218,6 @@
             "url": "http://localhost:8080/FeignClientTester/getHttp/notFound"
           },
           "response": []
-        },
-        {
-          "name": "New Request Copy 2",
-          "id": "7e37d1b4-662b-4b08-954e-9f0ec8794023",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": "http://localhost:8080/FeignClientTester/getHttp/notFound"
-          },
-          "response": []
         }
       ],
       "id": "6f8d5204-49a2-4171-a06b-229140165db8"
@@ -260,7 +247,7 @@
   ],
   "variable": [
     {
-      "id": "0308b899-f4e1-4eca-b203-0ca6e0fc96b8",
+      "id": "21389afb-f904-4a67-9f19-95edeba819df",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
