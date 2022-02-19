@@ -8,7 +8,7 @@ package spear.of.ares.model.dto;
  * @version 22:35:02 - 17/02/2022
  *
  */
-public class HttpResponse {
+public class HttpResponse extends RespuestaDTO {
 	
 	private String code;
 	private String description;

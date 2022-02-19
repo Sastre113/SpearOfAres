@@ -4,6 +4,7 @@
 package spear.of.ares.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -53,7 +54,10 @@ public class FeignClientTesterController {
 		try {
 			return this.feignClientTester.getHttpNotFound();
 		} catch (Exception e) {
-			throw new AresException(e);
+			HttpResponse httpResponse = new HttpResponse();
+			httpResponse.setCode("404");
+			httpResponse.setDescription("Error");
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(httpResponse);
 		}
 	}
 }

@@ -27,7 +27,7 @@ public class AresException extends Exception {
 	}
 	
 	public AresException(Exception e) {
-		//TODO
+		this(e.getClass().getCanonicalName(), e.getMessage(), null);
 	}
 	
 	public AresException(AresNotificacion notificacion) {
