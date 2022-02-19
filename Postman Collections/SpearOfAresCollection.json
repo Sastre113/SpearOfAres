@@ -215,7 +215,7 @@
           "request": {
             "method": "GET",
             "header": [],
-            "url": null
+            "url": "http://localhost:8080/FeignClientTester/getHttp/notFound"
           },
           "response": []
         }
@@ -247,7 +247,7 @@
   ],
   "variable": [
     {
-      "id": "3f5640ee-8e35-4207-aecf-27fa57722cbf",
+      "id": "392d167f-4d3c-43aa-b181-5d863fb9b0cf",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
