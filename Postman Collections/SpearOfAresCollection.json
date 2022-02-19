@@ -194,7 +194,7 @@
       "name": "FeingClientTester",
       "item": [
         {
-          "name": "New Request",
+          "name": "getHttp - OK",
           "id": "583794d8-710f-4c38-858e-b5861b2a433c",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -247,7 +247,7 @@
   ],
   "variable": [
     {
-      "id": "392d167f-4d3c-43aa-b181-5d863fb9b0cf",
+      "id": "db3bf210-de20-4352-aa9b-78a374f37afa",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
