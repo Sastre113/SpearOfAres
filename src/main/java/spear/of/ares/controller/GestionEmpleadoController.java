@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import spear.of.ares.excepcion.AresException;
+import spear.of.ares.excepcion.FeignClientTesterExceptionHandler;
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionInsertarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionModificarEmpleado;
 import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaEliminarEmpleadoDTO;
@@ -61,7 +63,7 @@ public class GestionEmpleadoController {
 			return ResponseEntity.ok(this.gestionEmpresaService.obtenerEmpleadoPorId(idEmpleado));	
 		} catch (AresException e) {
 			return ResponseEntity.status(e.getHttpStatus()).body(e.mapError(RespuestaObtenerEmpleadoDTO.class));
-		}	
+		}
 	}
 
 	@GetMapping(path = "/eliminarEmpleado", produces = MediaType.APPLICATION_JSON_VALUE)
