@@ -179,11 +179,11 @@
               },
               "status": "OK",
               "code": 200,
-              "_postman_previewlanguage": "xml",
+              "_postman_previewlanguage": "json",
               "header": null,
               "cookie": [],
               "responseTime": null,
-              "body": "{\r\n    \"codigo\": \"0\",\r\n    \"mensaje\": \"Petición realizada con exito\",\r\n    \"mensajeExtendido\": null,\r\n    \"empleadoDTO\": {\r\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\r\n        \"dni\": \"00000000T\",\r\n        \"nombre\": \"Pepe\",\r\n        \"fechaNacimiento\": \"1993-02-18T00:00:00.000+00:00\"\r\n    }\r\n}"
+              "body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Petición realizada con exito\",\n    \"mensajeExtendido\": null,\n    \"empleadoDTO\": {\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Pepe\",\n        \"fechaNacimiento\": \"1993-02-18T00:00:00.000+00:00\"\n    }\n}"
             }
           ]
         }
@@ -192,7 +192,21 @@
     },
     {
       "name": "FeingClientTester",
-      "item": [],
+      "item": [
+        {
+          "name": "New Request",
+          "id": "583794d8-710f-4c38-858e-b5861b2a433c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": null
+          },
+          "response": []
+        }
+      ],
       "id": "6f8d5204-49a2-4171-a06b-229140165db8"
     }
   ],
@@ -220,7 +234,7 @@
   ],
   "variable": [
     {
-      "id": "1a8aafd5-4979-462e-b7bc-520a0d93b664",
+      "id": "9c710e1b-eeb4-4c17-9f6b-bff3d7fb66d8",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
