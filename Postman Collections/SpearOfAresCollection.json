@@ -207,8 +207,8 @@
           "response": []
         },
         {
-          "name": "getHttp - NOT FOUND",
-          "id": "82f25ccc-5a4e-4c9a-a046-df7caecd35f6",
+          "name": "getHttp - NOT FOUND Copy",
+          "id": "9c45f489-3cbd-474b-8ec0-c4bc3a98fc96",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -220,8 +220,8 @@
           "response": []
         },
         {
-          "name": "getHttp - NOT FOUND Copy",
-          "id": "9c45f489-3cbd-474b-8ec0-c4bc3a98fc96",
+          "name": "getHttp - NOT FOUND",
+          "id": "82f25ccc-5a4e-4c9a-a046-df7caecd35f6",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -260,7 +260,7 @@
   ],
   "variable": [
     {
-      "id": "0aa7a657-4816-411a-b4c4-05cbf8c0573b",
+      "id": "e883a398-d4a1-4bf4-af70-f9d5928ede4f",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
