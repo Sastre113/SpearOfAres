@@ -202,7 +202,7 @@
           "request": {
             "method": "GET",
             "header": [],
-            "url": null
+            "url": "http://localhost:8080/FeignClientTester/getHttp/ok"
           },
           "response": []
         },
@@ -247,7 +247,7 @@
   ],
   "variable": [
     {
-      "id": "dc4ccbfb-7f76-4483-85e9-213a1f5d3ece",
+      "id": "9309cf03-1937-458a-818f-9c49b8e5031b",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
