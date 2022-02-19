@@ -19,7 +19,8 @@ public enum AresNotificacion {
 
 	ERROR_GENERICO(-1, HttpStatus.INTERNAL_SERVER_ERROR, "Error inesperado en la aplicación"),
 	OK(0, HttpStatus.OK, "Petición realizada con exito"),
-	PT_ERR_VALIDACION(1000, HttpStatus.BAD_REQUEST, "La petición no es correcta");
+	PT_ERR_VALIDACION(1000, HttpStatus.BAD_REQUEST, "La petición no es correcta"),
+	PT_ERR_DATOS_NO_ENCONTRADOS(404, HttpStatus.NOT_FOUND, "No se han encontrado datos");
 
 	private int codigo;
 	private HttpStatus httpStatus;
