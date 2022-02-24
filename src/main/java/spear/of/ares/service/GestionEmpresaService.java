@@ -1,5 +1,6 @@
 package spear.of.ares.service;
 
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,6 +63,8 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 	@Override
 	public RespuestaModificarEmpleadoDTO modificarEmpleado(PeticionModificarEmpleado peticionDTO) {
 		// TODO Auto-generated method stub
+		
+		
 		return null;
 	}
 
@@ -74,8 +77,14 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 	
 
 	@Override
-	public RespuestaEliminarEmpleadoDTO eliminarEmpleado(String idEmpleado) {
-		// TODO Auto-generated method stub
+	public RespuestaEliminarEmpleadoDTO eliminarEmpleado(String idEmpleado) throws AresException {
+
+		if(!StringUtils.hasLength(idEmpleado)) {
+			throw new AresException(AresNotificacion.PT_ERR_VALIDACION);
+		}
+		
+		this.empleadoDAO.deleteById(idEmpleado);
+		
 		return null;
 	}
 
