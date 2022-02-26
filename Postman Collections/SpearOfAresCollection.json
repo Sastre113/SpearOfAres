@@ -134,7 +134,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\r\n    \"nombre\": \"Pepe el Aguila\",\r\n    \"fechaNacimiento\": \"1964-02-18\"\r\n}",
+              "raw": "{\r\n    \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\r\n    \"nombre\": \"Peper EL gaviotar\",\r\n    \"fechaNacimiento\": \"1993-01-31\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -146,7 +146,7 @@
           "response": [
             {
               "id": "4e5edb83-b09e-4185-ab16-d735aea964c9",
-              "name": "ModificarEmpleado",
+              "name": "200 - ModificarEmpleado - Petición correcta",
               "originalRequest": {
                 "method": "POST",
                 "header": [],
@@ -161,11 +161,13 @@
                 },
                 "url": "http://localhost:8080/gestionEmpleado/modificarEmpleado"
               },
-              "_postman_previewlanguage": null,
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
               "header": null,
               "cookie": [],
               "responseTime": null,
-              "body": null
+              "body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Petición realizada con exito\",\n    \"mensajeExtendido\": null,\n    \"empleadoOriginal\": {\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Pepe er Arguilullo\",\n        \"fechaNacimiento\": \"1964-02-18T00:00:00.000+00:00\"\n    },\n    \"empleadoModificado\": {\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Peper EL gaviotar\",\n        \"fechaNacimiento\": \"1993-01-31T00:00:00.000+00:00\"\n    }\n}"
             }
           ]
         },
@@ -315,7 +317,7 @@
   ],
   "variable": [
     {
-      "id": "36089428-094d-4fe2-bb4e-b6d3a2279eb0",
+      "id": "79c657f7-4987-455a-bfa0-90d88437095e",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
