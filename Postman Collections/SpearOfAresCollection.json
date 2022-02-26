@@ -145,52 +145,6 @@
           },
           "response": [
             {
-              "id": "baeb7f6a-d8f2-406d-a58f-bb8fbfb0c26c",
-              "name": "200 - InsertarEmpleado - Petición correcta",
-              "originalRequest": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n    \"dni\": \"00000000T\",\r\n    \"nombre\":\"Pepe\",\r\n    \"fechaNacimiento\": \"1993-02-18\"\r\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": "http://localhost:8080/gestionEmpleado/insertarEmpleado"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                },
-                {
-                  "key": "Transfer-Encoding",
-                  "value": "chunked"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sat, 29 Jan 2022 21:47:09 GMT"
-                },
-                {
-                  "key": "Keep-Alive",
-                  "value": "timeout=60"
-                },
-                {
-                  "key": "Connection",
-                  "value": "keep-alive"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Inserción con exito!\",\n    \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\"\n}"
-            },
-            {
               "id": "1aeb53a1-dff5-49d0-a7e0-0444f9f54301",
               "name": "400 - InsertarEmpleado - Dni incorrecto",
               "originalRequest": {
@@ -384,7 +338,7 @@
   ],
   "variable": [
     {
-      "id": "96e2af5b-db71-4a91-8f0a-feb21f96f1bb",
+      "id": "610bbc7d-d7f4-4130-95d2-9e3d7973d656",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
