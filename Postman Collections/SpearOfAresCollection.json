@@ -143,7 +143,31 @@
             },
             "url": "http://localhost:8080/gestionEmpleado/modificarEmpleado"
           },
-          "response": []
+          "response": [
+            {
+              "id": "4e5edb83-b09e-4185-ab16-d735aea964c9",
+              "name": "ModificarEmpleado",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\r\n    \"nombre\": \"Pepe el Aguila\",\r\n    \"fechaNacimiento\": \"1964-02-18\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "http://localhost:8080/gestionEmpleado/modificarEmpleado"
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": null
+            }
+          ]
         },
         {
           "name": "ObtenerEmpleadoById",
@@ -291,7 +315,7 @@
   ],
   "variable": [
     {
-      "id": "430c08c6-eb5d-4bef-b8a9-1358daddeb9c",
+      "id": "ed8dc83e-8f83-485f-95ec-419ae20031b0",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
