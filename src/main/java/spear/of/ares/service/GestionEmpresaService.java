@@ -1,5 +1,6 @@
 package spear.of.ares.service;
 
+import java.util.NoSuchElementException;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -88,9 +89,18 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 			throw new AresException(AresNotificacion.PT_ERR_VALIDACION);
 		}
 		
-		this.empleadoDAO.deleteById(idEmpleado);
+		TbEmpleado empleadoEntity;
+		try {
+			empleadoEntity = this.empleadoDAO.findById(idEmpleado).get();
+		} catch (NoSuchElementException e) {
+			throw new AresException(AresNotificacion.PT_ERR_DATOS_NO_ENCONTRADOS);
+		}
+
+		this.empleadoDAO.deleteById(idEmpleado);			
+		RespuestaEliminarEmpleadoDTO respuesta = AresNotificacion.OK.construir(RespuestaEliminarEmpleadoDTO.class);
+		respuesta.setEmpleadoEliminado(this.mapEntityToDTO(empleadoEntity));
 		
-		return null;
+		return respuesta;
 	}
 	
 	@Override
