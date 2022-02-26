@@ -143,54 +143,7 @@
             },
             "url": "http://localhost:8080/gestionEmpleado/insertarEmpleado"
           },
-          "response": [
-            {
-              "id": "1aeb53a1-dff5-49d0-a7e0-0444f9f54301",
-              "name": "400 - InsertarEmpleado - Dni incorrecto",
-              "originalRequest": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n    \"dni\": \"\",\r\n    \"nombre\":\"Pepe\",\r\n    \"fechaNacimiento\": \"1993-02-18\"\r\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": "http://localhost:8080/gestionEmpleado/insertarEmpleado"
-              },
-              "status": "Bad Request",
-              "code": 400,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                },
-                {
-                  "key": "Transfer-Encoding",
-                  "value": "chunked"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sat, 29 Jan 2022 21:47:09 GMT"
-                },
-                {
-                  "key": "Keep-Alive",
-                  "value": "timeout=60"
-                },
-                {
-                  "key": "Connection",
-                  "value": "keep-alive"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"codigo\": \"1000\",\n    \"mensaje\": \"La petición no es correcta\",\n    \"mensajeExtendido\": \"{dni: debe coincidir con \\\"\\\\d{8}[A-HJ-NP-TV-Z]\\\"}\",\n    \"idEmpleado\": null\n}"
-            }
-          ]
+          "response": []
         },
         {
           "name": "ObtenerEmpleadoById",
@@ -338,7 +291,7 @@
   ],
   "variable": [
     {
-      "id": "74adcc53-faa9-49f4-bc0c-c410b4400113",
+      "id": "fabc7673-db8c-4e1e-af93-8c2f025d8d5b",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
