@@ -236,7 +236,7 @@
           ]
         },
         {
-          "name": "ObtenerEmpleadoById",
+          "name": "EliminarEmpleadoById",
           "id": "d6a61538-784c-4059-812d-e6c3ed494930",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -347,7 +347,7 @@
   ],
   "variable": [
     {
-      "id": "de8a731d-8c56-4ba8-b6eb-558bc5a89306",
+      "id": "a909ca30-84cd-4843-ab40-6673c361832e",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
