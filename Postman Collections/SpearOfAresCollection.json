@@ -124,7 +124,7 @@
           ]
         },
         {
-          "name": "InsertarEmpleado Copy",
+          "name": "ModificarEmpleado",
           "id": "5dde8817-d241-43c2-8794-9108396b25af",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -384,7 +384,7 @@
   ],
   "variable": [
     {
-      "id": "d6e0a577-b714-4b73-847e-2bc4d7c604ea",
+      "id": "96e2af5b-db71-4a91-8f0a-feb21f96f1bb",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
