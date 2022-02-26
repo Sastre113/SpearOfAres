@@ -11,10 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import spear.of.ares.excepcion.AresException;
-import spear.of.ares.excepcion.FeignClientTesterExceptionHandler;
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionInsertarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.Peticion.PeticionModificarEmpleado;
 import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaEliminarEmpleadoDTO;
@@ -48,13 +46,12 @@ public class GestionEmpleadoController {
 	}
 
 	@PostMapping(path = "/modificarEmpleado", produces = MediaType.APPLICATION_JSON_VALUE)
-	public RespuestaModificarEmpleadoDTO modificarEmpleado(@RequestBody PeticionModificarEmpleado peticionDTO) {
-		return this.gestionEmpresaService.modificarEmpleado(peticionDTO);
-	}
-
-	@GetMapping(path = "/listarEmpleados", produces = MediaType.APPLICATION_JSON_VALUE)
-	public RespuestaListarEmpleadosDTO listarEmpleados() {
-		return this.gestionEmpresaService.listarEmpleados();
+	public ResponseEntity<RespuestaModificarEmpleadoDTO> modificarEmpleado(@RequestBody PeticionModificarEmpleado peticionDTO) {
+		try {
+			return ResponseEntity.ok(this.gestionEmpresaService.modificarEmpleado(peticionDTO));
+		} catch (AresException e) {
+			return ResponseEntity.status(e.getHttpStatus()).body(e.mapError(RespuestaModificarEmpleadoDTO.class));
+		}
 	}
 
 	@GetMapping(path = "/obtenerEmpleadoPorId", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -67,8 +64,21 @@ public class GestionEmpleadoController {
 	}
 
 	@GetMapping(path = "/eliminarEmpleado", produces = MediaType.APPLICATION_JSON_VALUE)
-	public RespuestaEliminarEmpleadoDTO eliminarEmpleado(@RequestParam String idEmpleado) {
-		return this.gestionEmpresaService.eliminarEmpleado(idEmpleado);
+	public ResponseEntity<RespuestaEliminarEmpleadoDTO> eliminarEmpleado(@RequestParam String idEmpleado) {
+		try {
+			return ResponseEntity.ok(this.gestionEmpresaService.eliminarEmpleado(idEmpleado));
+		} catch (AresException e) {
+			return ResponseEntity.status(e.getHttpStatus()).body(e.mapError(RespuestaEliminarEmpleadoDTO.class));
+		}
+	}
+	
+	@GetMapping(path = "/listarEmpleados", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<RespuestaListarEmpleadosDTO> listarEmpleados(@RequestBody String idEmpresa) {
+		try {
+			return  ResponseEntity.ok(this.gestionEmpresaService.listarEmpleados(idEmpresa));
+		} catch (AresException e) {
+			return ResponseEntity.status(e.getHttpStatus()).body(e.mapError(RespuestaListarEmpleadosDTO.class));
+		}
 	}
 
 }

@@ -1,6 +1,5 @@
 package spear.of.ares.service;
 
-import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,20 +60,26 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 	}
 
 	@Override
-	public RespuestaModificarEmpleadoDTO modificarEmpleado(PeticionModificarEmpleado peticionDTO) {
-		// TODO Auto-generated method stub
+	public RespuestaModificarEmpleadoDTO modificarEmpleado(PeticionModificarEmpleado peticionDTO) throws AresException {
+		AresUtils.validarPeticion(peticionDTO);
+		
+		TbEmpleado empleadoEntity = this.empleadoDAO.findById(peticionDTO.getIdEmpleado()).get();
+		EmpleadoDTO empleadoOriginal = this.mapEntityToDTO(empleadoEntity);
+		
+		empleadoEntity.setNombre(peticionDTO.getNombre());
+		if(peticionDTO.getFechaNacimiento() != null) {
+			empleadoEntity.setFechaNacimiento(peticionDTO.getFechaNacimiento());
+		}
+		
+		this.empleadoDAO.save(empleadoEntity);
 		
 		
-		return null;
+		RespuestaModificarEmpleadoDTO respuesta = AresNotificacion.OK.construir(RespuestaModificarEmpleadoDTO.class);
+		respuesta.setEmpleadoOriginal(empleadoOriginal);
+		respuesta.setEmpleadoModificado(this.mapEntityToDTO(empleadoEntity));
+		
+		return respuesta;
 	}
-
-	@Override
-	public RespuestaListarEmpleadosDTO listarEmpleados() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
 
 	@Override
 	public RespuestaEliminarEmpleadoDTO eliminarEmpleado(String idEmpleado) throws AresException {
@@ -85,6 +90,12 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 		
 		this.empleadoDAO.deleteById(idEmpleado);
 		
+		return null;
+	}
+	
+	@Override
+	public RespuestaListarEmpleadosDTO listarEmpleados(String idEmpresa) throws AresException {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -115,4 +126,6 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 		
 		return empleadoDTO;
 	}
+
+	
 }
