@@ -263,41 +263,7 @@
               ]
             }
           },
-          "response": [
-            {
-              "id": "3bd6cac8-5b57-41de-90dc-62b17ff438b5",
-              "name": "200 - ObtenerEmpleadoById",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "http://localhost:8080/gestionEmpleado/obtenerEmpleadoPorId?idEmpleado=75c3e4d5-b81b-42b3-b451-0783b7f091f5",
-                  "protocol": "http",
-                  "host": [
-                    "localhost"
-                  ],
-                  "port": "8080",
-                  "path": [
-                    "gestionEmpleado",
-                    "obtenerEmpleadoPorId"
-                  ],
-                  "query": [
-                    {
-                      "key": "idEmpleado",
-                      "value": "75c3e4d5-b81b-42b3-b451-0783b7f091f5"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": null,
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Petición realizada con exito\",\n    \"mensajeExtendido\": null,\n    \"empleadoDTO\": {\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Pepe\",\n        \"fechaNacimiento\": \"1993-02-18T00:00:00.000+00:00\"\n    }\n}"
-            }
-          ]
+          "response": []
         }
       ],
       "id": "26b98f7c-985b-404f-8260-fab13ff01a8a"
@@ -381,7 +347,7 @@
   ],
   "variable": [
     {
-      "id": "d137ebc4-8dfc-47c4-a0cc-b53798001ebf",
+      "id": "43e06ed1-ab23-46d7-bcc7-7e381b99b969",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
