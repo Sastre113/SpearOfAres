@@ -19,7 +19,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"empleado\": {\r\n        \"dni\": \"00000000Taaaa\",\r\n        \"nombre\": \"Pepe el Gaviota\",\r\n        \"fechaNacimiento\": \"\"\r\n    }\r\n}",
+              "raw": "{\r\n    \"empleado\": {\r\n        \"dni\": \"00000000T\",\r\n        \"nombre\": \"Pepe el Gaviota\",\r\n        \"fechaNacimiento\": \"\"\r\n    }\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -347,7 +347,7 @@
   ],
   "variable": [
     {
-      "id": "a909ca30-84cd-4843-ab40-6673c361832e",
+      "id": "3f2f60ef-68ac-4596-8228-e85e9ab7284e",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
