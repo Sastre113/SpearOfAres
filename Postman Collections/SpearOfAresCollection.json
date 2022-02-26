@@ -134,14 +134,14 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"empleado\": {\r\n        \"dni\": \"00000000Taaaa\",\r\n        \"nombre\": \"Pepe el Gaviota\",\r\n        \"fechaNacimiento\": \"\"\r\n    }\r\n}",
+              "raw": "{\r\n    \"empleado\": {\r\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\r\n        \"nombre\": \"Pepe el Aguila\",\r\n        \"fechaNacimiento\": \"18-02-1964\"\r\n    }\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
                 }
               }
             },
-            "url": "http://localhost:8080/gestionEmpleado/insertarEmpleado"
+            "url": "http://localhost:8080/gestionEmpleado/modificarEmpleado"
           },
           "response": []
         },
@@ -291,7 +291,7 @@
   ],
   "variable": [
     {
-      "id": "09f0e6c6-9a5f-4696-a98d-77250cfaf44d",
+      "id": "990e7d21-2001-471e-b60b-f4efd11d6d5b",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
