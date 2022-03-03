@@ -15,6 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/gestionEmpresa")
-public class GestionEmpresaController {
+public class EmpresaController {
 
 }

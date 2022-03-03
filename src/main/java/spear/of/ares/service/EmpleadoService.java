@@ -1,5 +1,6 @@
 package spear.of.ares.service;
 
+import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.UUID;
 
@@ -28,7 +29,7 @@ import spear.of.ares.utils.AresUtils;
  *
  */
 @Service
-public class GestionEmpresaService implements IGestionEmpresaService {
+public class EmpleadoService implements IEmpleadoService {
 
 	@Autowired
 	private IEmpleadoDAO empleadoDAO;
@@ -104,9 +105,12 @@ public class GestionEmpresaService implements IGestionEmpresaService {
 	}
 	
 	@Override
-	public RespuestaListarEmpleadosDTO listarEmpleados(String idEmpresa) throws AresException {
-		// TODO Auto-generated method stub
-		return null;
+	public RespuestaListarEmpleadosDTO listarEmpleados() throws AresException {
+		RespuestaListarEmpleadosDTO respuesta = AresNotificacion.OK.construir(RespuestaListarEmpleadosDTO.class);
+		respuesta.setListaEmpleado(new ArrayList<EmpleadoDTO>());
+		this.empleadoDAO.findAll().forEach(empleadoEntity -> respuesta.getListaEmpleado().add(this.mapEntityToDTO(empleadoEntity)));
+		
+		return respuesta;
 	}
 
 	/*
