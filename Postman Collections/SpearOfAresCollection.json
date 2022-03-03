@@ -236,7 +236,7 @@
           ]
         },
         {
-          "name": "ObtenerEmpleadoById Copy",
+          "name": "ListarEmpleados",
           "id": "47fcbde0-ed45-4681-b1ed-0bd02bfaf993",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -457,7 +457,7 @@
   ],
   "variable": [
     {
-      "id": "062e37e0-fd61-48fa-9762-8d900f7cc045",
+      "id": "4cea7c2a-670a-4f38-9245-3ddd136fbb42",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
