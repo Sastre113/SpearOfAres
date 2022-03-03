@@ -357,6 +357,18 @@
               "body": "{\n    \"codigo\": \"1001\",\n    \"mensaje\": \"No se han encontrado datos\",\n    \"mensajeExtendido\": null,\n    \"empleadoEliminado\": null\n}"
             }
           ]
+        },
+        {
+          "name": "test",
+          "id": "e197ec3c-b435-49e6-8271-4f5f9ec50528",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
         }
       ],
       "id": "26b98f7c-985b-404f-8260-fab13ff01a8a"
@@ -440,7 +452,7 @@
   ],
   "variable": [
     {
-      "id": "7b7b5211-7b09-4bcb-9812-7f7054ace31b",
+      "id": "02f3f48c-8857-4a5c-88a6-20a5b1ae9052",
       "key": "baseUrl",
       "value": "localhost:8080",
       "type": "string"
