@@ -15,12 +15,12 @@ import spear.of.ares.model.dto.Empleado.Peticion.PeticionModificarEmpleado;
  * @version 1:36:28 - 30/01/2022
  *
  */
-public interface IGestionEmpresaService {
+public interface IEmpleadoService {
 
 	public RespuestaInsertarEmpleadoDTO insertarEmpleado(PeticionInsertarEmpleadoDTO peticionDTO) throws AresException;
 	public RespuestaModificarEmpleadoDTO modificarEmpleado(PeticionModificarEmpleado peticionDTO) throws AresException;
 	public RespuestaObtenerEmpleadoDTO obtenerEmpleadoPorId(String idEmpleado) throws AresException;
 	public RespuestaEliminarEmpleadoDTO eliminarEmpleado(String idEmpleado) throws AresException;
-	public RespuestaListarEmpleadosDTO listarEmpleados(String idEmpresa) throws AresException;
+	public RespuestaListarEmpleadosDTO listarEmpleados() throws AresException;
 
 }

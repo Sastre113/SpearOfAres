@@ -20,7 +20,7 @@ import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaInsertarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaListarEmpleadosDTO;
 import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaModificarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaObtenerEmpleadoDTO;
-import spear.of.ares.service.IGestionEmpresaService;
+import spear.of.ares.service.IEmpleadoService;
 
 /**
  * 
@@ -31,10 +31,10 @@ import spear.of.ares.service.IGestionEmpresaService;
 
 @RestController
 @RequestMapping(value = "/gestionEmpleado")
-public class GestionEmpleadoController {
+public class EmpleadoController {
 
 	@Autowired
-	private IGestionEmpresaService gestionEmpresaService;
+	private IEmpleadoService gestionEmpresaService;
 
 	@PostMapping(path = "/insertarEmpleado", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<RespuestaInsertarEmpleadoDTO> insertarEmpleado(RequestEntity<PeticionInsertarEmpleadoDTO> peticionDTO) {	
@@ -73,9 +73,9 @@ public class GestionEmpleadoController {
 	}
 	
 	@GetMapping(path = "/listarEmpleados", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<RespuestaListarEmpleadosDTO> listarEmpleados(@RequestBody String idEmpresa) {
+	public ResponseEntity<RespuestaListarEmpleadosDTO> listarEmpleados() {
 		try {
-			return  ResponseEntity.ok(this.gestionEmpresaService.listarEmpleados(idEmpresa));
+			return  ResponseEntity.ok(this.gestionEmpresaService.listarEmpleados());
 		} catch (AresException e) {
 			return ResponseEntity.status(e.getHttpStatus()).body(e.mapError(RespuestaListarEmpleadosDTO.class));
 		}
