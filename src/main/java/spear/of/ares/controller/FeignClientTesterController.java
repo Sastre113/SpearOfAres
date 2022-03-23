@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,7 @@ import spear.of.ares.excepcion.FeignClientTesterExceptionHandler;
 import spear.of.ares.model.dto.HttpResponse;
 import spear.of.ares.model.dto.Empleado.EmpleadoDTO;
 import spear.of.ares.rest.IFeignClientTester;
+import spear.of.ares.utils.AresUtilsHttp;
 
 /**
  * @author Miguel Á. Sastre <sastre113@gmail.com>
@@ -40,7 +42,7 @@ public class FeignClientTesterController {
 	}
 	
 	@GetMapping(path = "/getHttp/badRequest", produces = MediaType.APPLICATION_JSON_VALUE)
-	@org.springframework.web.bind.annotation.ExceptionHandler({FeignClientTesterExceptionHandler.class})
+	@ExceptionHandler({FeignClientTesterExceptionHandler.class})
 	public ResponseEntity<HttpResponse> getHttpBadRequest(@RequestBody EmpleadoDTO peticionDTO) throws AresException {
 		try {
 			return this.feignClientTester.getHttpBadRequest(peticionDTO);
@@ -53,11 +55,8 @@ public class FeignClientTesterController {
 	public ResponseEntity<HttpResponse> getHttpNotFound() throws AresException {
 		try {
 			return this.feignClientTester.getHttpNotFound();
-		} catch (Exception e) {
-			HttpResponse httpResponse = new HttpResponse();
-			httpResponse.setCode("404");
-			httpResponse.setDescription("Error");
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(httpResponse);
+		} catch (Exception e) {;
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(AresUtilsHttp.construirHttpResponse(HttpStatus.NOT_FOUND.value()));
 		}
 	}
 }
