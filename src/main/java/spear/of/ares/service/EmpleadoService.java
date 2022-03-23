@@ -38,8 +38,7 @@ public class EmpleadoService implements IEmpleadoService {
 	public RespuestaInsertarEmpleadoDTO insertarEmpleado(PeticionInsertarEmpleadoDTO peticionDTO) throws AresException {
 		AresUtils.validarPeticion(peticionDTO);
 		
-		TbEmpleado empleadoEntity = this.maptoEntity(peticionDTO);
-		
+		TbEmpleado empleadoEntity = this.maptoEntity(peticionDTO.getEmpleado());
 		this.empleadoDAO.save(empleadoEntity);
 		
 		RespuestaInsertarEmpleadoDTO respuesta = AresNotificacion.OK.construir(RespuestaInsertarEmpleadoDTO.class);
@@ -119,13 +118,13 @@ public class EmpleadoService implements IEmpleadoService {
 	 * 
 	 */
 
-	private TbEmpleado maptoEntity(PeticionInsertarEmpleadoDTO peticionDTO) {
+	private TbEmpleado maptoEntity(EmpleadoDTO empleadoDTO) {
 		TbEmpleado empleadoEntity = new TbEmpleado();
 
 		empleadoEntity.setIdEmpleado(UUID.randomUUID().toString());
-		empleadoEntity.setDni(peticionDTO.getEmpleado().getDni());
-		empleadoEntity.setNombre(peticionDTO.getEmpleado().getNombre());
-		empleadoEntity.setFechaNacimiento(peticionDTO.getEmpleado().getFechaNacimiento());
+		empleadoEntity.setDni(empleadoDTO.getDni());
+		empleadoEntity.setNombre(empleadoDTO.getNombre());
+		empleadoEntity.setFechaNacimiento(empleadoDTO.getFechaNacimiento());
 
 		return empleadoEntity;
 	}
