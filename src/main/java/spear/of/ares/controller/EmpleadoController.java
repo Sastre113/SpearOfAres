@@ -34,12 +34,12 @@ import spear.of.ares.service.IEmpleadoService;
 public class EmpleadoController {
 
 	@Autowired
-	private IEmpleadoService gestionEmpresaService;
+	private IEmpleadoService gestionEmpleadoService;
 
 	@PostMapping(path = "/insertarEmpleado", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<RespuestaInsertarEmpleadoDTO> insertarEmpleado(RequestEntity<PeticionInsertarEmpleadoDTO> peticionDTO) {	
 		try {
-			return ResponseEntity.ok(this.gestionEmpresaService.insertarEmpleado(peticionDTO.getBody()));	
+			return ResponseEntity.ok(this.gestionEmpleadoService.insertarEmpleado(peticionDTO.getBody()));	
 		} catch (AresException e) {
 			return ResponseEntity.status(e.getHttpStatus()).body(e.mapError(RespuestaInsertarEmpleadoDTO.class));
 		}	 
@@ -48,7 +48,7 @@ public class EmpleadoController {
 	@PostMapping(path = "/modificarEmpleado", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<RespuestaModificarEmpleadoDTO> modificarEmpleado(@RequestBody PeticionModificarEmpleado peticionDTO) {
 		try {
-			return ResponseEntity.ok(this.gestionEmpresaService.modificarEmpleado(peticionDTO));
+			return ResponseEntity.ok(this.gestionEmpleadoService.modificarEmpleado(peticionDTO));
 		} catch (AresException e) {
 			return ResponseEntity.status(e.getHttpStatus()).body(e.mapError(RespuestaModificarEmpleadoDTO.class));
 		}
@@ -57,7 +57,7 @@ public class EmpleadoController {
 	@GetMapping(path = "/obtenerEmpleadoPorId", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<RespuestaObtenerEmpleadoDTO> obtenerEmpleadoPorId(@RequestParam String idEmpleado) {
 		try {
-			return ResponseEntity.ok(this.gestionEmpresaService.obtenerEmpleadoPorId(idEmpleado));	
+			return ResponseEntity.ok(this.gestionEmpleadoService.obtenerEmpleadoPorId(idEmpleado));	
 		} catch (AresException e) {
 			return ResponseEntity.status(e.getHttpStatus()).body(e.mapError(RespuestaObtenerEmpleadoDTO.class));
 		}
@@ -66,7 +66,7 @@ public class EmpleadoController {
 	@GetMapping(path = "/eliminarEmpleado", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<RespuestaEliminarEmpleadoDTO> eliminarEmpleado(@RequestParam String idEmpleado) {
 		try {
-			return ResponseEntity.ok(this.gestionEmpresaService.eliminarEmpleado(idEmpleado));
+			return ResponseEntity.ok(this.gestionEmpleadoService.eliminarEmpleado(idEmpleado));
 		} catch (AresException e) {
 			return ResponseEntity.status(e.getHttpStatus()).body(e.mapError(RespuestaEliminarEmpleadoDTO.class));
 		}
@@ -75,7 +75,7 @@ public class EmpleadoController {
 	@GetMapping(path = "/listarEmpleados", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<RespuestaListarEmpleadosDTO> listarEmpleados() {
 		try {
-			return  ResponseEntity.ok(this.gestionEmpresaService.listarEmpleados());
+			return  ResponseEntity.ok(this.gestionEmpleadoService.listarEmpleados());
 		} catch (AresException e) {
 			return ResponseEntity.status(e.getHttpStatus()).body(e.mapError(RespuestaListarEmpleadosDTO.class));
 		}

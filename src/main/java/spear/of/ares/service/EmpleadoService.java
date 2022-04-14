@@ -139,6 +139,4 @@ public class EmpleadoService implements IEmpleadoService {
 		
 		return empleadoDTO;
 	}
-
-	
 }
