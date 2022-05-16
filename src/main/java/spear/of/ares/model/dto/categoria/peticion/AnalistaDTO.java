@@ -1,14 +1,14 @@
 /**
  * 
  */
-package spear.of.ares.model.dto.categoria;
+package spear.of.ares.model.dto.categoria.peticion;
 
 /**
  * @author Miguel Á. Sastre <sastre113@gmail.com>
- * @version 22:11:49 - 12/05/2022
+ * @version 23:29:37 - 16/05/2022
  *
  */
-public class Analista extends AbstractCategoriaDTO {
+public class AnalistaDTO extends AbstractPuestoDTO {
 
 	private String tipoAnalista;
 	private String especialidad;

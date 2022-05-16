@@ -1,13 +1,13 @@
 package spear.of.ares.service;
 
 import spear.of.ares.excepcion.AresException;
-import spear.of.ares.model.dto.Empleado.Peticion.PeticionInsertarEmpleadoDTO;
-import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaEliminarEmpleadoDTO;
-import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaInsertarEmpleadoDTO;
-import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaListarEmpleadosDTO;
-import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaModificarEmpleadoDTO;
-import spear.of.ares.model.dto.Empleado.Respuesta.RespuestaObtenerEmpleadoDTO;
-import spear.of.ares.model.dto.Empleado.Peticion.PeticionModificarEmpleado;
+import spear.of.ares.model.dto.Empleado.peticion.PeticionInsertarEmpleadoDTO;
+import spear.of.ares.model.dto.Empleado.peticion.PeticionModificarEmpleado;
+import spear.of.ares.model.dto.Empleado.respuesta.RespuestaEliminarEmpleadoDTO;
+import spear.of.ares.model.dto.Empleado.respuesta.RespuestaInsertarEmpleadoDTO;
+import spear.of.ares.model.dto.Empleado.respuesta.RespuestaListarEmpleadosDTO;
+import spear.of.ares.model.dto.Empleado.respuesta.RespuestaModificarEmpleadoDTO;
+import spear.of.ares.model.dto.Empleado.respuesta.RespuestaObtenerEmpleadoDTO;
 
 /**
  * 

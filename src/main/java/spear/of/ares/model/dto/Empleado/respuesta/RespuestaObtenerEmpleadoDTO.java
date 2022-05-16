@@ -1,7 +1,7 @@
 /**
  * 
  */
-package spear.of.ares.model.dto.Empleado.Respuesta;
+package spear.of.ares.model.dto.Empleado.respuesta;
 
 import spear.of.ares.model.dto.RespuestaDTO;
 import spear.of.ares.model.dto.Empleado.EmpleadoDTO;

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package spear.of.ares.model.dto.Empleado.Peticion;
+package spear.of.ares.model.dto.Empleado.peticion;
 
 import java.util.Date;
 

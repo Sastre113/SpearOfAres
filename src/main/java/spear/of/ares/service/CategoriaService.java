@@ -19,7 +19,12 @@ public class CategoriaService implements ICategoriaService {
 	@Override
 	public <T extends AbstractCategoriaDTO> RespuestaMapearCategoria mapearCategoria(RequestEntity<PeticionMapearCategoria<T>> peticionDTO) {
 		// TODO Auto-generated method stub
-		return null;
+		RespuestaMapearCategoria respuesta = new RespuestaMapearCategoria();
+		
+		
+		
+		
+		return respuesta;
 	}
 
 }

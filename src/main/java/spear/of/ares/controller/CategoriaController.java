@@ -2,7 +2,7 @@ package spear.of.ares.controller;
 
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,9 +27,23 @@ public class CategoriaController {
 		this.categoriaService = categoriaService;
 	}
 
-	@GetMapping(path = "/")
-	public <T extends AbstractCategoriaDTO> ResponseEntity<RespuestaMapearCategoria> mapearCategoria(RequestEntity<PeticionMapearCategoria<T>> peticionDTO) {
+	@SuppressWarnings("unchecked")
+	@PostMapping(path = "/analista")
+	public <T extends AbstractCategoriaDTO> ResponseEntity<RespuestaMapearCategoria<T>> mapearAnalista(RequestEntity<PeticionMapearCategoria<T>> peticionDTO) {
 		return ResponseEntity.ok(this.categoriaService.mapearCategoria(peticionDTO));
 	}
+	
+	@SuppressWarnings("unchecked")
+	@PostMapping(path = "/junior")
+	public <T extends AbstractCategoriaDTO> ResponseEntity<RespuestaMapearCategoria<T>> mapearJunior(RequestEntity<PeticionMapearCategoria<T>> peticionDTO) {
+		return ResponseEntity.ok(this.categoriaService.mapearCategoria(peticionDTO));
+	}
+	
+	@SuppressWarnings("unchecked")
+	@PostMapping(path = "/senior")
+	public <T extends AbstractCategoriaDTO> ResponseEntity<RespuestaMapearCategoria<T>> mapearSenior(RequestEntity<PeticionMapearCategoria<T>> peticionDTO) {
+		return ResponseEntity.ok(this.categoriaService.mapearCategoria(peticionDTO));
+	}
+
 	
 }

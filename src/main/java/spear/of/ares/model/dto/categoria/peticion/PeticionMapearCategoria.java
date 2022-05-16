@@ -11,5 +11,5 @@ import spear.of.ares.model.dto.categoria.AbstractCategoriaDTO;
  *
  */
 public class PeticionMapearCategoria<T extends AbstractCategoriaDTO> {
-
+	
 }
