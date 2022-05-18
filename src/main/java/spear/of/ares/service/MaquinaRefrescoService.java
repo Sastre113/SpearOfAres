@@ -1,5 +1,6 @@
 package spear.of.ares.service;
 
+
 import org.springframework.stereotype.Service;
 
 import spear.of.ares.model.dto.maquinaRefresco.MaquinaRefresco;
@@ -14,11 +15,7 @@ import spear.of.ares.model.dto.maquinaRefresco.MaquinaRefresco;
 public class MaquinaRefrescoService {
 
 	public void crearMaquina() {
-		MaquinaRefresco maquina = new MaquinaRefresco();
-		
-		maquina.
-		
-		
+		MaquinaRefresco maquina = new MaquinaRefresco.Builder("1", "coke-cola").build();
 	}
 	
 }
