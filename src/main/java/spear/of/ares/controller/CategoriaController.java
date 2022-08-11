@@ -20,7 +20,7 @@ import spear.of.ares.service.ICategoriaService;
 @RestController
 @RequestMapping(value = "/categoria")
 public class CategoriaController {
-
+	/*
 	private ICategoriaService categoriaService;
 	
 	public CategoriaController(ICategoriaService categoriaService) {
@@ -45,5 +45,5 @@ public class CategoriaController {
 		return ResponseEntity.ok(this.categoriaService.mapearCategoria(peticionDTO));
 	}
 
-	
+*/	
 }

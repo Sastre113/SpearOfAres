@@ -4,6 +4,9 @@
 package spear.of.ares.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -27,10 +30,14 @@ import spear.of.ares.utils.AresUtilsHttp;
  */
 @RestController
 @RequestMapping(value = "/FeignClientTester")
+@PropertySource("classpath:/db/messages.yml")
 public class FeignClientTesterController {
 
 	@Autowired
 	private IFeignClientTester feignClientTester;
+	
+	@Value("${querySql.select}")
+	private String pepe;
 	
 	@GetMapping(path = "/getHttp/ok", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<HttpResponse> getHttpOk() throws AresException {

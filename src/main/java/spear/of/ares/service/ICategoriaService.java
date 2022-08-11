@@ -15,5 +15,5 @@ import spear.of.ares.model.dto.categoria.respuesta.RespuestaMapearCategoria;
  *
  */
 public interface ICategoriaService {
-	 public <T extends AbstractCategoriaDTO> RespuestaMapearCategoria mapearCategoria(RequestEntity<PeticionMapearCategoria<T>> peticionDTO);
+	// public <T extends AbstractCategoriaDTO> RespuestaMapearCategoria mapearCategoria(RequestEntity<PeticionMapearCategoria<T>> peticionDTO);
 }

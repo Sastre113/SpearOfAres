@@ -15,7 +15,7 @@ import spear.of.ares.model.dto.categoria.respuesta.RespuestaMapearCategoria;
  *
  */
 public class CategoriaService implements ICategoriaService {
-
+/*
 	@Override
 	public <T extends AbstractCategoriaDTO> RespuestaMapearCategoria mapearCategoria(RequestEntity<PeticionMapearCategoria<T>> peticionDTO) {
 		// TODO Auto-generated method stub
@@ -26,5 +26,5 @@ public class CategoriaService implements ICategoriaService {
 		
 		return respuesta;
 	}
-
+*/
 }
