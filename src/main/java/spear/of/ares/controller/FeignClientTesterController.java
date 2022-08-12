@@ -5,6 +5,7 @@ package spear.of.ares.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpStatus;
@@ -22,6 +23,7 @@ import spear.of.ares.model.dto.HttpResponse;
 import spear.of.ares.model.dto.Empleado.EmpleadoDTO;
 import spear.of.ares.rest.IFeignClientTester;
 import spear.of.ares.utils.AresUtilsHttp;
+import spear.of.ares.utils.YamlPropertySourceFactory;
 
 /**
  * @author Miguel Á. Sastre <sastre113@gmail.com>
@@ -30,14 +32,14 @@ import spear.of.ares.utils.AresUtilsHttp;
  */
 @RestController
 @RequestMapping(value = "/FeignClientTester")
-@PropertySource("classpath:/db/messages.yml")
+@PropertySource(value = "classpath:db/messages.yml", factory = YamlPropertySourceFactory.class)
 public class FeignClientTesterController {
 
 	@Autowired
 	private IFeignClientTester feignClientTester;
 	
 	@Value("${querySql.select}")
-	private String pepe;
+	private String query;
 	
 	@GetMapping(path = "/getHttp/ok", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<HttpResponse> getHttpOk() throws AresException {
