@@ -38,8 +38,10 @@ public class FeignClientTesterController {
 	@Autowired
 	private IFeignClientTester feignClientTester;
 	
+	@Value("${querySql.select}")
+	private String query1;
 	@Value("${querySql.select2}")
-	private String query;
+	private String query2;
 	
 	@GetMapping(path = "/getHttp/ok", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<HttpResponse> getHttpOk() throws AresException {
