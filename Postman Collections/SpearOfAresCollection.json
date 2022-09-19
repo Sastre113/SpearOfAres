@@ -428,7 +428,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/gestionEmpresa/obtenerEmpresaPorId?idEmpresa=75c3e4d5-b81b-42b3-b451-0783b7f091f5",
+							"raw": "http://localhost:8080/gestionEmpresa/obtenerEmpresaPorId?idEmpresa=d6503c52-7c8f-11ec-90d6-0242ac120003",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -441,7 +441,7 @@
 							"query": [
 								{
 									"key": "idEmpresa",
-									"value": "75c3e4d5-b81b-42b3-b451-0783b7f091f5"
+									"value": "d6503c52-7c8f-11ec-90d6-0242ac120003"
 								}
 							]
 						}
@@ -510,7 +510,7 @@
 	],
 	"variable": [
 		{
-			"id": "915d5388-ad17-462f-874e-826eddd009a6",
+			"id": "c43b23e8-a92f-4b50-be60-c965a4703a6e",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
