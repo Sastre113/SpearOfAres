@@ -27,4 +27,21 @@ spring:
         dialect: org.hibernate.dialect.H2Dialect
 
 
-        
+# Configuración postgreSQL
+#spring:  
+#  jpa:  
+#    hibernate:  
+#      ddl-auto: create  
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect  
+#  datasource:  
+#    url: "jdbc:postgresql://localhost:5432/Empresa"  
+#    username: belazar  
+#    password: belazar13
+#
+---
+
+#querySql:
+#  mensaje2: SELECT *
+#   FROM TABLA_INVENTADA INVENTADA
+#   WHERE INVENTADA.ID_COLM1 = 'COLUMN'
+#   AND INVENTADA.COLOR = 'ROJO';

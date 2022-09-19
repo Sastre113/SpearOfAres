@@ -1,0 +1,8 @@
+querySql:
+     select: SELECT * 
+       FROM TABLA_INVENTADA INVENTADA 
+       WHERE INVENTADA.ID_COLM1 = 'COLUMN' 
+       AND INVENTADA.COLOR = 'ROJO'; 
+       
+     select2: SELECT *
+       QUE HACE COSAS

@@ -12,6 +12,16 @@ public class HttpResponse extends RespuestaDTO {
 	
 	private String code;
 	private String description;
+	
+	/**
+	 * @param code
+	 * @param description
+	 */
+	public HttpResponse(String code, String description) {
+		super();
+		this.code = code;
+		this.description = description;
+	}
 
 	public String getCode() {
 		return code;

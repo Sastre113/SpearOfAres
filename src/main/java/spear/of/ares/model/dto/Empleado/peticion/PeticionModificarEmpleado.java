@@ -1,28 +1,36 @@
-package spear.of.ares.model.dto.Empleado;
+/**
+ * 
+ */
+package spear.of.ares.model.dto.Empleado.peticion;
 
 import java.util.Date;
 
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Pattern.Flag;
 import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
 
-public class EmpleadoDTO extends IdEmpleadoDTO {
+/**
+ * 
+ * @author Miguel Á. Sastre <sastre113@gmail.com>
+ * @version 10:25:22 - 26/02/2022
+ *
+ */
+public class PeticionModificarEmpleado {
 
-	@NotEmpty @Pattern(regexp="\\d{8}[A-HJ-NP-TV-Z]", flags={Flag.CASE_INSENSITIVE})
-	private String dni;
-	@NotEmpty @Size(max = 40) 
+	@NotEmpty
+	private String idEmpleado;
+	@NotEmpty
+	@Size(max = 40)
 	private String nombre;
 	@Past
 	private Date fechaNacimiento;
-	
-	public String getDni() {
-		return dni;
+
+	public String getIdEmpleado() {
+		return idEmpleado;
 	}
 
-	public void setDni(String dni) {
-		this.dni = dni;
+	public void setIdEmpleado(String idEmpleado) {
+		this.idEmpleado = idEmpleado;
 	}
 
 	public String getNombre() {
@@ -40,4 +48,5 @@ public class EmpleadoDTO extends IdEmpleadoDTO {
 	public void setFechaNacimiento(Date fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
+
 }

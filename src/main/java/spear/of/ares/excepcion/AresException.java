@@ -32,6 +32,7 @@ public class AresException extends Exception {
 	
 	public AresException(AresNotificacion notificacion) {
 		this(notificacion.construir(), null);
+		httpStatus = notificacion.getHttpStatus();
 	}
 	
 	public AresException(AresNotificacion notificacion, String msgExtendido) {
