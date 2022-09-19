@@ -10,8 +10,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
-
 /**
  * 
  * @author Miguel Á. Sastre <sastre113@gmail.com>

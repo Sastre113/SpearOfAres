@@ -30,9 +30,9 @@ CREATE TABLE TB_REL_EMPRESA_EMPLEADO(
 
 );
 
-INSERT INTO TB_EMPRESA (id_empresa, nombre, propietario, cantidad_empleados, fecha_creacion, fecha_desaparicion) VALUES ('d6503c52-7c8f-11ec-90d6-0242ac120003', 'Black-Mesa', 'EEUU',1500,'1942-06-01',null);
-INSERT INTO TB_EMPRESA (id_empresa, nombre, propietario, cantidad_empleados, fecha_creacion, fecha_desaparicion) VALUES ('fa6ff6f4-7c8f-11ec-90d6-0242ac120003', 'Aperture-Science', 'EEUU',632,'1945-09-01',null);
-INSERT INTO TB_EMPRESA (id_empresa, nombre, propietario, cantidad_empleados, fecha_creacion, fecha_desaparicion) VALUES ('1b1ca136-7c90-11ec-90d6-0242ac120003', 'Microsoft', 'Bill Gates',181000,'1975-04-04', null);
+INSERT INTO TB_EMPRESA (id_empresa, nombre, propietario, cantidad_empleados, fecha_creacion, fecha_desaparacion) VALUES ('d6503c52-7c8f-11ec-90d6-0242ac120003', 'Black-Mesa', 'EEUU',1500,'1942-06-01',null);
+INSERT INTO TB_EMPRESA (id_empresa, nombre, propietario, cantidad_empleados, fecha_creacion, fecha_desaparacion) VALUES ('fa6ff6f4-7c8f-11ec-90d6-0242ac120003', 'Aperture-Science', 'EEUU',632,'1945-09-01',null);
+INSERT INTO TB_EMPRESA (id_empresa, nombre, propietario, cantidad_empleados, fecha_creacion, fecha_desaparacion) VALUES ('1b1ca136-7c90-11ec-90d6-0242ac120003', 'Microsoft', 'Bill Gates',181000,'1975-04-04', null);
 
 INSERT INTO TB_EMPLEADO (id_empleado, dni, nombre, fecha_nacimiento) VALUES ('c059d9ac-7c90-11ec-90d6-0242ac120003', '00000000T', 'Miguel'			,'1993-02-18');
 INSERT INTO TB_EMPLEADO (id_empleado, dni, nombre, fecha_nacimiento) VALUES ('c464174c-7c90-11ec-90d6-0242ac120003', '00000000T', 'Gordon Freeman'	,'1972-02-18');

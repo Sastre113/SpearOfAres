@@ -9,8 +9,8 @@ import org.springframework.stereotype.Repository;
 import spear.of.ares.model.entity.TbEmpresa;
 
 @Repository
-public interface IEmpresaDAO extends JpaRepository<TbEmpresa, String> {
+public interface IEmpresaRepository extends JpaRepository<TbEmpresa, String> {
 
-	List<TbEmpresa> findAll();
-	Optional<TbEmpresa> findById(String idEmpresa);
+	public List<TbEmpresa> findAll();
+	public Optional<TbEmpresa> findById(String idEmpresa);
 }
