@@ -416,7 +416,7 @@
 			"id": "6f8d5204-49a2-4171-a06b-229140165db8"
 		},
 		{
-			"name": "New Folder",
+			"name": "GestionEmpresa",
 			"item": [],
 			"id": "c51cd26c-126e-4fce-99db-cf5ff2a29194"
 		}
@@ -445,7 +445,7 @@
 	],
 	"variable": [
 		{
-			"id": "b7a2ab2f-8d55-4962-b62b-7f40cefef9b0",
+			"id": "010a579f-95a7-4a1c-bd98-08f72f6fc564",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
