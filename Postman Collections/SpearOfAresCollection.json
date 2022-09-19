@@ -428,15 +428,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/gestionEmpleado/obtenerEmpleadoPorId?idEmpresa=75c3e4d5-b81b-42b3-b451-0783b7f091f5",
+							"raw": "http://localhost:8080/gestionEmpresa/obtenerEmpresaPorId?idEmpresa=75c3e4d5-b81b-42b3-b451-0783b7f091f5",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"gestionEmpleado",
-								"obtenerEmpleadoPorId"
+								"gestionEmpresa",
+								"obtenerEmpresaPorId"
 							],
 							"query": [
 								{
@@ -510,7 +510,7 @@
 	],
 	"variable": [
 		{
-			"id": "9fbd14ee-1532-4554-ba18-aa07a4459719",
+			"id": "915d5388-ad17-462f-874e-826eddd009a6",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
