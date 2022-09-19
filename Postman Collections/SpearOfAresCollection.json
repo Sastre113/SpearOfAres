@@ -419,7 +419,7 @@
 			"name": "GestionEmpresa",
 			"item": [
 				{
-					"name": "ObtenerEmpleadoById Copy",
+					"name": "ObtenerEmpresaById",
 					"id": "66be1876-ee4f-4973-b4ea-88d89c4b0820",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -510,7 +510,7 @@
 	],
 	"variable": [
 		{
-			"id": "abcd6840-8248-44f0-aeac-aca93f4b24f0",
+			"id": "07d57bc0-feca-4a84-924a-a39ee6327dc5",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
