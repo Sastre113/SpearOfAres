@@ -417,7 +417,72 @@
 		},
 		{
 			"name": "GestionEmpresa",
-			"item": [],
+			"item": [
+				{
+					"name": "ObtenerEmpleadoById Copy",
+					"id": "66be1876-ee4f-4973-b4ea-88d89c4b0820",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/gestionEmpleado/obtenerEmpleadoPorId?idEmpresa=75c3e4d5-b81b-42b3-b451-0783b7f091f5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gestionEmpleado",
+								"obtenerEmpleadoPorId"
+							],
+							"query": [
+								{
+									"key": "idEmpresa",
+									"value": "75c3e4d5-b81b-42b3-b451-0783b7f091f5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "33c7094d-59d2-4793-8975-c9558fb5d250",
+							"name": "200 - ObtenerEmpleadoById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/gestionEmpleado/obtenerEmpleadoPorId?idEmpleado=75c3e4d5-b81b-42b3-b451-0783b7f091f5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gestionEmpleado",
+										"obtenerEmpleadoPorId"
+									],
+									"query": [
+										{
+											"key": "idEmpleado",
+											"value": "75c3e4d5-b81b-42b3-b451-0783b7f091f5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Petición realizada con exito\",\n    \"mensajeExtendido\": null,\n    \"empleadoDTO\": {\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Pepe\",\n        \"fechaNacimiento\": \"1993-02-18T00:00:00.000+00:00\"\n    }\n}"
+						}
+					]
+				}
+			],
 			"id": "c51cd26c-126e-4fce-99db-cf5ff2a29194"
 		}
 	],
@@ -445,7 +510,7 @@
 	],
 	"variable": [
 		{
-			"id": "010a579f-95a7-4a1c-bd98-08f72f6fc564",
+			"id": "abcd6840-8248-44f0-aeac-aca93f4b24f0",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
