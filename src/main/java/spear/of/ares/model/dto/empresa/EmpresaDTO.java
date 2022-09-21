@@ -5,6 +5,9 @@ package spear.of.ares.model.dto.empresa;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 /**
  * @author Miguel Á. Sastre <sastre113@gmail.com>
  * @version 0:37:28 - 20/09/2022
@@ -13,8 +16,10 @@ import java.time.LocalDate;
 public class EmpresaDTO extends IdEmpresaDTO {
 
 	private String nombre;
+	@NotEmpty
 	private String propietario;
 	private int cantidadEmpleados;
+	@NotNull
 	private LocalDate fechaCreacion;
 	private LocalDate fechaDesaparicion;
 

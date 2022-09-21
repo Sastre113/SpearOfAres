@@ -3,6 +3,8 @@
  */
 package spear.of.ares.service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
@@ -17,6 +19,7 @@ import spear.of.ares.model.dto.empresa.respuesta.RespuestaObtenerEmpresaDTO;
 import spear.of.ares.model.entity.TbEmpresa;
 import spear.of.ares.repository.IEmpresaRepository;
 import spear.of.ares.utils.AresNotificacion;
+import spear.of.ares.utils.AresUtils;
 
 /**
  * @author Miguel Á. Sastre <sastre113@gmail.com>
@@ -35,31 +38,41 @@ public class EmpresaService implements IEmpresaService {
 
 	@Override
 	public RespuestaInsertarEmpresaDTO insertarEmpresa(PeticionInsertarEmpresaDTO peticioDTO) throws AresException {
-		// TODO Auto-generated method stub
-		throw new AresException(new UnsupportedOperationException());
+		AresUtils.validarPeticion(peticioDTO);
+		TbEmpresa empresaEntity = this.mapDtoToEntity(peticioDTO.getEmpresa());
+		this.empresaRepository.save(empresaEntity);
+		
+		RespuestaInsertarEmpresaDTO respuesta = AresNotificacion.OK.construir(RespuestaInsertarEmpresaDTO.class);
+		respuesta.setEmpresa(peticioDTO.getEmpresa());
+		
+		return respuesta;
 	}
 
 	@Override
 	public RespuestaEliminarEmpresaDTO eliminarEmpresa(String idEmpresa) throws AresException {
-		// TODO Auto-generated method stub
+		if(!StringUtils.hasLength(idEmpresa)) {
+			throw new AresException(AresNotificacion.PT_ERR_VALIDACION, "Se debe indicar idEmpresa");
+		}
 		
-		throw new AresException(new UnsupportedOperationException());
+		Optional<TbEmpresa> optEmpresaEntity = this.empresaRepository.findById(idEmpresa);
+		optEmpresaEntity.ifPresent(empresaEntity -> this.empresaRepository.delete(empresaEntity));
+		
+		// TODO Revisar cuando no se borra nada
+		RespuestaEliminarEmpresaDTO respuesta = AresNotificacion.OK.construir(RespuestaEliminarEmpresaDTO.class);
+		
+		return respuesta;
 	}
 
 	@Override
 	public RespuestaObtenerEmpresaDTO obtenerEmpresaPorId(String idEmpresa) throws AresException {
-		// TODO Auto-generated method stub
 		if(!StringUtils.hasLength(idEmpresa)) {
 			throw new AresException(AresNotificacion.PT_ERR_VALIDACION);
 		}
 		
 		Optional<TbEmpresa> empresaEntity = this.empresaRepository.findById(idEmpresa);
-		
-		
-		RespuestaObtenerEmpresaDTO respuesta = new RespuestaObtenerEmpresaDTO();
-		if(empresaEntity.isPresent()) {
-			
-			EmpresaDTO empresaDTO = this.mapToDTO(empresaEntity.get());
+		RespuestaObtenerEmpresaDTO respuesta = AresNotificacion.OK.construir(RespuestaObtenerEmpresaDTO.class);
+		if(empresaEntity.isPresent()) {		
+			EmpresaDTO empresaDTO = this.mapEntityToDTO(empresaEntity.get());
 			respuesta.setEmpresa(empresaDTO);			
 		}
 		
@@ -68,22 +81,40 @@ public class EmpresaService implements IEmpresaService {
 
 	@Override
 	public RespuestaListarEmpresasDTO listarEmpresas() throws AresException {
-		// TODO Auto-generated method stub
-		throw new AresException(new UnsupportedOperationException());
+		List<EmpresaDTO> listaEmpresa = new ArrayList<>();
+		this.empresaRepository.findAll().forEach(empresaEntity -> listaEmpresa.add(this.mapEntityToDTO(empresaEntity)));
+		RespuestaListarEmpresasDTO respuesta =  AresNotificacion.OK.construir(RespuestaListarEmpresasDTO.class);
+		respuesta.setListaEmpresa(listaEmpresa);
+		
+		return respuesta;
 	}
 
 
-	private EmpresaDTO mapToDTO(TbEmpresa empresaEntity) {
-		// TODO Auto-generated method stub
+	private EmpresaDTO mapEntityToDTO(TbEmpresa empresaEntity) {
 		EmpresaDTO empresaDTO = new EmpresaDTO();
 		empresaDTO.setIdEmpresa(empresaEntity.getIdEmpresa());
 		empresaDTO.setNombre(empresaEntity.getNombre());
 		empresaDTO.setPropietario(empresaEntity.getPropietario());
 		empresaDTO.setCantidadEmpleados(empresaEntity.getCantidadEmpleados());
-		/*empresaDTO.setFechaCreacion(null);
-		empresaDTO.setFechaDesaparicion(null);
-		*/
-		
+		empresaDTO.setFechaCreacion(AresUtils.convertirDateToLocalTime(empresaEntity.getFechaCreacion()));
+		empresaDTO.setFechaDesaparicion(AresUtils.convertirDateToLocalTime(empresaEntity.getFechaDesaparacion()));
+
 		return empresaDTO;
 	}
+	
+	private TbEmpresa mapDtoToEntity(EmpresaDTO empresaDTO) {
+		TbEmpresa empresaEntity = new TbEmpresa();
+		empresaEntity.setIdEmpresa(empresaDTO.getIdEmpresa());
+		empresaEntity.setNombre(empresaDTO.getNombre());
+		empresaEntity.setPropietario(empresaDTO.getPropietario());
+		empresaEntity.setCantidadEmpleados(empresaDTO.getCantidadEmpleados());
+		empresaEntity.setFechaCreacion(AresUtils.convertirLocalTimeToDate(empresaDTO.getFechaCreacion()));
+		empresaEntity.setFechaDesaparacion(AresUtils.convertirLocalTimeToDate(empresaDTO.getFechaDesaparicion()));
+
+		return empresaEntity;
+	}
+
+	
+
+	
 }

@@ -4,6 +4,7 @@
 package spear.of.ares.model.dto.empresa.respuesta;
 
 import spear.of.ares.model.dto.RespuestaDTO;
+import spear.of.ares.model.dto.empresa.EmpresaDTO;
 
 /**
  * @author Miguel Á. Sastre <sastre113@gmail.com>
@@ -11,5 +12,14 @@ import spear.of.ares.model.dto.RespuestaDTO;
  *
  */
 public class RespuestaInsertarEmpresaDTO extends RespuestaDTO {
-	
+
+	private EmpresaDTO empresa;
+
+	public EmpresaDTO getEmpresa() {
+		return empresa;
+	}
+
+	public void setEmpresa(EmpresaDTO empresa) {
+		this.empresa = empresa;
+	}
 }
