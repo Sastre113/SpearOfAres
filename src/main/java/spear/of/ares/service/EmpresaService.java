@@ -63,11 +63,9 @@ public class EmpresaService implements IEmpresaService {
 		}
 		
 		Optional<TbEmpresa> optEmpresaEntity = this.empresaRepository.findById(idEmpresa);
-		optEmpresaEntity.ifPresent(empresaEntity -> this.empresaRepository.delete(empresaEntity));
-		
-		// TODO Revisar cuando no se borra nada
-		RespuestaEliminarEmpresaDTO respuesta = AresNotificacion.OK.construir(RespuestaEliminarEmpresaDTO.class);
-		
+		this.empresaRepository.delete(optEmpresaEntity.orElseThrow());
+
+		RespuestaEliminarEmpresaDTO respuesta = AresNotificacion.OK.construir(RespuestaEliminarEmpresaDTO.class);		
 		return respuesta;
 	}
 
@@ -79,11 +77,8 @@ public class EmpresaService implements IEmpresaService {
 		
 		Optional<TbEmpresa> empresaEntity = this.empresaRepository.findById(idEmpresa);
 		RespuestaObtenerEmpresaDTO respuesta = AresNotificacion.OK.construir(RespuestaObtenerEmpresaDTO.class);
-		if(empresaEntity.isPresent()) {		
-			EmpresaDTO empresaDTO = this.mapEntityToDTO(empresaEntity.get());
-			respuesta.setEmpresa(empresaDTO);			
-		}
-		
+		respuesta.setEmpresa(this.mapEntityToDTO(empresaEntity.orElseThrow()));
+
 		return respuesta;
 	}
 

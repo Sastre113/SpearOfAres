@@ -1,6 +1,8 @@
 package spear.of.ares.utils;
 
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
 import java.util.Set;
 
@@ -30,7 +32,11 @@ public final class AresUtils {
 	}
 		
 	public static LocalDate convertirDateToLocalTime(Date fecha) {
-		return LocalDate.ofEpochDay(fecha.getTime());
+		if(fecha == null) {
+			return null;
+		}
+		
+		return Instant.ofEpochMilli(fecha.getTime()).atZone(ZoneId.systemDefault()).toLocalDate();
 	}
 	
 	public static Date convertirLocalTimeToDate(LocalDate fecha) {
