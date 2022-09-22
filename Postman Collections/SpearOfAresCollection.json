@@ -504,7 +504,24 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/gestionEmpresa/listarEmpresas"
+						"url": {
+							"raw": "http://localhost:8080/gestionEmpresa/obtenerEmpresaPorId?idEmpresa=d6503c52-7c8f-11ec-90d6-0242ac120003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gestionEmpresa",
+								"obtenerEmpresaPorId"
+							],
+							"query": [
+								{
+									"key": "idEmpresa",
+									"value": "d6503c52-7c8f-11ec-90d6-0242ac120003"
+								}
+							]
+						}
 					},
 					"response": [
 						{
@@ -600,7 +617,7 @@
 	],
 	"variable": [
 		{
-			"id": "c401407d-02e5-428a-a424-0c1d1e7e0368",
+			"id": "3893feaa-741d-45fc-94de-883ccdbdf890",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
