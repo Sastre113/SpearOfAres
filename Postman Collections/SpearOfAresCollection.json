@@ -483,7 +483,7 @@
 					]
 				},
 				{
-					"name": "Eliminar",
+					"name": "EliminarEmpresaPorId",
 					"id": "aa172478-9246-4b4a-b029-c1425ab1ffdc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -522,7 +522,7 @@
 	],
 	"variable": [
 		{
-			"id": "c41a9e40-df13-4111-95bb-f625ed43c83f",
+			"id": "69c8033e-8809-450e-a1bf-d10a9283a43c",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
