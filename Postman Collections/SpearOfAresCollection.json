@@ -427,7 +427,46 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"{{$randomStreetName}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": "http://localhost:8080/gestionEmpresa/insertarEmpresa"
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarEmpresaPorId",
+					"id": "aa172478-9246-4b4a-b029-c1425ab1ffdc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/gestionEmpresa/eliminarEmpresa?idEmpresa=d6503c52-7c8f-11ec-90d6-0242ac120003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gestionEmpresa",
+								"eliminarEmpresa"
+							],
+							"query": [
+								{
+									"key": "idEmpresa",
+									"value": "d6503c52-7c8f-11ec-90d6-0242ac120003"
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -541,36 +580,6 @@
 							"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Petición realizada con exito\",\n    \"mensajeExtendido\": null,\n    \"empleadoDTO\": {\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Pepe\",\n        \"fechaNacimiento\": \"1993-02-18T00:00:00.000+00:00\"\n    }\n}"
 						}
 					]
-				},
-				{
-					"name": "EliminarEmpresaPorId",
-					"id": "aa172478-9246-4b4a-b029-c1425ab1ffdc",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/gestionEmpresa/eliminarEmpresa?idEmpresa=d6503c52-7c8f-11ec-90d6-0242ac120003",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"gestionEmpresa",
-								"eliminarEmpresa"
-							],
-							"query": [
-								{
-									"key": "idEmpresa",
-									"value": "d6503c52-7c8f-11ec-90d6-0242ac120003"
-								}
-							]
-						}
-					},
-					"response": []
 				}
 			],
 			"id": "c51cd26c-126e-4fce-99db-cf5ff2a29194"
@@ -600,7 +609,7 @@
 	],
 	"variable": [
 		{
-			"id": "687b54ba-d24b-4c65-b68e-3bb27e63494f",
+			"id": "51ce94de-314a-43e2-8623-851936ff7447",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
