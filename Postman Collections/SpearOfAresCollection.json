@@ -519,26 +519,9 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "DELETE",
+						"method": "POST",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/gestionEmpresa/eliminarEmpresa?idEmpresa=d6503c52-7c8f-11ec-90d6-0242ac120003",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"gestionEmpresa",
-								"eliminarEmpresa"
-							],
-							"query": [
-								{
-									"key": "idEmpresa",
-									"value": "d6503c52-7c8f-11ec-90d6-0242ac120003"
-								}
-							]
-						}
+						"url": "http://localhost:8080/gestionEmpresa/insertarEmpresa"
 					},
 					"response": []
 				}
@@ -570,7 +553,7 @@
 	],
 	"variable": [
 		{
-			"id": "a8cd956b-8529-4cf0-935a-ac698490911a",
+			"id": "b4bbd0df-765f-4915-9a74-366eac1705c1",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
