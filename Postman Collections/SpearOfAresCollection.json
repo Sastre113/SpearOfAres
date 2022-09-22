@@ -496,7 +496,7 @@
 					]
 				},
 				{
-					"name": "ObtenerListarEmpresas",
+					"name": "ObtenerListasEmpresas",
 					"id": "758c6c5d-2c70-491e-b18a-19ce3ca3443d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -600,7 +600,7 @@
 	],
 	"variable": [
 		{
-			"id": "6420283d-3683-4e38-8684-a81392565341",
+			"id": "687b54ba-d24b-4c65-b68e-3bb27e63494f",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
