@@ -511,6 +511,36 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "InsertarEmpresa",
+					"id": "bb2e4f6d-4fa6-4386-a8f9-1eb601766697",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/gestionEmpresa/eliminarEmpresa?idEmpresa=d6503c52-7c8f-11ec-90d6-0242ac120003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gestionEmpresa",
+								"eliminarEmpresa"
+							],
+							"query": [
+								{
+									"key": "idEmpresa",
+									"value": "d6503c52-7c8f-11ec-90d6-0242ac120003"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "c51cd26c-126e-4fce-99db-cf5ff2a29194"
@@ -540,7 +570,7 @@
 	],
 	"variable": [
 		{
-			"id": "98c27388-74b8-4569-8581-0cd89199a0b9",
+			"id": "a8cd956b-8529-4cf0-935a-ac698490911a",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
