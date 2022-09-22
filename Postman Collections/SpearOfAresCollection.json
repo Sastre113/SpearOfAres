@@ -429,7 +429,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"nombre\": \"{{$randomStreetName}}\"\r\n}",
+							"raw": "{\r\n  \"nombre\": \"{{$randomStreetName}}\",\r\n  \"propietario\": \"{{$randomFullName}}\",\r\n  \"cantidadEmpleados\": {{$randomAlphaNumeric}}\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -609,7 +609,7 @@
 	],
 	"variable": [
 		{
-			"id": "51ce94de-314a-43e2-8623-851936ff7447",
+			"id": "1c14d578-e8a9-4ba4-bbe9-18cc53d4df6d",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
