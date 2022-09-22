@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -40,9 +41,9 @@ public class EmpresaController {
 	}
 	
 	@PostMapping(path = "/insertarEmpresa", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<RespuestaInsertarEmpresaDTO> insertarEmpresa(RequestEntity<PeticionInsertarEmpresaDTO> peticionDTO) {	
+	public ResponseEntity<RespuestaInsertarEmpresaDTO> insertarEmpresa(@RequestBody PeticionInsertarEmpresaDTO peticionDTO) {	
 		try {
-			return ResponseEntity.ok(this.empresaService.insertarEmpresa(peticionDTO.getBody()));	
+			return ResponseEntity.ok(this.empresaService.insertarEmpresa(peticionDTO));	
 		} catch (AresException e) {
 			return ResponseEntity.status(e.getHttpStatus()).body(e.mapError(RespuestaInsertarEmpresaDTO.class));
 		}	 

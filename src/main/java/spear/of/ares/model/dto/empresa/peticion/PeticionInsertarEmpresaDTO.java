@@ -3,10 +3,9 @@
  */
 package spear.of.ares.model.dto.empresa.peticion;
 
-import javax.validation.Valid;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-
-import spear.of.ares.model.dto.empresa.EmpresaDTO;
 
 /**
  * @author Miguel Á. Sastre <sastre113@gmail.com>
@@ -15,14 +14,35 @@ import spear.of.ares.model.dto.empresa.EmpresaDTO;
  */
 public class PeticionInsertarEmpresaDTO {
 
-	@Valid @NotNull
-	private EmpresaDTO empresa;
+	@NotEmpty
+	private String nombre;
+	@NotEmpty
+	private String propietario;
+	@NotNull
+	@Min(value = 1)
+	private Integer cantidadEmpleados;
 
-	public EmpresaDTO getEmpresa() {
-		return empresa;
+	public String getNombre() {
+		return nombre;
 	}
 
-	public void setEmpresa(EmpresaDTO empresa) {
-		this.empresa = empresa;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getPropietario() {
+		return propietario;
+	}
+
+	public void setPropietario(String propietario) {
+		this.propietario = propietario;
+	}
+
+	public Integer getCantidadEmpleados() {
+		return cantidadEmpleados;
+	}
+
+	public void setCantidadEmpleados(Integer cantidadEmpleados) {
+		this.cantidadEmpleados = cantidadEmpleados;
 	}
 }

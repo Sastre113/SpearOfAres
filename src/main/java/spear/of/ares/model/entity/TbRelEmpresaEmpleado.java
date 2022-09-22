@@ -7,6 +7,7 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -22,6 +23,7 @@ import lombok.Data;
 @Data
 public class TbRelEmpresaEmpleado {
 
+	@Id
 	@Column(name = "id_relacion", updatable = false, nullable = false, length = 36)
 	private String idRelacion;
 	@Column(name = "id_empresa", updatable = false, nullable = false, length = 36)
@@ -82,4 +84,5 @@ public class TbRelEmpresaEmpleado {
 	public void setFechaBaja(Date fechaBaja) {
 		this.fechaBaja = fechaBaja;
 	}
+
 }

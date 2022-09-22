@@ -4,8 +4,10 @@
 package spear.of.ares.service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -39,11 +41,17 @@ public class EmpresaService implements IEmpresaService {
 	@Override
 	public RespuestaInsertarEmpresaDTO insertarEmpresa(PeticionInsertarEmpresaDTO peticioDTO) throws AresException {
 		AresUtils.validarPeticion(peticioDTO);
-		TbEmpresa empresaEntity = this.mapDtoToEntity(peticioDTO.getEmpresa());
+		TbEmpresa empresaEntity = new TbEmpresa();
+		empresaEntity.setIdEmpresa(UUID.randomUUID().toString());
+		empresaEntity.setNombre(peticioDTO.getNombre());
+		empresaEntity.setPropietario(peticioDTO.getPropietario());
+		empresaEntity.setCantidadEmpleados(peticioDTO.getCantidadEmpleados());
+		empresaEntity.setFechaCreacion(new Date());
+		
 		this.empresaRepository.save(empresaEntity);
 		
 		RespuestaInsertarEmpresaDTO respuesta = AresNotificacion.OK.construir(RespuestaInsertarEmpresaDTO.class);
-		respuesta.setEmpresa(peticioDTO.getEmpresa());
+		respuesta.setEmpresa(empresaEntity);
 		
 		return respuesta;
 	}
@@ -113,8 +121,4 @@ public class EmpresaService implements IEmpresaService {
 
 		return empresaEntity;
 	}
-
-	
-
-	
 }
