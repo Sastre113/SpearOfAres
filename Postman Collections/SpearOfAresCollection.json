@@ -419,6 +419,19 @@
 			"name": "GestionEmpresa",
 			"item": [
 				{
+					"name": "InsertarEmpresa",
+					"id": "bb2e4f6d-4fa6-4386-a8f9-1eb601766697",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8080/gestionEmpresa/insertarEmpresa"
+					},
+					"response": []
+				},
+				{
 					"name": "ObtenerEmpresaById",
 					"id": "66be1876-ee4f-4973-b4ea-88d89c4b0820",
 					"protocolProfileBehavior": {
@@ -483,6 +496,53 @@
 					]
 				},
 				{
+					"name": "ObtenerListarEmpresas",
+					"id": "758c6c5d-2c70-491e-b18a-19ce3ca3443d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/gestionEmpresa/listarEmpresas"
+					},
+					"response": [
+						{
+							"id": "d88f0289-94d8-4fd3-bbeb-e61ecb74db43",
+							"name": "200 - ObtenerEmpleadoById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/gestionEmpleado/obtenerEmpleadoPorId?idEmpleado=75c3e4d5-b81b-42b3-b451-0783b7f091f5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gestionEmpleado",
+										"obtenerEmpleadoPorId"
+									],
+									"query": [
+										{
+											"key": "idEmpleado",
+											"value": "75c3e4d5-b81b-42b3-b451-0783b7f091f5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Petición realizada con exito\",\n    \"mensajeExtendido\": null,\n    \"empleadoDTO\": {\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Pepe\",\n        \"fechaNacimiento\": \"1993-02-18T00:00:00.000+00:00\"\n    }\n}"
+						}
+					]
+				},
+				{
 					"name": "EliminarEmpresaPorId",
 					"id": "aa172478-9246-4b4a-b029-c1425ab1ffdc",
 					"protocolProfileBehavior": {
@@ -509,19 +569,6 @@
 								}
 							]
 						}
-					},
-					"response": []
-				},
-				{
-					"name": "InsertarEmpresa",
-					"id": "bb2e4f6d-4fa6-4386-a8f9-1eb601766697",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"url": "http://localhost:8080/gestionEmpresa/insertarEmpresa"
 					},
 					"response": []
 				}
@@ -553,7 +600,7 @@
 	],
 	"variable": [
 		{
-			"id": "b4bbd0df-765f-4915-9a74-366eac1705c1",
+			"id": "c401407d-02e5-428a-a424-0c1d1e7e0368",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
