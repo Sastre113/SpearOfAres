@@ -15,6 +15,7 @@ import org.springframework.util.StringUtils;
 import spear.of.ares.excepcion.AresException;
 import spear.of.ares.model.dto.empresa.EmpresaDTO;
 import spear.of.ares.model.dto.empresa.peticion.PeticionInsertarEmpresaDTO;
+import spear.of.ares.model.dto.empresa.respuesta.RespuestaEliminarEmpresaDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaInsertarEmpresaDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaListarEmpresasDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaObtenerEmpresaDTO;

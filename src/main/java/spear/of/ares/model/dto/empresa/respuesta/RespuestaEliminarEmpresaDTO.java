@@ -1,7 +1,7 @@
 /**
  * 
  */
-package spear.of.ares.service;
+package spear.of.ares.model.dto.empresa.respuesta;
 
 import spear.of.ares.model.dto.RespuestaDTO;
 import spear.of.ares.model.dto.empresa.EmpresaDTO;

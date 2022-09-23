@@ -4,7 +4,6 @@
 package spear.of.ares.controller;
 
 import org.springframework.http.MediaType;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,11 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import spear.of.ares.excepcion.AresException;
 import spear.of.ares.model.dto.empresa.peticion.PeticionInsertarEmpresaDTO;
+import spear.of.ares.model.dto.empresa.respuesta.RespuestaEliminarEmpresaDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaInsertarEmpresaDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaListarEmpresasDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaObtenerEmpresaDTO;
 import spear.of.ares.service.IEmpresaService;
-import spear.of.ares.service.RespuestaEliminarEmpresaDTO;
 
 /**
  * 
