@@ -42,6 +42,7 @@ public class TbRelEmpresaEmpleado {
 	private Date fechaAlta;
 	@Column(name = "fecha_baja", updatable = false, nullable = false)
 	private Date fechaBaja;
+	
 	public String getIdRelacion() {
 		return idRelacion;
 	}

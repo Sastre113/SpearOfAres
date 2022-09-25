@@ -18,6 +18,7 @@ import spear.of.ares.model.dto.empresa.peticion.PeticionInsertarEmpresaDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaEliminarEmpresaDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaInsertarEmpresaDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaListarEmpresasDTO;
+import spear.of.ares.model.dto.empresa.respuesta.RespuestaMostrarEmpleadosDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaObtenerEmpresaDTO;
 import spear.of.ares.service.IEmpresaService;
 
@@ -72,6 +73,15 @@ public class EmpresaController {
 			return ResponseEntity.ok(this.empresaService.listarEmpresas());	
 		} catch (AresException e) {
 			return ResponseEntity.status(e.getHttpStatus()).body(e.mapError(RespuestaListarEmpresasDTO.class));
+		}	 
+	}
+	
+	@GetMapping(path = "/mostrarEmpleados", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<RespuestaMostrarEmpleadosDTO> mostrarEmpleados(@RequestParam String idEmpresa) {	
+		try {
+			return ResponseEntity.ok(this.empresaService.mostrarEmpleados(idEmpresa));	
+		} catch (AresException e) {
+			return ResponseEntity.status(e.getHttpStatus()).body(e.mapError(RespuestaMostrarEmpleadosDTO.class));
 		}	 
 	}
 }

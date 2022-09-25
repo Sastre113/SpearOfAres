@@ -4,6 +4,7 @@
 package spear.of.ares.model.entity;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -25,7 +26,7 @@ public class TbEmpleado {
 	@Id
 	@Column(name = "id_empleado", nullable = false, length = 36)
 	private String idEmpleado;
-	
+
 	@Column(name = "dni", nullable = false, length = 9)
 	private String dni;
 	@Column(name = "nombre", nullable = false, length = 100)
@@ -34,7 +35,7 @@ public class TbEmpleado {
 	private Date fechaNacimiento;
 
 	@OneToMany(mappedBy = "empleado")
-	private Set<TbRelEmpresaEmpleado> relEmpresaEmpleado;
+	private List<TbRelEmpresaEmpleado> relEmpresaEmpleado;
 
 	public String getIdEmpleado() {
 		return idEmpleado;
@@ -68,11 +69,11 @@ public class TbEmpleado {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
-	public Set<TbRelEmpresaEmpleado> getRelEmpresaEmpleado() {
+	public List<TbRelEmpresaEmpleado> getRelEmpresaEmpleado() {
 		return relEmpresaEmpleado;
 	}
 
-	public void setRelEmpresaEmpleado(Set<TbRelEmpresaEmpleado> relEmpresaEmpleado) {
+	public void setRelEmpresaEmpleado(List<TbRelEmpresaEmpleado> relEmpresaEmpleado) {
 		this.relEmpresaEmpleado = relEmpresaEmpleado;
 	}
 

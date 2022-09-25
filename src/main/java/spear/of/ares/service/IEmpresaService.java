@@ -8,6 +8,7 @@ import spear.of.ares.model.dto.empresa.peticion.PeticionInsertarEmpresaDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaEliminarEmpresaDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaInsertarEmpresaDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaListarEmpresasDTO;
+import spear.of.ares.model.dto.empresa.respuesta.RespuestaMostrarEmpleadosDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaObtenerEmpresaDTO;
 
 /**
@@ -21,4 +22,5 @@ public interface IEmpresaService {
 	public RespuestaEliminarEmpresaDTO eliminarEmpresa(String idEmpresa) throws AresException;
 	public RespuestaObtenerEmpresaDTO obtenerEmpresaPorId(String idEmpresa) throws AresException;
 	public RespuestaListarEmpresasDTO listarEmpresas() throws AresException;
+	public RespuestaMostrarEmpleadosDTO mostrarEmpleados(String idEmpresa) throws AresException;;
 }

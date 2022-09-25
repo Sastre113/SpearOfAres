@@ -13,13 +13,17 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import spear.of.ares.excepcion.AresException;
+import spear.of.ares.model.dto.Empleado.EmpleadoDTO;
 import spear.of.ares.model.dto.empresa.EmpresaDTO;
 import spear.of.ares.model.dto.empresa.peticion.PeticionInsertarEmpresaDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaEliminarEmpresaDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaInsertarEmpresaDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaListarEmpresasDTO;
+import spear.of.ares.model.dto.empresa.respuesta.RespuestaMostrarEmpleadosDTO;
 import spear.of.ares.model.dto.empresa.respuesta.RespuestaObtenerEmpresaDTO;
+import spear.of.ares.model.entity.TbEmpleado;
 import spear.of.ares.model.entity.TbEmpresa;
+import spear.of.ares.model.entity.TbRelEmpresaEmpleado;
 import spear.of.ares.repository.IEmpresaRepository;
 import spear.of.ares.utils.AresNotificacion;
 import spear.of.ares.utils.AresUtils;
@@ -92,7 +96,20 @@ public class EmpresaService implements IEmpresaService {
 		
 		return respuesta;
 	}
-
+	
+	@Override
+	public RespuestaMostrarEmpleadosDTO mostrarEmpleados(String idEmpresa) throws AresException {
+		if(!StringUtils.hasLength(idEmpresa)) {
+			throw new AresException(AresNotificacion.PT_ERR_VALIDACION);
+		}
+		
+		TbEmpresa empresaEntity = this.empresaRepository.findById(idEmpresa).orElseThrow();
+		RespuestaMostrarEmpleadosDTO respuesta = AresNotificacion.OK.construir(RespuestaMostrarEmpleadosDTO.class);
+		respuesta.setEmpresa(this.mapEntityToDTO(empresaEntity));
+		respuesta.setListaEmpleados(this.mapEmpleados(empresaEntity.getRelEmpresaEmpleado()));
+		
+		return respuesta;
+	}
 
 	private EmpresaDTO mapEntityToDTO(TbEmpresa empresaEntity) {
 		EmpresaDTO empresaDTO = new EmpresaDTO();
@@ -116,5 +133,29 @@ public class EmpresaService implements IEmpresaService {
 		empresaEntity.setFechaDesaparacion(AresUtils.convertirLocalTimeToDate(empresaDTO.getFechaDesaparicion()));
 
 		return empresaEntity;
+	}
+	
+	private List<EmpleadoDTO> mapEmpleados(List<TbRelEmpresaEmpleado> relEmpresaEmpleado) {
+		List<EmpleadoDTO> listaEmpleados = new ArrayList<>();
+		
+		if(relEmpresaEmpleado != null && !relEmpresaEmpleado.isEmpty()) {
+			relEmpresaEmpleado.forEach(relEmpresaEmpleadoEntity -> listaEmpleados.add(this.mapEntityToDTO(relEmpresaEmpleadoEntity.getEmpleado())));
+		}
+		
+		return listaEmpleados;
+	}
+	
+	/*
+	 * 	TODO Ya existe en EmpleadoService. Generar una clase mapeadora.
+	 */
+	private EmpleadoDTO mapEntityToDTO(TbEmpleado empleadoEntity) {
+		EmpleadoDTO empleadoDTO = new EmpleadoDTO();
+		
+		empleadoDTO.setIdEmpleado(empleadoEntity.getIdEmpleado());
+		empleadoDTO.setDni(empleadoEntity.getDni());
+		empleadoDTO.setFechaNacimiento(empleadoEntity.getFechaNacimiento());
+		empleadoDTO.setNombre(empleadoEntity.getNombre());
+		
+		return empleadoDTO;
 	}
 }
