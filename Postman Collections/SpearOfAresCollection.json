@@ -535,6 +535,70 @@
 					]
 				},
 				{
+					"name": "MostrarEmpleados",
+					"id": "311defcd-aa72-4098-b645-2c8e8abd089f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/gestionEmpresa/obtenerEmpresaPorId?idEmpresa=d6503c52-7c8f-11ec-90d6-0242ac120003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gestionEmpresa",
+								"obtenerEmpresaPorId"
+							],
+							"query": [
+								{
+									"key": "idEmpresa",
+									"value": "d6503c52-7c8f-11ec-90d6-0242ac120003"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "7a457dd7-7ac9-48a4-9df0-e41a1fc41d0d",
+							"name": "200 - ObtenerEmpleadoById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/gestionEmpleado/obtenerEmpleadoPorId?idEmpleado=75c3e4d5-b81b-42b3-b451-0783b7f091f5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gestionEmpleado",
+										"obtenerEmpleadoPorId"
+									],
+									"query": [
+										{
+											"key": "idEmpleado",
+											"value": "75c3e4d5-b81b-42b3-b451-0783b7f091f5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Petición realizada con exito\",\n    \"mensajeExtendido\": null,\n    \"empleadoDTO\": {\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Pepe\",\n        \"fechaNacimiento\": \"1993-02-18T00:00:00.000+00:00\"\n    }\n}"
+						}
+					]
+				},
+				{
 					"name": "ObtenerListasEmpresas",
 					"id": "758c6c5d-2c70-491e-b18a-19ce3ca3443d",
 					"protocolProfileBehavior": {
@@ -609,7 +673,7 @@
 	],
 	"variable": [
 		{
-			"id": "26e79add-2e65-4ae1-8acf-493a287a970e",
+			"id": "2c2c7006-5719-45b5-bce8-24e8d547ad94",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
