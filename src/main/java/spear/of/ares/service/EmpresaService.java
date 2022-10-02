@@ -44,13 +44,13 @@ public class EmpresaService implements IEmpresaService {
 	}
 
 	@Override
-	public RespuestaInsertarEmpresaDTO insertarEmpresa(PeticionInsertarEmpresaDTO peticioDTO) throws AresException {
-		AresUtils.validarPeticion(peticioDTO);
+	public RespuestaInsertarEmpresaDTO insertarEmpresa(PeticionInsertarEmpresaDTO peticionDTO) throws AresException {
+		AresUtils.validarPeticion(peticionDTO);
 		TbEmpresa empresaEntity = new TbEmpresa();
 		empresaEntity.setIdEmpresa(UUID.randomUUID().toString());
-		empresaEntity.setNombre(peticioDTO.getNombre());
-		empresaEntity.setPropietario(peticioDTO.getPropietario());
-		empresaEntity.setCantidadEmpleados(peticioDTO.getCantidadEmpleados());
+		empresaEntity.setNombre(peticionDTO.getNombre());
+		empresaEntity.setPropietario(peticionDTO.getPropietario());
+		empresaEntity.setCantidadEmpleados(peticionDTO.getCantidadEmpleados());
 		empresaEntity.setFechaCreacion(new Date());
 		
 		this.empresaRepository.save(empresaEntity);
