@@ -682,7 +682,7 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"url": "http://localhost:8080/gestionRelacionEmpresaEmpleado/altaEmpleado"
+						"url": "http://localhost:8080/gestionRelacionEmpresaEmpleado/bajaEmpleado"
 					},
 					"response": []
 				}
@@ -714,7 +714,7 @@
 	],
 	"variable": [
 		{
-			"id": "fed68eba-2fba-445a-adb5-5ab1aaabcc93",
+			"id": "8fea59f4-e453-418b-8357-445927115789",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
