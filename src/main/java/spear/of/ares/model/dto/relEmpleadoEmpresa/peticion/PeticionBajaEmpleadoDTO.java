@@ -10,4 +10,6 @@ package spear.of.ares.model.dto.relEmpleadoEmpresa.peticion;
  */
 public class PeticionBajaEmpleadoDTO {
 
+	private String idRelacion;
+	
 }

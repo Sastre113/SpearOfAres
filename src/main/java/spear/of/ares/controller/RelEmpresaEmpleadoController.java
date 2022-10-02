@@ -5,14 +5,15 @@ package spear.of.ares.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import spear.of.ares.excepcion.AresException;
 import spear.of.ares.model.dto.relEmpleadoEmpresa.peticion.PeticionAltaEmpleadoDTO;
-import spear.of.ares.model.dto.relEmpleadoEmpresa.peticion.PeticionBajaEmpleadoDTO;
 import spear.of.ares.model.dto.relEmpleadoEmpresa.peticion.PeticionListarRelacionesDTO;
 import spear.of.ares.model.dto.relEmpleadoEmpresa.respuesta.RespuestaAltaEmpleadoDTO;
 import spear.of.ares.model.dto.relEmpleadoEmpresa.respuesta.RespuestaBajaEmpleadoDTO;
@@ -42,10 +43,10 @@ public class RelEmpresaEmpleadoController {
 		}	 
 	}
 	
-	@PostMapping(path = "/bajaEmpleado", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<RespuestaBajaEmpleadoDTO> bajaEmpleado(@RequestBody PeticionBajaEmpleadoDTO peticionDTO) {	
+	@GetMapping(path = "/bajaEmpleado", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<RespuestaBajaEmpleadoDTO> bajaEmpleado(@RequestParam String idRelacion) {	
 		try {
-			return ResponseEntity.ok(this.relEmpresaEmpleadoService.bajaEmpleado(peticionDTO));	
+			return ResponseEntity.ok(this.relEmpresaEmpleadoService.bajaEmpleado(idRelacion));	
 		} catch (AresException e) {
 			return ResponseEntity.status(e.getHttpStatus()).body(e.mapError(RespuestaBajaEmpleadoDTO.class));
 		}	 

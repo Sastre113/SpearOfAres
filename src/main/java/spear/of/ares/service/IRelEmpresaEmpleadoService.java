@@ -19,6 +19,6 @@ import spear.of.ares.model.dto.relEmpleadoEmpresa.respuesta.RespuestaBajaEmplead
 public interface IRelEmpresaEmpleadoService {
 
 	public RespuestaAltaEmpleadoDTO altaEmpleado(PeticionAltaEmpleadoDTO peticionDTO) throws AresException;
-	public RespuestaBajaEmpleadoDTO bajaEmpleado(PeticionBajaEmpleadoDTO peticionDTO) throws AresException;
+	public RespuestaBajaEmpleadoDTO bajaEmpleado(String idRelacion) throws AresException;
 	public RespuestaListarRelacionesDTO listarRelaciones(PeticionListarRelacionesDTO peticionDTO) throws AresException;
 }
