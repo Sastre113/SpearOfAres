@@ -658,8 +658,9 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8080/gestionRelacionEmpresaEmpleado/altaEmpleado"
 					},
 					"response": []
 				}
@@ -691,7 +692,7 @@
 	],
 	"variable": [
 		{
-			"id": "3268cbfe-0b7a-442c-b021-208b579b8c9d",
+			"id": "786a6341-489b-4484-bd50-2aa2400ffcbd",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
