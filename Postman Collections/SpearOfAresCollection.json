@@ -721,24 +721,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:8080/gestionRelacionEmpresaEmpleado/bajaEmpleado?idRelacion",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"gestionRelacionEmpresaEmpleado",
-								"bajaEmpleado"
-							],
-							"query": [
-								{
-									"key": "idRelacion",
-									"value": null
-								}
-							]
-						}
+						"url": "http://localhost:8080/gestionRelacionEmpresaEmpleadolistarRelEmpresaEmpleado"
 					},
 					"response": []
 				}
@@ -770,7 +753,7 @@
 	],
 	"variable": [
 		{
-			"id": "a598efda-04fa-47f2-bc2b-fc32d7e1c4b4",
+			"id": "d4229477-1eac-4978-b937-93e0a53f6336",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
