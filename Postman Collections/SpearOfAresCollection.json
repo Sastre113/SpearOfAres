@@ -652,7 +652,7 @@
 			"name": "GestionRelaciones",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "AltaEmpleado",
 					"id": "b0426f75-3690-4ab0-80fb-8b6f1b2f0c0d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -692,7 +692,7 @@
 	],
 	"variable": [
 		{
-			"id": "786a6341-489b-4484-bd50-2aa2400ffcbd",
+			"id": "f1e89368-54ca-4fb5-896b-b3667d520794",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
