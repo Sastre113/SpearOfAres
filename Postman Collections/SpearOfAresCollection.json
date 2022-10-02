@@ -662,7 +662,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"idEmpresa\":\"d6503c52-7c8f-11ec-90d6-0242ac120003\",\r\n    \"idEmpleado\":\"c059d9ac-7c90-11ec-90d6-0242ac120003\",\r\n    \"tipoPuesto\":\"\"\r\n}",
+							"raw": "{\r\n    \"idEmpresa\":\"d6503c52-7c8f-11ec-90d6-0242ac120003\",\r\n    \"idEmpleado\":\"c059d9ac-7c90-11ec-90d6-0242ac120003\",\r\n    \"tipoPuesto\":\"Programador\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -770,7 +770,7 @@
 	],
 	"variable": [
 		{
-			"id": "1d0148ff-02ad-4e74-bcc9-72ecf238e1c9",
+			"id": "a265ff87-597c-4f6e-bdd9-005aba215048",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
