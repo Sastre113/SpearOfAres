@@ -703,6 +703,37 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "listarRelaciones",
+					"id": "df11b133-86c8-43f3-8577-2d8431d973f3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/gestionRelacionEmpresaEmpleado/bajaEmpleado?idRelacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gestionRelacionEmpresaEmpleado",
+								"bajaEmpleado"
+							],
+							"query": [
+								{
+									"key": "idRelacion",
+									"value": null,
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "d818cedb-8ac5-44a0-a6b9-e7780c8c1c92"
@@ -732,7 +763,7 @@
 	],
 	"variable": [
 		{
-			"id": "39435c1d-874e-40cd-b087-8d498546417d",
+			"id": "0e9f03b0-64fb-4e4e-9e79-666629beb6d3",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
