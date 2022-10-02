@@ -680,7 +680,7 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [],
 						"url": {
 							"raw": "http://localhost:8080/gestionRelacionEmpresaEmpleado/bajaEmpleado?idRelacion",
@@ -696,8 +696,7 @@
 							"query": [
 								{
 									"key": "idRelacion",
-									"value": null,
-									"type": "text"
+									"value": null
 								}
 							]
 						}
@@ -771,7 +770,7 @@
 	],
 	"variable": [
 		{
-			"id": "f166e9bd-619d-45cd-a4b8-82fe830d7e03",
+			"id": "509baa15-ba5e-4b8b-bc6f-eb89c892e3d4",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
