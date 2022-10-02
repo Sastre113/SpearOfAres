@@ -721,7 +721,7 @@
 								}
 							}
 						},
-						"url": "http://localhost:8080/gestionRelacionEmpresaEmpleadolistarRelEmpresaEmpleado"
+						"url": "http://localhost:8080/gestionRelacionEmpresaEmpleado/listarRelEmpresaEmpleado"
 					},
 					"response": []
 				}
@@ -753,7 +753,7 @@
 	],
 	"variable": [
 		{
-			"id": "d4229477-1eac-4978-b937-93e0a53f6336",
+			"id": "5f2b8ca1-69f2-414a-bacc-b3b2907076b0",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
