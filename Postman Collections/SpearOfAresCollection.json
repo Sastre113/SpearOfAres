@@ -683,7 +683,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/gestionRelacionEmpresaEmpleado/bajaEmpleado?idRelacion",
+							"raw": "http://localhost:8080/gestionRelacionEmpresaEmpleado/bajaEmpleado?idRelacion=a5ddcd79-0e97-4c85-b3de-b5565a84f849",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -696,7 +696,7 @@
 							"query": [
 								{
 									"key": "idRelacion",
-									"value": null
+									"value": "a5ddcd79-0e97-4c85-b3de-b5565a84f849"
 								}
 							]
 						}
@@ -770,7 +770,7 @@
 	],
 	"variable": [
 		{
-			"id": "a265ff87-597c-4f6e-bdd9-005aba215048",
+			"id": "fa299c6c-8d3e-448b-9858-54e6312e2cb4",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
