@@ -660,6 +660,15 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idEmpresa\":\"\",\r\n    \"idEmpleado\":\"\",\r\n    \"tipoPuesto\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": "http://localhost:8080/gestionRelacionEmpresaEmpleado/altaEmpleado"
 					},
 					"response": []
@@ -705,7 +714,7 @@
 	],
 	"variable": [
 		{
-			"id": "af3a8e66-6b57-4da3-88f2-d8f1fb78807c",
+			"id": "fed68eba-2fba-445a-adb5-5ab1aaabcc93",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
