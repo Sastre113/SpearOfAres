@@ -81,6 +81,8 @@ public class RelEmpresaEmpleadosService implements IRelEmpresaEmpleadoService {
 		listaResultado.forEach(relacionEntity -> respuesta.getListaRelacion().add(this.mapEntityToDTO(relacionEntity)));
 		return respuesta;
 		*/
+		
+		return  null;
 	}
 	
 	

@@ -3,12 +3,8 @@
  */
 package spear.of.ares.dao;
 
-import java.util.List;
-
 import org.springframework.data.repository.CrudRepository;
 
-import spear.of.ares.model.entity.TbEmpleado;
-import spear.of.ares.model.entity.TbEmpresa;
 import spear.of.ares.model.entity.TbRelEmpresaEmpleado;
 
 /**
