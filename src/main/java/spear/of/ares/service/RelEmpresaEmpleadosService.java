@@ -7,6 +7,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+import javax.persistence.EntityManager;
+
 import org.springframework.stereotype.Service;
 
 import spear.of.ares.controller.RespuestaListarRelacionesDTO;
@@ -31,13 +33,14 @@ import spear.of.ares.utils.AresUtils;
 @Service("GestionRelEmpresaEmpleadoService")
 public class RelEmpresaEmpleadosService implements IRelEmpresaEmpleadoService {
 
+	private EntityManager entityManager;
 	private IEmpleadoDAO empleadoDAO;
 	private IEmpresaRepository empresaRepository;
 	private IRelEmpresaEmpleadoDAO relEmpresaEmpleadoDAO;
 
 	public RelEmpresaEmpleadosService(IEmpleadoDAO empleadoDAO, IEmpresaRepository empresaRepository,
-			IRelEmpresaEmpleadoDAO relEmpresaEmpleadoDAO) {
-		super();
+			IRelEmpresaEmpleadoDAO relEmpresaEmpleadoDAO, EntityManager entityManager) {
+		this.entityManager = entityManager;
 		this.empleadoDAO = empleadoDAO;
 		this.empresaRepository = empresaRepository;
 		this.relEmpresaEmpleadoDAO = relEmpresaEmpleadoDAO;
@@ -76,13 +79,12 @@ public class RelEmpresaEmpleadosService implements IRelEmpresaEmpleadoService {
 
 	@Override
 	public RespuestaListarRelacionesDTO listarRelaciones(PeticionListarRelacionesDTO peticionDTO) throws AresException {
-		/*
+		List<TbRelEmpresaEmpleado> listaResultado = this.relEmpresaEmpleadoDAO.getRelaciones(peticionDTO.getIdRelacion(),
+				peticionDTO.getIdEmpresa());
+		
 		RespuestaListarRelacionesDTO respuesta = AresNotificacion.OK.construir(RespuestaListarRelacionesDTO.class);
 		listaResultado.forEach(relacionEntity -> respuesta.getListaRelacion().add(this.mapEntityToDTO(relacionEntity)));
 		return respuesta;
-		*/
-		
-		return  null;
 	}
 	
 	

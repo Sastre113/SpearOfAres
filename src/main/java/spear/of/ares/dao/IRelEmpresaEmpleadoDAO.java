@@ -3,7 +3,10 @@
  */
 package spear.of.ares.dao;
 
-import org.springframework.data.repository.CrudRepository;
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import spear.of.ares.model.entity.TbRelEmpresaEmpleado;
 
@@ -12,6 +15,10 @@ import spear.of.ares.model.entity.TbRelEmpresaEmpleado;
  * @version 23:48:40 - 02/10/2022
  *
  */
-public interface IRelEmpresaEmpleadoDAO extends CrudRepository<TbRelEmpresaEmpleado, String> {
-
+public interface IRelEmpresaEmpleadoDAO extends JpaRepository<TbRelEmpresaEmpleado, String> {
+	
+	@Query(" FROM TbRelEmpresaEmpleado "
+		+ " WHERE idRelacion = :idRelacion"
+		+ " OR empresa.idEmpresa = :idEmpresa")
+	public List<TbRelEmpresaEmpleado> getRelaciones(String idRelacion, String idEmpresa);
 }
