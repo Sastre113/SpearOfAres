@@ -26,18 +26,6 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
 
-
-# Configuración postgreSQL
-#spring:  
-#  jpa:  
-#    hibernate:  
-#      ddl-auto: create  
-#    database-platform: org.hibernate.dialect.PostgreSQLDialect  
-#  datasource:  
-#    url: "jdbc:postgresql://localhost:5432/Empresa"  
-#    username: belazar  
-#    password: belazar13
-#
 ---
 
 #querySql:

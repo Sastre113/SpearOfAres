@@ -76,13 +76,7 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<!-- Configuracion para postgreSQL
-		 <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        -->
+
 	</dependencies>
 
 	<dependencyManagement>
