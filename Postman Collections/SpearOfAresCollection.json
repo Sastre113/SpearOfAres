@@ -134,7 +134,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"idEmpleado\": \"c2eda45f-54a7-4db1-bf64-92c829398462\",\r\n    \"nombre\": \"Peper EL gaviotar\",\r\n    \"fechaNacimiento\": \"1993-01-31\"\r\n}",
+							"raw": "{\r\n    \"idEmpleado\": \"c2eda45f-54a7-4db1-bf64-92c829398462\",\r\n    \"nombre\": \"\",\r\n    \"fechaNacimiento\": \"1993-01-31\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -753,7 +753,7 @@
 	],
 	"variable": [
 		{
-			"id": "65a10e80-4375-4f61-aa63-73b201f67257",
+			"id": "1ebbe471-95cb-49df-9392-1a24fb82669c",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
