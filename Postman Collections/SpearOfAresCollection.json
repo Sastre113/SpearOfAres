@@ -26,7 +26,8 @@
 								}
 							}
 						},
-						"url": "http://localhost:8080/gestionEmpleado/insertarEmpleado"
+						"url": "http://localhost:8080/gestionEmpleado/insertarEmpleado",
+						"description": "Petición para insertar un empleado"
 					},
 					"response": [
 						{
@@ -754,7 +755,7 @@
 	],
 	"variable": [
 		{
-			"id": "a8548d5c-becd-4e37-9983-5d031d661298",
+			"id": "f6df81a1-9865-4f5e-a0f2-2500108ba926",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
