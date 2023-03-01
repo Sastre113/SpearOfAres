@@ -359,7 +359,8 @@
 					]
 				}
 			],
-			"id": "26b98f7c-985b-404f-8260-fab13ff01a8a"
+			"id": "26b98f7c-985b-404f-8260-fab13ff01a8a",
+			"description": "Esto es una prueba de documentación"
 		},
 		{
 			"name": "FeingClientTester",
@@ -753,7 +754,7 @@
 	],
 	"variable": [
 		{
-			"id": "1ebbe471-95cb-49df-9392-1a24fb82669c",
+			"id": "a8548d5c-becd-4e37-9983-5d031d661298",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
