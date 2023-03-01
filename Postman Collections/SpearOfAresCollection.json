@@ -755,7 +755,7 @@
 	],
 	"variable": [
 		{
-			"id": "f6df81a1-9865-4f5e-a0f2-2500108ba926",
+			"id": "7ed72b8c-8cca-44a2-a21e-942a18b5590c",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
