@@ -28,7 +28,7 @@
 							}
 						},
 						"url": "{{host}}/gestionEmpleado/insertarEmpleado",
-						"description": "Petición para insertar un empleado"
+						"description": "Descripción de la petición"
 					},
 					"response": [
 						{
@@ -756,7 +756,7 @@
 	],
 	"variable": [
 		{
-			"id": "3a590902-c11a-43f6-8edf-5ecfe209584c",
+			"id": "18577bef-46e0-4f46-8384-acded0acf213",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
