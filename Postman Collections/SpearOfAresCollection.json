@@ -362,7 +362,7 @@
 				}
 			],
 			"id": "26b98f7c-985b-404f-8260-fab13ff01a8a",
-			"description": "Esto es una prueba de documentación"
+			"description": "Descripción a nivel de carpeta, GestionEmpleado"
 		},
 		{
 			"name": "FeingClientTester",
@@ -756,7 +756,7 @@
 	],
 	"variable": [
 		{
-			"id": "18577bef-46e0-4f46-8384-acded0acf213",
+			"id": "37b17d84-ba84-4af4-bf80-439fa189ed73",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
