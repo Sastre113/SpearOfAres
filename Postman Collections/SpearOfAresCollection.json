@@ -23,6 +23,18 @@
 								],
 								"type": "text/javascript"
 							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "699f07c1-0587-4969-ab56-34f99c4104ff",
+								"exec": [
+									"// Esto es una prueba\r",
+									"var test = 0\r",
+									""
+								],
+								"type": "text/javascript"
+							}
 						}
 					],
 					"id": "189fbf7e-a2a6-410b-9666-ba9977165ea7",
@@ -770,7 +782,7 @@
 	],
 	"variable": [
 		{
-			"id": "78635110-c419-446c-b693-d3a4bf25d7fe",
+			"id": "b6b1a4c9-ba6b-4611-bb24-1b0217df9938",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
