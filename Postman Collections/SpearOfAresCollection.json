@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "105e36a1-f9d3-4015-95b9-291af1d8c7ce",
 		"name": "SpearOfAresApi",
-		"description": "Descripción principal de la cabecera",
+		"description": "Descripción principal de la **cabecera**",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -756,7 +756,7 @@
 	],
 	"variable": [
 		{
-			"id": "ed083fed-8f47-484b-981e-8a9f982df80a",
+			"id": "3933fba6-ec2c-4491-9538-b30552437efe",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
