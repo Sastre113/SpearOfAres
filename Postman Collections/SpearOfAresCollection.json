@@ -10,7 +10,7 @@
 			"name": "GestionEmpleado",
 			"item": [
 				{
-					"name": "New Folder",
+					"name": "Nested-Folder",
 					"item": [],
 					"id": "57a93704-9d31-46b1-a8c7-6ca55aea8e4c"
 				},
@@ -929,7 +929,7 @@
 	],
 	"variable": [
 		{
-			"id": "5ed27efb-86ad-45b1-b307-d27bdf26743e",
+			"id": "59d1db3a-d199-4d6e-a2bf-ead5ca2221c4",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
