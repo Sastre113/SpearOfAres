@@ -155,7 +155,8 @@
 							]
 						}
 					],
-					"id": "57a93704-9d31-46b1-a8c7-6ca55aea8e4c"
+					"id": "57a93704-9d31-46b1-a8c7-6ca55aea8e4c",
+					"description": "Descripción de nested folder"
 				},
 				{
 					"name": "InsertarEmpleado",
@@ -1072,7 +1073,7 @@
 	],
 	"variable": [
 		{
-			"id": "fbb856c6-3e90-4603-9ebd-6d82cfbaf666",
+			"id": "5e01a182-6a5a-4b37-bddf-273290dc032c",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
