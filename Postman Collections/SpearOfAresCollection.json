@@ -162,7 +162,7 @@
 					"name": "Búsqueda",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "Carpeta interna",
 							"item": [],
 							"id": "9f64e952-5077-4efc-9839-892910b556b5"
 						}
@@ -1341,7 +1341,7 @@
 	],
 	"variable": [
 		{
-			"id": "d9d8418f-652e-4bed-8c06-08a15cbf5f75",
+			"id": "b4e115fd-374f-43f6-b07e-4a4fd73a46ee",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
