@@ -160,7 +160,13 @@
 				},
 				{
 					"name": "Búsqueda",
-					"item": [],
+					"item": [
+						{
+							"name": "New Folder",
+							"item": [],
+							"id": "9f64e952-5077-4efc-9839-892910b556b5"
+						}
+					],
 					"id": "114e86d7-06eb-4e85-b3e1-0a8ed2eddba3"
 				},
 				{
@@ -1335,7 +1341,7 @@
 	],
 	"variable": [
 		{
-			"id": "99002af7-6f03-4a17-bf92-09909fc3709d",
+			"id": "d9d8418f-652e-4bed-8c06-08a15cbf5f75",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
