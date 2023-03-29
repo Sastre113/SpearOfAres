@@ -159,7 +159,7 @@
 					"description": "Descripción de nested folder"
 				},
 				{
-					"name": "New Folder",
+					"name": "Búsqueda",
 					"item": [],
 					"id": "114e86d7-06eb-4e85-b3e1-0a8ed2eddba3"
 				},
@@ -1078,7 +1078,7 @@
 	],
 	"variable": [
 		{
-			"id": "ac8be627-aedf-4e24-99e0-c8f3556090a4",
+			"id": "3c4fdcd0-2ad2-43de-86e8-e56e534e358c",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
