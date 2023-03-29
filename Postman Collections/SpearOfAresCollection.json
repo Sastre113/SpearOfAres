@@ -165,7 +165,150 @@
 				},
 				{
 					"name": "Gestión",
-					"item": [],
+					"item": [
+						{
+							"name": "InsertarEmpleado Copy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "c115463c-fece-4012-b25b-3538d5be67e1",
+										"exec": [
+											"// Esto es una prueba\r",
+											"var test = 0\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "699f07c1-0587-4969-ab56-34f99c4104ff",
+										"exec": [
+											"// Esto es una prueba\r",
+											"var test = 0\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "1caa22ec-7014-431e-a2e3-958d0f54d72b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"empleado\": {\r\n        \"dni\": \"00000000T\",\r\n        \"nombre\": \"Pepe el Gaviota\",\r\n        \"fechaNacimiento\": \"\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host}}/gestionEmpleado/insertarEmpleado",
+								"description": "**Descripción** de la petición"
+							},
+							"response": [
+								{
+									"id": "7bfd265e-a0da-4f11-a5c3-6001e575c4d8",
+									"name": "200 - InsertarEmpleado - Petición correcta",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"dni\": \"00000000T\",\r\n    \"nombre\":\"Pepe\",\r\n    \"fechaNacimiento\": \"1993-02-18\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:8080/gestionEmpleado/insertarEmpleado"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 29 Jan 2022 21:47:09 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Inserción con exito!\",\n    \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\"\n}"
+								},
+								{
+									"id": "867fcfe4-d84d-44e0-8e10-9835e30db069",
+									"name": "400 - InsertarEmpleado - Dni incorrecto",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"dni\": \"\",\r\n    \"nombre\":\"Pepe\",\r\n    \"fechaNacimiento\": \"1993-02-18\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:8080/gestionEmpleado/insertarEmpleado"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 29 Jan 2022 21:47:09 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"codigo\": \"1000\",\n    \"mensaje\": \"La petición no es correcta\",\n    \"mensajeExtendido\": \"{dni: debe coincidir con \\\"\\\\d{8}[A-HJ-NP-TV-Z]\\\"}\",\n    \"idEmpleado\": null\n}"
+								}
+							]
+						}
+					],
 					"id": "eabca1f0-f07e-4f19-b6be-81cc10f4d4ba"
 				},
 				{
@@ -1083,7 +1226,7 @@
 	],
 	"variable": [
 		{
-			"id": "57c1589c-59b1-4003-bc47-9682fd2fcd04",
+			"id": "b6145036-ff1a-42df-890a-6b289af5fce9",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
