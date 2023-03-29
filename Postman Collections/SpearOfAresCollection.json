@@ -45,6 +45,12 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "esto es un token"
+									}
+								},
 								"method": "POST",
 								"header": [],
 								"body": {
@@ -1576,7 +1582,7 @@
 	],
 	"variable": [
 		{
-			"id": "d3ad4411-d2d6-4d32-a48c-a03f7adb6ad7",
+			"id": "73360958-69a1-43ad-a86a-98300d07ac26",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
