@@ -163,8 +163,215 @@
 					"item": [
 						{
 							"name": "Carpeta interna",
-							"item": [],
+							"item": [
+								{
+									"name": "InsertarEmpleado Copy 2",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "c115463c-fece-4012-b25b-3538d5be67e1",
+												"exec": [
+													"// Esto es una prueba\r",
+													"var test = 0\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "699f07c1-0587-4969-ab56-34f99c4104ff",
+												"exec": [
+													"// Esto es una prueba\r",
+													"var test = 0\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "67119c46-ebd1-45ae-992d-59e4ed29fa83",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"empleado\": {\r\n        \"dni\": \"00000000T\",\r\n        \"nombre\": \"Pepe el Gaviota\",\r\n        \"fechaNacimiento\": \"\"\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{host}}/gestionEmpleado/insertarEmpleado",
+										"description": "**Descripción** de la petición"
+									},
+									"response": [
+										{
+											"id": "6376d9ba-25a4-4043-af71-235ef6390fc3",
+											"name": "200 - InsertarEmpleado - Petición correcta",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"dni\": \"00000000T\",\r\n    \"nombre\":\"Pepe\",\r\n    \"fechaNacimiento\": \"1993-02-18\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "http://localhost:8080/gestionEmpleado/insertarEmpleado"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 29 Jan 2022 21:47:09 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Inserción con exito!\",\n    \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\"\n}"
+										},
+										{
+											"id": "9fadaac8-0408-469d-905f-c0bbb7d7596c",
+											"name": "400 - InsertarEmpleado - Dni incorrecto",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"dni\": \"\",\r\n    \"nombre\":\"Pepe\",\r\n    \"fechaNacimiento\": \"1993-02-18\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "http://localhost:8080/gestionEmpleado/insertarEmpleado"
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 29 Jan 2022 21:47:09 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"codigo\": \"1000\",\n    \"mensaje\": \"La petición no es correcta\",\n    \"mensajeExtendido\": \"{dni: debe coincidir con \\\"\\\\d{8}[A-HJ-NP-TV-Z]\\\"}\",\n    \"idEmpleado\": null\n}"
+										}
+									]
+								}
+							],
 							"id": "9f64e952-5077-4efc-9839-892910b556b5"
+						},
+						{
+							"name": "ObtenerEmpleadoById Copy",
+							"id": "2ce5e808-962b-4cb6-a21f-c951c299e464",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/gestionEmpleado/obtenerEmpleadoPorId?idEmpleado=2c16e914-a381-4972-9be3-4c69660d3146",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gestionEmpleado",
+										"obtenerEmpleadoPorId"
+									],
+									"query": [
+										{
+											"key": "idEmpleado",
+											"value": "2c16e914-a381-4972-9be3-4c69660d3146"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "540ae3f0-7b04-4256-a1c9-92a92e50153e",
+									"name": "200 - ObtenerEmpleadoById",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/gestionEmpleado/obtenerEmpleadoPorId?idEmpleado=75c3e4d5-b81b-42b3-b451-0783b7f091f5",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"gestionEmpleado",
+												"obtenerEmpleadoPorId"
+											],
+											"query": [
+												{
+													"key": "idEmpleado",
+													"value": "75c3e4d5-b81b-42b3-b451-0783b7f091f5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Petición realizada con exito\",\n    \"mensajeExtendido\": null,\n    \"empleadoDTO\": {\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Pepe\",\n        \"fechaNacimiento\": \"1993-02-18T00:00:00.000+00:00\"\n    }\n}"
+								}
+							]
 						}
 					],
 					"id": "114e86d7-06eb-4e85-b3e1-0a8ed2eddba3"
@@ -805,7 +1012,35 @@
 				}
 			],
 			"id": "26b98f7c-985b-404f-8260-fab13ff01a8a",
-			"description": "**Descripción** a nivel de carpeta, GestionEmpleado"
+			"description": "**Descripción** a nivel de carpeta, GestionEmpleado",
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "esto es un token"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a60e9714-9ac5-4888-b751-7b0dadb601c9",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "1f41cb11-c0b6-4cf4-8b17-b5cd6abb9589",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
 		},
 		{
 			"name": "FeingClientTester",
@@ -1341,7 +1576,7 @@
 	],
 	"variable": [
 		{
-			"id": "b4e115fd-374f-43f6-b07e-4a4fd73a46ee",
+			"id": "d3ad4411-d2d6-4d32-a48c-a03f7adb6ad7",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
