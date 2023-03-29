@@ -1558,11 +1558,17 @@
 			]
 		}
 	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "El token de la colección"
+		}
+	},
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "98f968aa-30a6-4716-ab4f-09bf1e130c96",
+				"id": "a25fe52c-3410-4363-9961-1901e28bbf6b",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1572,7 +1578,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "c84f2b8b-bf09-4330-a571-79e283add0ee",
+				"id": "f11c7f85-0f98-4eb2-a261-bfa2bcb02f90",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1582,7 +1588,7 @@
 	],
 	"variable": [
 		{
-			"id": "73360958-69a1-43ad-a86a-98300d07ac26",
+			"id": "5a8df2dd-5c62-456d-b14f-16481c89cc63",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
