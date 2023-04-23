@@ -528,6 +528,18 @@
 				},
 				{
 					"name": "ObtenerEmpleadoById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f8fdd2ca-4ada-4dce-88e0-a7b01d71f9f8",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "8c7c9a3a-b34e-4883-8147-f42192632256",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1148,7 +1160,7 @@
 	],
 	"variable": [
 		{
-			"id": "3d98c126-e8bc-4240-aea4-fa4c4906f46f",
+			"id": "380f4ef4-03e8-4579-8087-2c2c063a771d",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
