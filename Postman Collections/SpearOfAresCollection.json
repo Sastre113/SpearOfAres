@@ -75,6 +75,19 @@
 									"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Petición realizada con exito\",\n    \"mensajeExtendido\": null,\n    \"empleadoDTO\": {\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Pepe\",\n        \"fechaNacimiento\": \"1993-02-18T00:00:00.000+00:00\"\n    }\n}"
 								}
 							]
+						},
+						{
+							"name": "ListarEmpleados",
+							"id": "47fcbde0-ed45-4681-b1ed-0bd02bfaf993",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/gestionEmpleado/listarEmpleados"
+							},
+							"response": []
 						}
 					],
 					"id": "114e86d7-06eb-4e85-b3e1-0a8ed2eddba3"
@@ -83,7 +96,7 @@
 					"name": "Gestión",
 					"item": [
 						{
-							"name": "InsertarEmpleado Copy",
+							"name": "InsertarEmpleado",
 							"event": [
 								{
 									"listen": "prerequest",
@@ -110,7 +123,7 @@
 									}
 								}
 							],
-							"id": "1caa22ec-7014-431e-a2e3-958d0f54d72b",
+							"id": "189fbf7e-a2a6-410b-9666-ba9977165ea7",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -131,7 +144,7 @@
 							},
 							"response": [
 								{
-									"id": "7bfd265e-a0da-4f11-a5c3-6001e575c4d8",
+									"id": "d0f4549d-5e1d-4a3c-a1e3-7e8159ae16fd",
 									"name": "200 - InsertarEmpleado - Petición correcta",
 									"originalRequest": {
 										"method": "POST",
@@ -177,7 +190,7 @@
 									"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Inserción con exito!\",\n    \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\"\n}"
 								},
 								{
-									"id": "867fcfe4-d84d-44e0-8e10-9835e30db069",
+									"id": "81f75367-e5bb-42bf-96c5-f413ff275903",
 									"name": "400 - InsertarEmpleado - Dni incorrecto",
 									"originalRequest": {
 										"method": "POST",
@@ -225,8 +238,56 @@
 							]
 						},
 						{
-							"name": "EliminarEmpleadoById Copy",
-							"id": "9c167c51-28c6-42e3-b74a-471a1404c31d",
+							"name": "ModificarEmpleado",
+							"id": "5dde8817-d241-43c2-8794-9108396b25af",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idEmpleado\": \"c2eda45f-54a7-4db1-bf64-92c829398462\",\r\n    \"nombre\": \"\",\r\n    \"fechaNacimiento\": \"1993-01-31\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/gestionEmpleado/modificarEmpleado"
+							},
+							"response": [
+								{
+									"id": "4e5edb83-b09e-4185-ab16-d735aea964c9",
+									"name": "200 - ModificarEmpleado - Petición correcta",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\r\n    \"nombre\": \"Pepe el Aguila\",\r\n    \"fechaNacimiento\": \"1964-02-18\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:8080/gestionEmpleado/modificarEmpleado"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Petición realizada con exito\",\n    \"mensajeExtendido\": null,\n    \"empleadoOriginal\": {\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Pepe er Arguilullo\",\n        \"fechaNacimiento\": \"1964-02-18T00:00:00.000+00:00\"\n    },\n    \"empleadoModificado\": {\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Peper EL gaviotar\",\n        \"fechaNacimiento\": \"1993-01-31T00:00:00.000+00:00\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "EliminarEmpleadoById",
+							"id": "d6a61538-784c-4059-812d-e6c3ed494930",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -234,7 +295,7 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/gestionEmpleado/eliminarEmpleado?idEmpleado=7b2078ea-68d4-4f96-8773-78dd14f4047b",
+									"raw": "http://localhost:8080/gestionEmpleado/eliminarEmpleado?idEmpleado=7f74a1a5-737a-4aae-bc47-8023d3118174",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -247,14 +308,14 @@
 									"query": [
 										{
 											"key": "idEmpleado",
-											"value": "7b2078ea-68d4-4f96-8773-78dd14f4047b"
+											"value": "7f74a1a5-737a-4aae-bc47-8023d3118174"
 										}
 									]
 								}
 							},
 							"response": [
 								{
-									"id": "17109c34-6dc8-47df-9940-8235948fd88b",
+									"id": "d381eab6-28e6-4ecb-8348-31553b786cfe",
 									"name": "200 - EliminarEmpleadoById - Petición correcta",
 									"originalRequest": {
 										"method": "GET",
@@ -293,7 +354,7 @@
 									"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Petición realizada con exito\",\n    \"mensajeExtendido\": null,\n    \"empleadoEliminado\": {\n        \"idEmpleado\": \"7f74a1a5-737a-4aae-bc47-8023d3118174\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Pepe el Gaviota\",\n        \"fechaNacimiento\": null\n    }\n}"
 								},
 								{
-									"id": "5a0ab570-3842-4b4c-8323-757dd71e9200",
+									"id": "408d46c8-937a-4510-99cc-ad3e93e108cd",
 									"name": "404 - EliminarEmpleadoById - IdEmpleado no encontrado",
 									"originalRequest": {
 										"method": "GET",
@@ -335,400 +396,6 @@
 						}
 					],
 					"id": "eabca1f0-f07e-4f19-b6be-81cc10f4d4ba"
-				},
-				{
-					"name": "InsertarEmpleado",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "c115463c-fece-4012-b25b-3538d5be67e1",
-								"exec": [
-									"// Esto es una prueba\r",
-									"var test = 0\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "699f07c1-0587-4969-ab56-34f99c4104ff",
-								"exec": [
-									"// Esto es una prueba\r",
-									"var test = 0\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"id": "189fbf7e-a2a6-410b-9666-ba9977165ea7",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"empleado\": {\r\n        \"dni\": \"00000000T\",\r\n        \"nombre\": \"Pepe el Gaviota\",\r\n        \"fechaNacimiento\": \"\"\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{host}}/gestionEmpleado/insertarEmpleado",
-						"description": "**Descripción** de la petición"
-					},
-					"response": [
-						{
-							"id": "d0f4549d-5e1d-4a3c-a1e3-7e8159ae16fd",
-							"name": "200 - InsertarEmpleado - Petición correcta",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"dni\": \"00000000T\",\r\n    \"nombre\":\"Pepe\",\r\n    \"fechaNacimiento\": \"1993-02-18\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "http://localhost:8080/gestionEmpleado/insertarEmpleado"
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Sat, 29 Jan 2022 21:47:09 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Inserción con exito!\",\n    \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\"\n}"
-						},
-						{
-							"id": "81f75367-e5bb-42bf-96c5-f413ff275903",
-							"name": "400 - InsertarEmpleado - Dni incorrecto",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"dni\": \"\",\r\n    \"nombre\":\"Pepe\",\r\n    \"fechaNacimiento\": \"1993-02-18\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "http://localhost:8080/gestionEmpleado/insertarEmpleado"
-							},
-							"status": "Bad Request",
-							"code": 400,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Sat, 29 Jan 2022 21:47:09 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"codigo\": \"1000\",\n    \"mensaje\": \"La petición no es correcta\",\n    \"mensajeExtendido\": \"{dni: debe coincidir con \\\"\\\\d{8}[A-HJ-NP-TV-Z]\\\"}\",\n    \"idEmpleado\": null\n}"
-						}
-					]
-				},
-				{
-					"name": "ModificarEmpleado",
-					"id": "5dde8817-d241-43c2-8794-9108396b25af",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"idEmpleado\": \"c2eda45f-54a7-4db1-bf64-92c829398462\",\r\n    \"nombre\": \"\",\r\n    \"fechaNacimiento\": \"1993-01-31\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "http://localhost:8080/gestionEmpleado/modificarEmpleado"
-					},
-					"response": [
-						{
-							"id": "4e5edb83-b09e-4185-ab16-d735aea964c9",
-							"name": "200 - ModificarEmpleado - Petición correcta",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\r\n    \"nombre\": \"Pepe el Aguila\",\r\n    \"fechaNacimiento\": \"1964-02-18\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "http://localhost:8080/gestionEmpleado/modificarEmpleado"
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Petición realizada con exito\",\n    \"mensajeExtendido\": null,\n    \"empleadoOriginal\": {\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Pepe er Arguilullo\",\n        \"fechaNacimiento\": \"1964-02-18T00:00:00.000+00:00\"\n    },\n    \"empleadoModificado\": {\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Peper EL gaviotar\",\n        \"fechaNacimiento\": \"1993-01-31T00:00:00.000+00:00\"\n    }\n}"
-						}
-					]
-				},
-				{
-					"name": "ObtenerEmpleadoById",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "f8fdd2ca-4ada-4dce-88e0-a7b01d71f9f8",
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"id": "8c7c9a3a-b34e-4883-8147-f42192632256",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/gestionEmpleado/obtenerEmpleadoPorId?idEmpleado=2c16e914-a381-4972-9be3-4c69660d3146",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"gestionEmpleado",
-								"obtenerEmpleadoPorId"
-							],
-							"query": [
-								{
-									"key": "idEmpleado",
-									"value": "2c16e914-a381-4972-9be3-4c69660d3146"
-								},
-								{
-									"key": "idEmpleado",
-									"value": "000",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": [
-						{
-							"id": "36c26396-a8a0-4e9e-a214-500d1e31156f",
-							"name": "200 - ObtenerEmpleadoById",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8080/gestionEmpleado/obtenerEmpleadoPorId?idEmpleado=75c3e4d5-b81b-42b3-b451-0783b7f091f5",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"gestionEmpleado",
-										"obtenerEmpleadoPorId"
-									],
-									"query": [
-										{
-											"key": "idEmpleado",
-											"value": "75c3e4d5-b81b-42b3-b451-0783b7f091f5"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Petición realizada con exito\",\n    \"mensajeExtendido\": null,\n    \"empleadoDTO\": {\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Pepe\",\n        \"fechaNacimiento\": \"1993-02-18T00:00:00.000+00:00\"\n    }\n}"
-						}
-					]
-				},
-				{
-					"name": "ListarEmpleados",
-					"id": "47fcbde0-ed45-4681-b1ed-0bd02bfaf993",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "http://localhost:8080/gestionEmpleado/listarEmpleados"
-					},
-					"response": []
-				},
-				{
-					"name": "EliminarEmpleadoById",
-					"id": "d6a61538-784c-4059-812d-e6c3ed494930",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/gestionEmpleado/eliminarEmpleado?idEmpleado=7f74a1a5-737a-4aae-bc47-8023d3118174",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"gestionEmpleado",
-								"eliminarEmpleado"
-							],
-							"query": [
-								{
-									"key": "idEmpleado",
-									"value": "7f74a1a5-737a-4aae-bc47-8023d3118174",
-									"type": "text"
-								}
-							]
-						}
-					},
-					"response": [
-						{
-							"id": "d381eab6-28e6-4ecb-8348-31553b786cfe",
-							"name": "200 - EliminarEmpleadoById - Petición correcta",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8080/gestionEmpleado/eliminarEmpleado?idEmpleado=7f74a1a5-737a-4aae-bc47-8023d3118174",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"gestionEmpleado",
-										"eliminarEmpleado"
-									],
-									"query": [
-										{
-											"key": "idEmpleado",
-											"value": "7f74a1a5-737a-4aae-bc47-8023d3118174"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								""
-							],
-							"cookie": [
-								{
-									"expires": "Invalid Date"
-								}
-							],
-							"responseTime": null,
-							"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Petición realizada con exito\",\n    \"mensajeExtendido\": null,\n    \"empleadoEliminado\": {\n        \"idEmpleado\": \"7f74a1a5-737a-4aae-bc47-8023d3118174\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Pepe el Gaviota\",\n        \"fechaNacimiento\": null\n    }\n}"
-						},
-						{
-							"id": "408d46c8-937a-4510-99cc-ad3e93e108cd",
-							"name": "404 - EliminarEmpleadoById - IdEmpleado no encontrado",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8080/gestionEmpleado/eliminarEmpleado?idEmpleado=7f74a1a5-737a-4aae-bc47-8023d3118174",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"gestionEmpleado",
-										"eliminarEmpleado"
-									],
-									"query": [
-										{
-											"key": "idEmpleado",
-											"value": "7f74a1a5-737a-4aae-bc47-8023d3118174"
-										}
-									]
-								}
-							},
-							"status": "Not Found",
-							"code": 404,
-							"_postman_previewlanguage": "json",
-							"header": [
-								""
-							],
-							"cookie": [
-								{
-									"expires": "Invalid Date"
-								}
-							],
-							"responseTime": null,
-							"body": "{\n    \"codigo\": \"1001\",\n    \"mensaje\": \"No se han encontrado datos\",\n    \"mensajeExtendido\": null,\n    \"empleadoEliminado\": null\n}"
-						}
-					]
 				}
 			],
 			"id": "26b98f7c-985b-404f-8260-fab13ff01a8a",
@@ -1160,7 +827,7 @@
 	],
 	"variable": [
 		{
-			"id": "46e5b5bf-9b32-408e-9465-96382b55ad2c",
+			"id": "ede680fb-29e8-465c-8faf-86241c900e59",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
