@@ -10,12 +10,6 @@
 			"name": "GestionEmpleado",
 			"item": [
 				{
-					"name": "Nested-Folder",
-					"item": [],
-					"id": "57a93704-9d31-46b1-a8c7-6ca55aea8e4c",
-					"description": "Descripción de nested folder"
-				},
-				{
 					"name": "Búsqueda",
 					"item": [
 						{
@@ -1301,7 +1295,7 @@
 	],
 	"variable": [
 		{
-			"id": "2e1ecfcf-5358-45d8-9dc5-4617b2c6d33d",
+			"id": "9fa78375-2998-4a2a-9e13-24ebdb4e6623",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
