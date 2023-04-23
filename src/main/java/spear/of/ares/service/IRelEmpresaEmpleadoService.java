@@ -3,8 +3,8 @@
  */
 package spear.of.ares.service;
 
-import spear.of.ares.controller.RespuestaListarRelacionesDTO;
 import spear.of.ares.excepcion.AresException;
+import spear.of.ares.model.dto.relEmpleadoEmpresa.RespuestaListarRelacionesDTO;
 import spear.of.ares.model.dto.relEmpleadoEmpresa.peticion.PeticionAltaEmpleadoDTO;
 import spear.of.ares.model.dto.relEmpleadoEmpresa.peticion.PeticionBajaEmpleadoDTO;
 import spear.of.ares.model.dto.relEmpleadoEmpresa.peticion.PeticionListarRelacionesDTO;

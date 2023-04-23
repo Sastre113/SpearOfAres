@@ -35,7 +35,7 @@ public class EmpleadoController {
 
 	@Autowired
 	private IEmpleadoService gestionEmpleadoService;
-
+	
 	@PostMapping(path = "/insertarEmpleado", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<RespuestaInsertarEmpleadoDTO> insertarEmpleado(RequestEntity<PeticionInsertarEmpleadoDTO> peticionDTO) {	
 		try {

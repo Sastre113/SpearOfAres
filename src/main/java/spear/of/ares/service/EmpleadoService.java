@@ -6,6 +6,7 @@ import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import spear.of.ares.dao.IEmpleadoDAO;
@@ -29,6 +30,7 @@ import spear.of.ares.utils.AresUtils;
  *
  */
 @Service
+@Transactional
 public class EmpleadoService implements IEmpleadoService {
 
 	@Autowired
@@ -66,6 +68,8 @@ public class EmpleadoService implements IEmpleadoService {
 		
 		TbEmpleado empleadoEntity = this.empleadoDAO.findById(peticionDTO.getIdEmpleado()).get();
 		EmpleadoDTO empleadoOriginal = this.mapEntityToDTO(empleadoEntity);
+		
+		empleadoEntity.getRelEmpresaEmpleado().forEach(relEmpresaEmpleado ->{} );
 		
 		empleadoEntity.setNombre(peticionDTO.getNombre());
 		if(peticionDTO.getFechaNacimiento() != null) {

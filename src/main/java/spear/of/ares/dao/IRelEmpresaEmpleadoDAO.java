@@ -17,8 +17,9 @@ import spear.of.ares.model.entity.TbRelEmpresaEmpleado;
  */
 public interface IRelEmpresaEmpleadoDAO extends JpaRepository<TbRelEmpresaEmpleado, String> {
 	
-	@Query(" FROM TbRelEmpresaEmpleado "
-		+ " WHERE idRelacion = :idRelacion"
-		+ " OR empresa.idEmpresa = :idEmpresa")
+	@Query(""
+		+ " FROM TbRelEmpresaEmpleado rel"
+		+ " "
+		+ " ")
 	public List<TbRelEmpresaEmpleado> getRelaciones(String idRelacion, String idEmpresa);
 }

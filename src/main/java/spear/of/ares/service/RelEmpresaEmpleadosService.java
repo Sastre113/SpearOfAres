@@ -3,19 +3,32 @@
  */
 package spear.of.ares.service;
 
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.UUID;
 
 import javax.persistence.EntityManager;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Expression;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
-import spear.of.ares.controller.RespuestaListarRelacionesDTO;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import spear.of.ares.dao.IEmpleadoDAO;
 import spear.of.ares.dao.IRelEmpresaEmpleadoDAO;
 import spear.of.ares.excepcion.AresException;
 import spear.of.ares.model.dto.relEmpleadoEmpresa.RelacionDTO;
+import spear.of.ares.model.dto.relEmpleadoEmpresa.RespuestaListarRelacionesDTO;
 import spear.of.ares.model.dto.relEmpleadoEmpresa.peticion.PeticionAltaEmpleadoDTO;
 import spear.of.ares.model.dto.relEmpleadoEmpresa.peticion.PeticionListarRelacionesDTO;
 import spear.of.ares.model.dto.relEmpleadoEmpresa.respuesta.RespuestaAltaEmpleadoDTO;
@@ -79,14 +92,12 @@ public class RelEmpresaEmpleadosService implements IRelEmpresaEmpleadoService {
 
 	@Override
 	public RespuestaListarRelacionesDTO listarRelaciones(PeticionListarRelacionesDTO peticionDTO) throws AresException {
-		List<TbRelEmpresaEmpleado> listaResultado = this.relEmpresaEmpleadoDAO.getRelaciones(peticionDTO.getIdRelacion(),
-				peticionDTO.getIdEmpresa());
+		List<TbRelEmpresaEmpleado> listaResultado = this.usandoCriteriaQuery(peticionDTO, TbRelEmpresaEmpleado.class);
 		
 		RespuestaListarRelacionesDTO respuesta = AresNotificacion.OK.construir(RespuestaListarRelacionesDTO.class);
 		listaResultado.forEach(relacionEntity -> respuesta.getListaRelacion().add(this.mapEntityToDTO(relacionEntity)));
 		return respuesta;
 	}
-	
 	
 
 	private RelacionDTO mapEntityToDTO(TbRelEmpresaEmpleado relacionEntity) {
@@ -101,4 +112,34 @@ public class RelEmpresaEmpleadosService implements IRelEmpresaEmpleadoService {
 		return relacion;
 	}
 
+	
+	/*
+	 * El problema es cuando la entidad tenga relaciones contra otras entidades, donde
+	 * no se puede realizar la consulta más "compleja"
+	 */
+	private <D,T> List<T> usandoCriteriaQuery(D peticionDTO, Class<T> entityClazz) {
+		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();	
+		CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(entityClazz);
+		Root<T> root = criteriaQuery.from(entityClazz);
+		List<Predicate> predicates = new ArrayList<>();
+		
+		
+		ObjectMapper mapper = new ObjectMapper();
+		Map<String, Object> params = mapper.convertValue(peticionDTO, Map.class);
+		List<Field> fields = Arrays.asList(entityClazz.getDeclaredFields());
+		for(String key : params.keySet()) {
+			Object attribute = params.get(key);
+			
+			if(attribute == null || (attribute instanceof String && !StringUtils.hasText((String) attribute))) {
+				continue;
+			}
+			
+			Optional<Field> optField = fields.stream().filter(field -> field.getName().equals(key)).findFirst();
+			optField.ifPresent(field -> predicates.add(criteriaBuilder.equal(root.get(field.getName()), attribute)));				
+		}
+		
+	
+		criteriaQuery.select(root).where(predicates.toArray(new Predicate[] {}));
+ 		return entityManager.createQuery(criteriaQuery).getResultList();
+	}
 }

@@ -40,7 +40,7 @@ public class TbRelEmpresaEmpleado {
 	private String tipoPuesto;
 	@Column(name = "fecha_alta", updatable = false, nullable = false)
 	private Date fechaAlta;
-	@Column(name = "fecha_baja", updatable = false, nullable = false)
+	@Column(name = "fecha_baja", updatable = false, nullable = true)
 	private Date fechaBaja;
 	
 	public String getIdRelacion() {

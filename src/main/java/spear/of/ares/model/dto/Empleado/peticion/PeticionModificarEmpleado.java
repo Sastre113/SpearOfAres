@@ -16,7 +16,7 @@ import javax.validation.constraints.Size;
  *
  */
 public class PeticionModificarEmpleado {
-
+	
 	@NotEmpty
 	private String idEmpleado;
 	@NotEmpty
