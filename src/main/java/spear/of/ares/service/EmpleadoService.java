@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
-import spear.of.ares.dao.IEmpleadoDAO;
 import spear.of.ares.excepcion.AresException;
 import spear.of.ares.model.dto.Empleado.EmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.peticion.PeticionInsertarEmpleadoDTO;
@@ -20,6 +19,7 @@ import spear.of.ares.model.dto.Empleado.respuesta.RespuestaListarEmpleadosDTO;
 import spear.of.ares.model.dto.Empleado.respuesta.RespuestaModificarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.respuesta.RespuestaObtenerEmpleadoDTO;
 import spear.of.ares.model.entity.TbEmpleado;
+import spear.of.ares.repository.IEmpleadoRepository;
 import spear.of.ares.utils.AresNotificacion;
 import spear.of.ares.utils.AresUtils;
 
@@ -34,7 +34,7 @@ import spear.of.ares.utils.AresUtils;
 public class EmpleadoService implements IEmpleadoService {
 
 	@Autowired
-	private IEmpleadoDAO empleadoDAO;
+	private IEmpleadoRepository empleadoDAO;
 	
 	@Override
 	public RespuestaInsertarEmpleadoDTO insertarEmpleado(PeticionInsertarEmpleadoDTO peticionDTO) throws AresException {

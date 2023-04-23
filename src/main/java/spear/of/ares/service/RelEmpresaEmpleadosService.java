@@ -15,7 +15,6 @@ import java.util.UUID;
 import javax.persistence.EntityManager;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Expression;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
@@ -24,8 +23,6 @@ import org.springframework.util.StringUtils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import spear.of.ares.dao.IEmpleadoDAO;
-import spear.of.ares.dao.IRelEmpresaEmpleadoDAO;
 import spear.of.ares.excepcion.AresException;
 import spear.of.ares.model.dto.relEmpleadoEmpresa.RelacionDTO;
 import spear.of.ares.model.dto.relEmpleadoEmpresa.RespuestaListarRelacionesDTO;
@@ -34,7 +31,9 @@ import spear.of.ares.model.dto.relEmpleadoEmpresa.peticion.PeticionListarRelacio
 import spear.of.ares.model.dto.relEmpleadoEmpresa.respuesta.RespuestaAltaEmpleadoDTO;
 import spear.of.ares.model.dto.relEmpleadoEmpresa.respuesta.RespuestaBajaEmpleadoDTO;
 import spear.of.ares.model.entity.TbRelEmpresaEmpleado;
+import spear.of.ares.repository.IEmpleadoRepository;
 import spear.of.ares.repository.IEmpresaRepository;
+import spear.of.ares.repository.IRelEmpresaEmpleadoRepository;
 import spear.of.ares.utils.AresNotificacion;
 import spear.of.ares.utils.AresUtils;
 
@@ -47,12 +46,12 @@ import spear.of.ares.utils.AresUtils;
 public class RelEmpresaEmpleadosService implements IRelEmpresaEmpleadoService {
 
 	private EntityManager entityManager;
-	private IEmpleadoDAO empleadoDAO;
+	private IEmpleadoRepository empleadoDAO;
 	private IEmpresaRepository empresaRepository;
-	private IRelEmpresaEmpleadoDAO relEmpresaEmpleadoDAO;
+	private IRelEmpresaEmpleadoRepository relEmpresaEmpleadoDAO;
 
-	public RelEmpresaEmpleadosService(IEmpleadoDAO empleadoDAO, IEmpresaRepository empresaRepository,
-			IRelEmpresaEmpleadoDAO relEmpresaEmpleadoDAO, EntityManager entityManager) {
+	public RelEmpresaEmpleadosService(IEmpleadoRepository empleadoDAO, IEmpresaRepository empresaRepository,
+			IRelEmpresaEmpleadoRepository relEmpresaEmpleadoDAO, EntityManager entityManager) {
 		this.entityManager = entityManager;
 		this.empleadoDAO = empleadoDAO;
 		this.empresaRepository = empresaRepository;
