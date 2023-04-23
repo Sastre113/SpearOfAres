@@ -25,7 +25,7 @@ import spear.of.ares.service.IEmpresaService;
 /**
  * 
  * @author Miguel Á. Sastre <sastre113@gmail.com>
- * Creado 21:51:16 - 26/01/2022
+ * @version 21:51:16 - 26/01/2022
  *
  */
 
