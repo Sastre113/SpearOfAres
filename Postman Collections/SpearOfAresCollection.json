@@ -13,11 +13,6 @@
 					"name": "Búsqueda",
 					"item": [
 						{
-							"name": "Carpeta interna",
-							"item": [],
-							"id": "9f64e952-5077-4efc-9839-892910b556b5"
-						},
-						{
 							"name": "ObtenerEmpleadoById Copy",
 							"id": "2ce5e808-962b-4cb6-a21f-c951c299e464",
 							"protocolProfileBehavior": {
@@ -1152,7 +1147,7 @@
 	],
 	"variable": [
 		{
-			"id": "a84cce04-1cb4-4e58-94c3-2b83ae9a5e25",
+			"id": "629cd92a-ba8f-4317-9aa7-bdbf7c77f639",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
