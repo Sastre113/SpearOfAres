@@ -244,7 +244,7 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "POST",
+								"method": "PUT",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -292,7 +292,7 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
+								"method": "DELETE",
 								"header": [],
 								"url": {
 									"raw": "http://localhost:8080/gestionEmpleado/eliminarEmpleado?idEmpleado=7f74a1a5-737a-4aae-bc47-8023d3118174",
@@ -308,8 +308,7 @@
 									"query": [
 										{
 											"key": "idEmpleado",
-											"value": "7f74a1a5-737a-4aae-bc47-8023d3118174",
-											"type": "text"
+											"value": "7f74a1a5-737a-4aae-bc47-8023d3118174"
 										}
 									]
 								}
@@ -828,7 +827,7 @@
 	],
 	"variable": [
 		{
-			"id": "f340f00b-11e2-492b-9d76-7e58b9430c76",
+			"id": "38c01aaa-28cb-4bb6-84cf-5156e80b278a",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
