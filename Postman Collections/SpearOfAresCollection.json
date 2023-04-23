@@ -13,7 +13,7 @@
 					"name": "Búsqueda",
 					"item": [
 						{
-							"name": "ObtenerEmpleadoById Copy",
+							"name": "ObtenerEmpleadoById",
 							"id": "2ce5e808-962b-4cb6-a21f-c951c299e464",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -827,7 +827,7 @@
 	],
 	"variable": [
 		{
-			"id": "38c01aaa-28cb-4bb6-84cf-5156e80b278a",
+			"id": "194fe915-3408-4313-a634-f58f3e1cc297",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
