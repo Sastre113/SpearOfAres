@@ -842,7 +842,8 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "http://localhost:8080/"
 			},
 			"response": []
 		}
@@ -877,7 +878,7 @@
 	],
 	"variable": [
 		{
-			"id": "16f221d9-23b5-4fab-9a6d-de76a1365763",
+			"id": "68632a0b-8d8c-4216-9097-9d0cf9ae7291",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
