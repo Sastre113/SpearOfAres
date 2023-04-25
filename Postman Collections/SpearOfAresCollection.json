@@ -863,16 +863,17 @@
 		}
 	],
 	"auth": {
-		"type": "bearer",
-		"bearer": {
-			"token": ""
+		"type": "basic",
+		"basic": {
+			"username": "user",
+			"password": "userPass"
 		}
 	},
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "45724fb5-edfe-473e-b0cb-45fe3e5c91b2",
+				"id": "816cc57c-20c9-4513-81e9-419dd1aebcea",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -882,7 +883,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "c5280274-f67d-44c6-9b06-630b48dfd794",
+				"id": "29da073b-1e70-4a4a-bf4a-189bef614f5c",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -892,7 +893,7 @@
 	],
 	"variable": [
 		{
-			"id": "4dce9333-f8e1-4038-be71-c5473cc58e18",
+			"id": "61cbbf0c-0e9a-4482-b97d-19d8d389493b",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
