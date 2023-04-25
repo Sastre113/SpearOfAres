@@ -22,7 +22,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/gestionEmpleado/obtenerEmpleadoPorId?idEmpleado=2c16e914-a381-4972-9be3-4c69660d3146",
+									"raw": "http://localhost:8080/gestionEmpleado/obtenerEmpleadoPorId?idEmpleado=c059d9ac-7c90-11ec-90d6-0242ac120003",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -35,7 +35,7 @@
 									"query": [
 										{
 											"key": "idEmpleado",
-											"value": "2c16e914-a381-4972-9be3-4c69660d3146"
+											"value": "c059d9ac-7c90-11ec-90d6-0242ac120003"
 										}
 									]
 								}
@@ -873,7 +873,7 @@
 	],
 	"variable": [
 		{
-			"id": "887e4b72-1259-4c19-82d2-beb1352e04b2",
+			"id": "7f3b262d-6283-4f61-8f68-2fc7ef6d5a62",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
