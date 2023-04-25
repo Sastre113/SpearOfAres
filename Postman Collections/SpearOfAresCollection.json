@@ -436,7 +436,8 @@
 							]
 						}
 					],
-					"id": "eabca1f0-f07e-4f19-b6be-81cc10f4d4ba"
+					"id": "eabca1f0-f07e-4f19-b6be-81cc10f4d4ba",
+					"description": "Servicios relacionados con el mantenimiento de los empleados."
 				}
 			],
 			"id": "26b98f7c-985b-404f-8260-fab13ff01a8a",
@@ -863,7 +864,7 @@
 	],
 	"variable": [
 		{
-			"id": "3823abc5-3eef-4d97-a342-63976c64f7a1",
+			"id": "714d5e31-3db8-4abd-b30c-aefbd5555088",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
