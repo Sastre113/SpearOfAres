@@ -837,7 +837,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/login"
+				"url": "http://localhost:8080/login/"
 			},
 			"response": []
 		}
@@ -873,7 +873,7 @@
 	],
 	"variable": [
 		{
-			"id": "fe3afd7a-1d10-44f4-954a-08a1b5a48a35",
+			"id": "010bbd22-b1a2-47fe-a2ff-5e0b30189b38",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
