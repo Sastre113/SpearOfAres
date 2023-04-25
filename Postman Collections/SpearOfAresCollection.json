@@ -915,7 +915,8 @@
 								}
 							}
 						},
-						"url": "http://localhost:8080/gestionRelacionEmpresaEmpleado/listarRelEmpresaEmpleado"
+						"url": "http://localhost:8080/gestionRelacionEmpresaEmpleado/listarRelEmpresaEmpleado",
+						"description": "Petición que permite recuperar todas las relaciones existentes."
 					},
 					"response": []
 				}
@@ -948,7 +949,7 @@
 	],
 	"variable": [
 		{
-			"id": "dad4e832-da27-487d-b393-7e53de055251",
+			"id": "96ec2a03-bbf2-496b-a504-4f3df5984aba",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
