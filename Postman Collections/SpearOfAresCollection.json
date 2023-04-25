@@ -501,7 +501,7 @@
 						"method": "GET",
 						"header": [],
 						"url": "http://localhost:8080/FeignClientTester/getHttp/badRequest",
-						"description": "Petición que retorna un código 403"
+						"description": "Petición que retorna un código 400"
 					},
 					"response": []
 				},
@@ -860,7 +860,7 @@
 	],
 	"variable": [
 		{
-			"id": "3be0bfa4-a3e4-4ddf-aa4d-15b8147e9992",
+			"id": "fe11ecb2-e786-4517-81fb-408cbf950771",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
