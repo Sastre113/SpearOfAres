@@ -85,7 +85,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "http://localhost:8080/user/gestionEmpleado/listarEmpleados"
+								"url": "http://localhost:8080/gestionEmpleado/listarEmpleados"
 							},
 							"response": [
 								{
@@ -873,7 +873,7 @@
 	],
 	"variable": [
 		{
-			"id": "73d0a2e2-a62c-4d21-a194-01bcd899bdba",
+			"id": "bd655fd9-b986-4f2c-832d-eda39ef09d25",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
