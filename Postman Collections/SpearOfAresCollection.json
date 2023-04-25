@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "105e36a1-f9d3-4015-95b9-291af1d8c7ce",
 		"name": "SpearOfAresApi",
-		"description": "Proyecto personal con el objetivo de mejorar, aprender y practicar en el desarrollo del backend para aplicaciones web.\n\n**La lanza de Ares** también conocida como la Lanza de Marte, es un objeto de la mitología griega y romana que se dice que fue usada por el dios de la guerra Ares (o Marte en la mitología romana) durante las batallas. Según la leyenda, la lanza tenía propiedades mágicas y **otorgaba a su portador la victoria en la guerra**.\n\n### Tecnologías usadas:\n\n- Java 8\n- Spring Boot\n- DB H2\n- Security Spring\n- Feign Clients\n    \n\n### Que podemos encontrar en el proyecto:\n\n- CRUD típico\n- Manejo de base de datos H2\n- Security Spring con usuarios en memoria\n- Entidades generadas a mano\n- Diseño y pruebas con DTO's\n- CrudRepository y JpaRepository\n- Validación de DTO's con javax.validation",
+		"description": "Proyecto personal con el objetivo de mejorar, aprender y practicar en el desarrollo del backend para aplicaciones web.\n\n**La lanza de Ares** también conocida como la Lanza de Marte, es un objeto de la mitología griega y romana que se dice que fue usada por el dios de la guerra Ares (o Marte en la mitología romana) durante las batallas. Según la leyenda, la lanza tenía propiedades mágicas y **otorgaba a su portador la victoria en la guerra**.\n\n### Tecnologías usadas:\n\n- Java 8\n- Spring Boot\n- DB H2\n- Security Spring\n- Feign Clients\n    \n\n### Que podemos encontrar en el proyecto:\n\n- CRUD típico\n- Manejo de base de datos H2\n- Security Spring con usuarios en memoria\n- Entidades generadas a mano\n- Diseño y pruebas con DTO's\n- CrudRepository y JpaRepository\n- Validación de DTO's con javax.validation\n    \n\nLa base de datos consiste en un registro de empleados, empresas y como estos se han relacionado a lo largo del tiempo.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -860,7 +860,7 @@
 	],
 	"variable": [
 		{
-			"id": "a9aac13c-6705-43f5-8941-597d21258c57",
+			"id": "0acf3936-a9b1-4fba-8565-46306aab8f74",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
