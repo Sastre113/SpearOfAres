@@ -499,15 +499,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": "http://localhost:8080/FeignClientTester/getHttp/badRequest"
 					},
 					"response": []
@@ -867,7 +858,7 @@
 	],
 	"variable": [
 		{
-			"id": "088d8e5c-1c92-4301-8e88-4554203623f3",
+			"id": "8f99fcb2-efa3-461e-b1d2-107392bace61",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
