@@ -514,7 +514,8 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/FeignClientTester/getHttp/notFound"
+						"url": "http://localhost:8080/FeignClientTester/getHttp/notFound",
+						"description": "Petición que retorna un código 404"
 					},
 					"response": []
 				}
@@ -860,7 +861,7 @@
 	],
 	"variable": [
 		{
-			"id": "fe11ecb2-e786-4517-81fb-408cbf950771",
+			"id": "008d5576-ba62-44da-9a29-e228086a35e2",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
