@@ -706,6 +706,84 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Petición realizada con exito\",\n    \"mensajeExtendido\": null,\n    \"empleadoDTO\": {\n        \"idEmpleado\": \"75c3e4d5-b81b-42b3-b451-0783b7f091f5\",\n        \"dni\": \"00000000T\",\n        \"nombre\": \"Pepe\",\n        \"fechaNacimiento\": \"1993-02-18T00:00:00.000+00:00\"\n    }\n}"
+						},
+						{
+							"id": "adc63e37-705b-49c4-82be-547b90d88569",
+							"name": "MostrarEmpleados",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/gestionEmpresa/mostrarEmpleados?idEmpresa=d6503c52-7c8f-11ec-90d6-0242ac120003",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gestionEmpresa",
+										"mostrarEmpleados"
+									],
+									"query": [
+										{
+											"key": "idEmpresa",
+											"value": "d6503c52-7c8f-11ec-90d6-0242ac120003"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Apr 2023 23:46:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Petición realizada con exito\",\n    \"mensajeExtendido\": null,\n    \"empresa\": {\n        \"idEmpresa\": \"d6503c52-7c8f-11ec-90d6-0242ac120003\",\n        \"nombre\": \"Black-Mesa\",\n        \"propietario\": \"EEUU\",\n        \"cantidadEmpleados\": 1500,\n        \"fechaCreacion\": \"1942-06-01\",\n        \"fechaDesaparicion\": null\n    },\n    \"listaEmpleados\": [\n        {\n            \"idEmpleado\": \"c464174c-7c90-11ec-90d6-0242ac120003\",\n            \"dni\": \"00000000T\",\n            \"nombre\": \"Gordon Freeman\",\n            \"fechaNacimiento\": \"1972-02-17T23:00:00.000+00:00\"\n        },\n        {\n            \"idEmpleado\": \"c6e37a12-7c90-11ec-90d6-0242ac120003\",\n            \"dni\": \"00000000T\",\n            \"nombre\": \"G-Man\",\n            \"fechaNacimiento\": \"2032-02-17T23:00:00.000+00:00\"\n        }\n    ]\n}"
 						}
 					]
 				},
@@ -865,7 +943,7 @@
 	],
 	"variable": [
 		{
-			"id": "f0abfebf-27ef-41fc-9ec3-fa63f2c1a570",
+			"id": "b223b957-d961-4184-9124-78f22fa053a0",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
