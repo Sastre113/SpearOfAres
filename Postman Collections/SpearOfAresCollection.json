@@ -797,7 +797,8 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/gestionEmpresa/listarEmpresas"
+						"url": "http://localhost:8080/gestionEmpresa/listarEmpresas",
+						"description": "Petición para obtener todas empresas registradas."
 					},
 					"response": [
 						{
@@ -944,7 +945,7 @@
 	],
 	"variable": [
 		{
-			"id": "5266ff51-80c8-4c22-b18a-5350ed9b3a24",
+			"id": "1c1431ba-789c-4ae2-ada6-b145b021bc23",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
