@@ -438,17 +438,11 @@
 			],
 			"id": "26b98f7c-985b-404f-8260-fab13ff01a8a",
 			"description": "**Descripción** a nivel de carpeta, GestionEmpleado",
-			"auth": {
-				"type": "bearer",
-				"bearer": {
-					"token": "esto es un token"
-				}
-			},
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "a60e9714-9ac5-4888-b751-7b0dadb601c9",
+						"id": "5d7ef2f0-89f4-4221-bc67-92d69d09fd85",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -458,7 +452,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "1f41cb11-c0b6-4cf4-8b17-b5cd6abb9589",
+						"id": "3c0b0b75-d7e7-4918-91f9-3af4145bb0d6",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -879,7 +873,7 @@
 	],
 	"variable": [
 		{
-			"id": "d345571b-e9f2-4688-b7d1-635d6fb3fffa",
+			"id": "9787637f-99c0-4bd6-b599-f46892ab8909",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
