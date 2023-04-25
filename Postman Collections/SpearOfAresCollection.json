@@ -845,15 +845,15 @@
 	"auth": {
 		"type": "basic",
 		"basic": {
-			"username": "user",
-			"password": "userPass"
+			"password": "",
+			"username": ""
 		}
 	},
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "816cc57c-20c9-4513-81e9-419dd1aebcea",
+				"id": "7d5e1adb-cce3-4ad9-ab4e-c4cc4e85c887",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -863,7 +863,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "29da073b-1e70-4a4a-bf4a-189bef614f5c",
+				"id": "3be4abdf-b8de-4ed9-a09a-b0cab95c7d69",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -873,7 +873,7 @@
 	],
 	"variable": [
 		{
-			"id": "a96e2f7b-1e34-4a08-accb-9ca40e449428",
+			"id": "13f7fe31-66dc-4850-82af-37e364b215b6",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
