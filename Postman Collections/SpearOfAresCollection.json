@@ -353,7 +353,8 @@
 											"value": "7f74a1a5-737a-4aae-bc47-8023d3118174"
 										}
 									]
-								}
+								},
+								"description": "Petición que permite eliminar un empleado mediante el idEmpleado"
 							},
 							"response": [
 								{
@@ -865,7 +866,7 @@
 	],
 	"variable": [
 		{
-			"id": "1df7452b-7df2-49fd-9aec-fe1bd57e8d22",
+			"id": "be895a7c-e735-41bd-9a70-5a0a4af1bfb5",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
