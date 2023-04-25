@@ -437,7 +437,7 @@
 				}
 			],
 			"id": "26b98f7c-985b-404f-8260-fab13ff01a8a",
-			"description": "**Descripción** a nivel de carpeta, GestionEmpleado",
+			"description": "Servicios que permiten el mantenimiento y gestión de la tabla empleados.",
 			"auth": {
 				"type": "basic",
 				"basic": {
@@ -860,7 +860,7 @@
 	],
 	"variable": [
 		{
-			"id": "0acf3936-a9b1-4fba-8565-46306aab8f74",
+			"id": "1eadef78-c7bc-4bcc-acfe-b464b22a548a",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
