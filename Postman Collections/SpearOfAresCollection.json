@@ -918,7 +918,8 @@
 					"response": []
 				}
 			],
-			"id": "d818cedb-8ac5-44a0-a6b9-e7780c8c1c92"
+			"id": "d818cedb-8ac5-44a0-a6b9-e7780c8c1c92",
+			"description": "Servicios para el mantenimiento de las relaciones entre empresas y empleados."
 		}
 	],
 	"event": [
@@ -945,7 +946,7 @@
 	],
 	"variable": [
 		{
-			"id": "1c1431ba-789c-4ae2-ada6-b145b021bc23",
+			"id": "bf6c6e5d-3d91-4c41-8534-35bf95d1ad3b",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
