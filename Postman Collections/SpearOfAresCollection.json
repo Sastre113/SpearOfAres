@@ -892,7 +892,8 @@
 									"value": "a5ddcd79-0e97-4c85-b3de-b5565a84f849"
 								}
 							]
-						}
+						},
+						"description": "Petición para dar de baja a un empleado de una empresa."
 					},
 					"response": []
 				},
@@ -947,7 +948,7 @@
 	],
 	"variable": [
 		{
-			"id": "a22c8766-93c6-49fa-bd04-4ca6f1bccf66",
+			"id": "dad4e832-da27-487d-b393-7e53de055251",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
