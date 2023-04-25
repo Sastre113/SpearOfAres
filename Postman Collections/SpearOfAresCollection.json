@@ -821,7 +821,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"idRelacion\": \"\",\r\n    \"idEmpresa\": \"d6503c52-7c8f-11ec-90d6-0242ac120003\",\r\n    \"idEmpleado\": \"\",\r\n    \"tipoPuesto\": \"\"\r\n}",
+							"raw": "{\r\n    \"idRelacion\": \"\",\r\n    \"idEmpresa\": \"\",\r\n    \"idEmpleado\": \"\",\r\n    \"tipoPuesto\": \"\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -860,7 +860,7 @@
 	],
 	"variable": [
 		{
-			"id": "f394b5c8-0dbe-4a48-a9eb-00bd81a2026c",
+			"id": "d981c29e-b896-478b-bea7-a6458e304c3f",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
