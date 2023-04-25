@@ -19,6 +19,11 @@ import feign.codec.ErrorDecoder;
 @Component 
 public class FeignClientTesterExceptionHandler extends Throwable implements ErrorDecoder {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	private final ErrorDecoder.Default defaultDecoder = new Default();
 
 	@Override

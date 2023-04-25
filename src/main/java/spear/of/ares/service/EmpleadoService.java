@@ -57,7 +57,7 @@ public class EmpleadoService implements IEmpleadoService {
 		}
 		
 		RespuestaObtenerEmpleadoDTO respuesta = AresNotificacion.OK.construir(RespuestaObtenerEmpleadoDTO.class);
-		respuesta.setEmpleadoDTO(this.mapEntityToDTO(this.empleadoDAO.findById(idEmpleado).get()));
+		respuesta.setEmpleadoDTO(this.mapEntityToDTO(this.empleadoDAO.findById(idEmpleado).orElseThrow()));
 		
 		return respuesta;
 	}

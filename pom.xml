@@ -12,11 +12,12 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpearOfAres</name>
 	<description>Proyecto de API</description>
+
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
-	<dependencies>
 
+	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -76,6 +77,14 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+
+		<!-- Seguridad -->
+
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
 
 	</dependencies>
 

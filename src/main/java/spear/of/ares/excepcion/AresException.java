@@ -53,7 +53,7 @@ public class AresException extends Exception {
 		
 		respuesta.setCodigo(codigoError);
 		respuesta.setMensaje(msg);
-		respuesta.setMensajeExtendido(msgExtendido);
+		respuesta.setMensajeExtendido(this.getMessage());
 		
 		this.respuesta = respuesta;
 	}

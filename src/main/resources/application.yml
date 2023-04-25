@@ -26,6 +26,14 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
 
+userDetail:
+  name: user
+  pass: userPass
+
+adminDetail:
+  name: admin
+  pass: adminPass
+  
 ---
 
 #querySql:
