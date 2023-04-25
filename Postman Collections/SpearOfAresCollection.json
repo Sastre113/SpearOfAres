@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "105e36a1-f9d3-4015-95b9-291af1d8c7ce",
 		"name": "SpearOfAresApi",
-		"description": "Proyecto personal con el objetivo de mejorar, aprender y practicar en el desarrollo del backend para aplicaciones web.\n\n**La lanza de Ares** también conocida como la Lanza de Marte, es un objeto de la mitología griega y romana que se dice que fue usada por el dios de la guerra Ares (o Marte en la mitología romana) durante las batallas. Según la leyenda, la lanza tenía propiedades mágicas y **otorgaba a su portador la victoria en la guerra**.\n\nEndFragment\n\n### Tecnologías usadas:\n\n- Java 8\n- Spring Boot\n- DB H2\n- Security Spring\n- Feign Clients\n    \n\n### Que podemos encontrar en el proyecto:\n\n- CRUD típico\n- Manejo de base de datos H2\n- Security Spring con datos en memoría\n- Entidades generadas a mano\n- Diseño y pruebas con DTO's\n- CrudRepository y JpaRepository\n- Validación de DTO's con javax.validation",
+		"description": "Proyecto personal con el objetivo de mejorar, aprender y practicar en el desarrollo del backend para aplicaciones web.\n\n**La lanza de Ares** también conocida como la Lanza de Marte, es un objeto de la mitología griega y romana que se dice que fue usada por el dios de la guerra Ares (o Marte en la mitología romana) durante las batallas. Según la leyenda, la lanza tenía propiedades mágicas y **otorgaba a su portador la victoria en la guerra**.\n\n### Tecnologías usadas:\n\n- Java 8\n- Spring Boot\n- DB H2\n- Security Spring\n- Feign Clients\n    \n\n### Que podemos encontrar en el proyecto:\n\n- CRUD típico\n- Manejo de base de datos H2\n- Security Spring con datos en memoría\n- Entidades generadas a mano\n- Diseño y pruebas con DTO's\n- CrudRepository y JpaRepository\n- Validación de DTO's con javax.validation",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -860,7 +860,7 @@
 	],
 	"variable": [
 		{
-			"id": "e04a8502-7006-404e-a943-64180e409b22",
+			"id": "a84fe058-cd23-49d6-8f20-cd631600b8cd",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
