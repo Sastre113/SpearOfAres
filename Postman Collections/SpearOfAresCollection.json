@@ -754,7 +754,8 @@
 					]
 				}
 			],
-			"id": "c51cd26c-126e-4fce-99db-cf5ff2a29194"
+			"id": "c51cd26c-126e-4fce-99db-cf5ff2a29194",
+			"description": "StartFragment\n\nServicios que permiten la gestión de la tabla relacionada con empresas.\n\nEndFragment"
 		},
 		{
 			"name": "GestionRelaciones",
@@ -861,7 +862,7 @@
 	],
 	"variable": [
 		{
-			"id": "008d5576-ba62-44da-9a29-e228086a35e2",
+			"id": "46c7000e-e404-4f9a-a362-0d4c24371f62",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
