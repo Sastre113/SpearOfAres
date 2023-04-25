@@ -841,13 +841,6 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"password": "userPass",
-						"username": "user"
-					}
-				},
 				"method": "GET",
 				"header": [],
 				"url": "http://localhost:8080/user/"
@@ -886,7 +879,7 @@
 	],
 	"variable": [
 		{
-			"id": "d3848495-5291-4b44-8c77-1ef13b4e2c78",
+			"id": "d345571b-e9f2-4688-b7d1-635d6fb3fffa",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
