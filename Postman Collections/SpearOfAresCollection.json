@@ -709,7 +709,7 @@
 						},
 						{
 							"id": "adc63e37-705b-49c4-82be-547b90d88569",
-							"name": "MostrarEmpleados",
+							"name": "EX01 - MostrarEmpleados",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
@@ -943,7 +943,7 @@
 	],
 	"variable": [
 		{
-			"id": "fa99a82b-bfe1-4106-bb2c-229d5e2805bf",
+			"id": "328e3849-494e-4917-8a97-5b07765c45af",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
