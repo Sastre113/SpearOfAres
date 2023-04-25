@@ -842,18 +842,11 @@
 			"response": []
 		}
 	],
-	"auth": {
-		"type": "basic",
-		"basic": {
-			"password": "",
-			"username": ""
-		}
-	},
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "7d5e1adb-cce3-4ad9-ab4e-c4cc4e85c887",
+				"id": "8ef79986-ef04-46bb-abd7-384f0704d046",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -863,7 +856,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "3be4abdf-b8de-4ed9-a09a-b0cab95c7d69",
+				"id": "78ae70cb-b3fa-41a4-9e5d-0c642a335f3b",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -873,7 +866,7 @@
 	],
 	"variable": [
 		{
-			"id": "13f7fe31-66dc-4850-82af-37e364b215b6",
+			"id": "2d032d76-2c7e-4d42-8813-3e19a4c5b9f7",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
