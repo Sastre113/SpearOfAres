@@ -671,7 +671,8 @@
 									"value": "d6503c52-7c8f-11ec-90d6-0242ac120003"
 								}
 							]
-						}
+						},
+						"description": "Petición que permite recuperar los empleados relacionados con la empresa indicada mediante el idEmpresa."
 					},
 					"response": [
 						{
@@ -943,7 +944,7 @@
 	],
 	"variable": [
 		{
-			"id": "73ab5e15-7db1-40b4-80a6-dc1c34e6b166",
+			"id": "5266ff51-80c8-4c22-b18a-5350ed9b3a24",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
