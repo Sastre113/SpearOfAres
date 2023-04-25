@@ -38,7 +38,8 @@
 											"value": "c059d9ac-7c90-11ec-90d6-0242ac120003"
 										}
 									]
-								}
+								},
+								"description": "Petición que permite recuperar los datos de un empleado mediante el idEmpleado."
 							},
 							"response": [
 								{
@@ -861,7 +862,7 @@
 	],
 	"variable": [
 		{
-			"id": "413acfe6-d1c2-4350-93c3-4890ba3c433c",
+			"id": "35e5fbb9-e16b-4888-86e6-d7e40d015abf",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
