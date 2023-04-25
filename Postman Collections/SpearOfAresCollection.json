@@ -181,7 +181,7 @@
 									}
 								},
 								"url": "{{host}}/gestionEmpleado/insertarEmpleado",
-								"description": "**Descripción** de la petición"
+								"description": "Petición que permite la inserción de un nuevo empleado."
 							},
 							"response": [
 								{
@@ -864,7 +864,7 @@
 	],
 	"variable": [
 		{
-			"id": "714d5e31-3db8-4abd-b30c-aefbd5555088",
+			"id": "40a61ccb-93c6-4325-9ac4-09751e30e645",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
