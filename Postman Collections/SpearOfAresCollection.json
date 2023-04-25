@@ -128,7 +128,8 @@
 							]
 						}
 					],
-					"id": "114e86d7-06eb-4e85-b3e1-0a8ed2eddba3"
+					"id": "114e86d7-06eb-4e85-b3e1-0a8ed2eddba3",
+					"description": "Servicios relacionados con la búsqueda de empleados"
 				},
 				{
 					"name": "Gestión",
@@ -860,7 +861,7 @@
 	],
 	"variable": [
 		{
-			"id": "3a5ec25d-8e22-46d7-873a-969cdf3743ce",
+			"id": "413acfe6-d1c2-4350-93c3-4890ba3c433c",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
