@@ -86,7 +86,7 @@
 								"auth": {
 									"type": "basic",
 									"basic": {
-										"username": "use",
+										"username": "user",
 										"password": "userPass"
 									}
 								},
@@ -892,7 +892,7 @@
 	],
 	"variable": [
 		{
-			"id": "fa337547-4a5f-4f34-8948-b6ac32dbcc1d",
+			"id": "5c718c5f-b6f7-401b-8b37-51aa112be08b",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
