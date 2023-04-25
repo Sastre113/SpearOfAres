@@ -86,7 +86,8 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "http://localhost:8080/gestionEmpleado/listarEmpleados"
+								"url": "http://localhost:8080/gestionEmpleado/listarEmpleados",
+								"description": "Petición que permite recuperar todos los empleados."
 							},
 							"response": [
 								{
@@ -862,7 +863,7 @@
 	],
 	"variable": [
 		{
-			"id": "35e5fbb9-e16b-4888-86e6-d7e40d015abf",
+			"id": "3823abc5-3eef-4d97-a342-63976c64f7a1",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
