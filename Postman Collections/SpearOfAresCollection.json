@@ -544,7 +544,8 @@
 								}
 							}
 						},
-						"url": "http://localhost:8080/gestionEmpresa/insertarEmpresa"
+						"url": "http://localhost:8080/gestionEmpresa/insertarEmpresa",
+						"description": "Petición para insertar una empresa."
 					},
 					"response": []
 				},
@@ -862,7 +863,7 @@
 	],
 	"variable": [
 		{
-			"id": "5adcd78d-2e9c-4eab-8e11-01ab7b058795",
+			"id": "6b7c4751-f83d-40d5-874a-d80b5c717083",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
