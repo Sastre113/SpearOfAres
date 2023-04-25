@@ -438,11 +438,18 @@
 			],
 			"id": "26b98f7c-985b-404f-8260-fab13ff01a8a",
 			"description": "**Descripción** a nivel de carpeta, GestionEmpleado",
+			"auth": {
+				"type": "basic",
+				"basic": {
+					"password": "userPass",
+					"username": "user"
+				}
+			},
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "5d7ef2f0-89f4-4221-bc67-92d69d09fd85",
+						"id": "3b0c6b6e-b148-41ac-88bd-1f902d0bb85d",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -452,7 +459,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "3c0b0b75-d7e7-4918-91f9-3af4145bb0d6",
+						"id": "0c06cc65-a946-4d51-b658-0c12074fa77f",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -827,33 +834,13 @@
 				}
 			],
 			"id": "d818cedb-8ac5-44a0-a6b9-e7780c8c1c92"
-		},
-		{
-			"name": "New Request",
-			"id": "802a67cc-5ea4-4973-90f6-72f885ad80c4",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "http://localhost:8080/login/"
-			},
-			"response": []
 		}
 	],
-	"auth": {
-		"type": "basic",
-		"basic": {
-			"username": "user",
-			"password": "userPass"
-		}
-	},
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "816cc57c-20c9-4513-81e9-419dd1aebcea",
+				"id": "8ef79986-ef04-46bb-abd7-384f0704d046",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -863,7 +850,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "29da073b-1e70-4a4a-bf4a-189bef614f5c",
+				"id": "78ae70cb-b3fa-41a4-9e5d-0c642a335f3b",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -873,7 +860,7 @@
 	],
 	"variable": [
 		{
-			"id": "3a478fa3-1e2b-4ac1-be7b-26b0c279f232",
+			"id": "f394b5c8-0dbe-4a48-a9eb-00bd81a2026c",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
