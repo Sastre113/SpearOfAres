@@ -296,7 +296,8 @@
 										}
 									}
 								},
-								"url": "http://localhost:8080/gestionEmpleado/modificarEmpleado"
+								"url": "http://localhost:8080/gestionEmpleado/modificarEmpleado",
+								"description": "Petición que permite modificar los datos de un empleado."
 							},
 							"response": [
 								{
@@ -864,7 +865,7 @@
 	],
 	"variable": [
 		{
-			"id": "40a61ccb-93c6-4325-9ac4-09751e30e645",
+			"id": "1df7452b-7df2-49fd-9aec-fe1bd57e8d22",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
