@@ -606,7 +606,8 @@
 									"value": "d6503c52-7c8f-11ec-90d6-0242ac120003"
 								}
 							]
-						}
+						},
+						"description": "Petición para recuperar una empresa mediante el idEmpresa"
 					},
 					"response": [
 						{
@@ -864,7 +865,7 @@
 	],
 	"variable": [
 		{
-			"id": "37e7447d-9678-4523-a539-5c2bde44b71e",
+			"id": "4e7f4f00-cf3d-436c-bf84-b7078ebd6f19",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
