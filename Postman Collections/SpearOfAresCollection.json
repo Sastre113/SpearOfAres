@@ -486,7 +486,8 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/FeignClientTester/getHttp/ok"
+						"url": "http://localhost:8080/FeignClientTester/getHttp/ok",
+						"description": "Petición que retorna un código 200"
 					},
 					"response": []
 				},
@@ -858,7 +859,7 @@
 	],
 	"variable": [
 		{
-			"id": "8f99fcb2-efa3-461e-b1d2-107392bace61",
+			"id": "00f534cf-8a01-4bb7-bf9e-f15e0ef13447",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
