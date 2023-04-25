@@ -575,7 +575,8 @@
 									"value": "c44e75ad-e9c8-4c52-aac7-dfbc5dc23637"
 								}
 							]
-						}
+						},
+						"description": "Petición que permite eliminar una empresa mediante el idEmpresa"
 					},
 					"response": []
 				},
@@ -863,7 +864,7 @@
 	],
 	"variable": [
 		{
-			"id": "6b7c4751-f83d-40d5-874a-d80b5c717083",
+			"id": "37e7447d-9678-4523-a539-5c2bde44b71e",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
