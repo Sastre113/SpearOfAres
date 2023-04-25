@@ -500,7 +500,8 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/FeignClientTester/getHttp/badRequest"
+						"url": "http://localhost:8080/FeignClientTester/getHttp/badRequest",
+						"description": "Petición que retorna un código 403"
 					},
 					"response": []
 				},
@@ -859,7 +860,7 @@
 	],
 	"variable": [
 		{
-			"id": "00f534cf-8a01-4bb7-bf9e-f15e0ef13447",
+			"id": "3be0bfa4-a3e4-4ddf-aa4d-15b8147e9992",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
