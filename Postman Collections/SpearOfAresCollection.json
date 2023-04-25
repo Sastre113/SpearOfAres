@@ -861,7 +861,8 @@
 								}
 							}
 						},
-						"url": "http://localhost:8080/gestionRelacionEmpresaEmpleado/altaEmpleado"
+						"url": "http://localhost:8080/gestionRelacionEmpresaEmpleado/altaEmpleado",
+						"description": "Petición para dar de alta un empleado a una empresa."
 					},
 					"response": []
 				},
@@ -946,7 +947,7 @@
 	],
 	"variable": [
 		{
-			"id": "bf6c6e5d-3d91-4c41-8534-35bf95d1ad3b",
+			"id": "a22c8766-93c6-49fa-bd04-4ca6f1bccf66",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
