@@ -83,13 +83,6 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"auth": {
-									"type": "basic",
-									"basic": {
-										"username": "user",
-										"password": "userPass"
-									}
-								},
 								"method": "GET",
 								"header": [],
 								"url": "http://localhost:8080/gestionEmpleado/listarEmpleados"
@@ -893,7 +886,7 @@
 	],
 	"variable": [
 		{
-			"id": "61cbbf0c-0e9a-4482-b97d-19d8d389493b",
+			"id": "d3848495-5291-4b44-8c77-1ef13b4e2c78",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
