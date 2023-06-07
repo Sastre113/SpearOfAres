@@ -136,50 +136,15 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "GET",
 								"header": [],
 								"url": "http://localhost:8080/gestionEmpleado/listarNombres",
 								"description": "Petición que permite recuperar todos los empleados."
 							},
-							"response": [
-								{
-									"id": "7e42e6be-89ca-4175-a018-a5ee57e4719b",
-									"name": "EX - ListarEmpleados",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "http://localhost:8080/gestionEmpleado/listarEmpleados"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Sun, 23 Apr 2023 14:45:56 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"codigo\": \"0\",\n    \"mensaje\": \"Petición realizada con exito\",\n    \"mensajeExtendido\": null,\n    \"listaEmpleado\": [\n        {\n            \"idEmpleado\": \"c059d9ac-7c90-11ec-90d6-0242ac120003\",\n            \"dni\": \"00000000T\",\n            \"nombre\": \"Miguel\",\n            \"fechaNacimiento\": \"1993-02-17T23:00:00.000+00:00\"\n        },\n        {\n            \"idEmpleado\": \"c464174c-7c90-11ec-90d6-0242ac120003\",\n            \"dni\": \"00000000T\",\n            \"nombre\": \"Gordon Freeman\",\n            \"fechaNacimiento\": \"1972-02-17T23:00:00.000+00:00\"\n        },\n        {\n            \"idEmpleado\": \"c6e37a12-7c90-11ec-90d6-0242ac120003\",\n            \"dni\": \"00000000T\",\n            \"nombre\": \"G-Man\",\n            \"fechaNacimiento\": \"2032-02-17T23:00:00.000+00:00\"\n        },\n        {\n            \"idEmpleado\": \"c9817562-7c90-11ec-90d6-0242ac120003\",\n            \"dni\": \"00000000T\",\n            \"nombre\": \"GLaDOS\",\n            \"fechaNacimiento\": \"1986-08-12T22:00:00.000+00:00\"\n        },\n        {\n            \"idEmpleado\": \"cc640952-7c90-11ec-90d6-0242ac120003\",\n            \"dni\": \"00000000T\",\n            \"nombre\": \"Chell\",\n            \"fechaNacimiento\": \"1990-05-19T22:00:00.000+00:00\"\n        },\n        {\n            \"idEmpleado\": \"7b2078ea-68d4-4f96-8773-78dd14f4047b\",\n            \"dni\": \"00000000T\",\n            \"nombre\": \"Pepe el Gaviota\",\n            \"fechaNacimiento\": null\n        }\n    ]\n}"
-								}
-							]
+							"response": []
 						}
 					],
 					"id": "114e86d7-06eb-4e85-b3e1-0a8ed2eddba3",
@@ -1001,7 +966,7 @@
 	],
 	"variable": [
 		{
-			"id": "973f1466-bfb2-4e1d-bf24-de0df46aa138",
+			"id": "b5efb7dc-42ee-4246-988d-9ebdba4c8bd7",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
