@@ -30,11 +30,11 @@
 											"  // Generar un vector de inicialización (IV) aleatorio\r",
 											"  const iv = new Uint8Array(16);\r",
 											"  iv.fill(0x00);\r",
-											"  console.log(\"hola\")\r",
+											"\r",
 											"\r",
 											"  // Convertir el mensaje a un objeto WordArray\r",
 											"  const messageBytes = cryptoJs.enc.Utf8.parse(message);\r",
-											"\r",
+											"  console.log(\"hola\")\r",
 											"  // Definir las opciones de encriptación\r",
 											"  const options = {\r",
 											"    iv: iv,\r",
@@ -1025,13 +1025,13 @@
 	],
 	"variable": [
 		{
-			"id": "5a792247-2d3b-48c3-954e-501239533ba3",
+			"id": "141ce392-5e88-419a-b8e5-ea646dd910eb",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "ebdd0f32-291a-4687-a818-a66ad5a9f306",
+			"id": "c35632eb-0a7e-425c-8118-24aa064b397d",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
