@@ -62,7 +62,7 @@
 											"\r",
 											"// Ejemplo de uso\r",
 											"const message = 'Hola, mundo!';\r",
-											"const key = new Uint8Array([ /* Aquí va tu clave de cifrado en bytes */ ]);\r",
+											"const key = new Uint8Array([ 0x00 ]);\r",
 											"\r",
 											"encryptMessage(message, key)\r",
 											"  .then(result => {\r",
@@ -1037,13 +1037,13 @@
 	],
 	"variable": [
 		{
-			"id": "933323a1-77c4-4b9b-bb0f-9ede32c0ecd9",
+			"id": "ccc3d082-dbbf-49a4-b8b9-0dfdd68765d4",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "f41dfcc1-e701-48b5-9cda-0207d107386b",
+			"id": "a6b23b85-9f40-4e6f-90eb-f3a8767a9d28",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
