@@ -28,7 +28,7 @@
 											"  const keyBytes = cryptoJs.enc.Utf8.parse(key);\r",
 											"\r",
 											"  // Generar un vector de inicialización (IV) aleatorio\r",
-											"  const iv = cryptoJs.lib.WordArray.random(12);\r",
+											"  const iv = new Uint8Array[0x00];\r",
 											"\r",
 											"  // Convertir el mensaje a un objeto WordArray\r",
 											"  const messageBytes = cryptoJs.enc.Utf8.parse(message);\r",
@@ -1023,13 +1023,13 @@
 	],
 	"variable": [
 		{
-			"id": "38d7fe80-add5-4532-adab-eebea9538903",
+			"id": "9bc630ff-0687-4b34-9ccb-81814a12b038",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "11e90868-de3a-427f-b0ed-4a55ae21bb10",
+			"id": "9c74c6ee-6dbb-46d6-be78-bf944c889a25",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
