@@ -23,7 +23,7 @@
 								"header": [
 									{
 										"key": "hash",
-										"value": "",
+										"value": "{{hashGenerado}}",
 										"type": "text"
 									}
 								],
@@ -972,7 +972,7 @@
 	],
 	"variable": [
 		{
-			"id": "88611349-b2f1-4283-b401-ef9eee12f57b",
+			"id": "8e8b27cd-3a3a-4714-bec0-193506712db7",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
