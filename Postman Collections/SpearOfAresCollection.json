@@ -24,7 +24,7 @@
 											"\r",
 											"// Definir la función de encriptación\r",
 											"function encryptMessage(message, key) {\r",
-											"    const iv = cryptoJs.lib.WordArray.random(16); // Generar un IV aleatorio de 16 bytes\r",
+											"    const iv = CryptoJS.enc.Hex.parse('000000000000000000000000');\r",
 											"\r",
 											"\r",
 											"    // Definir las opciones de encriptación\r",
@@ -44,7 +44,7 @@
 											"    const ivText = iv.toString(cryptoJs.enc.Base64);\r",
 											"\r",
 											"    // Devolver el texto cifrado y el IV concatenados con un separador\r",
-											"    return ivText + \":\" + ciphertext;\r",
+											"    return ciphertext;\r",
 											"}\r",
 											"\r",
 											"// Ejemplo de uso\r",
@@ -1017,13 +1017,13 @@
 	],
 	"variable": [
 		{
-			"id": "2ab707a8-608a-420a-8155-a7f304a4bfec",
+			"id": "cc64436d-b3cf-4faf-aaeb-1113ec800375",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "89bf2bdf-977e-4375-9a54-ac0dfe6259c9",
+			"id": "2239e348-2a26-41df-833f-681831bf00c0",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
