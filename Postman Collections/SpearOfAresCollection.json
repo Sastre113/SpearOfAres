@@ -14,6 +14,18 @@
 					"item": [
 						{
 							"name": "ObtenerEmpleadoById",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "14268eda-dfbf-48b3-be62-6eda8aa6b4fa",
+										"exec": [
+											"pm.collectionVariables.set(\"hashGenerado\", hashGenerado);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "2ce5e808-962b-4cb6-a21f-c951c299e464",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -972,13 +984,13 @@
 	],
 	"variable": [
 		{
-			"id": "28629a2d-713d-4418-a09c-ae5e011f5fba",
+			"id": "b80f8ccb-8c25-4b49-a351-a110b8915708",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "853f3eb4-a0ff-4141-a7f8-8f06f2296727",
+			"id": "e0837797-bdfc-468a-b0a5-6dab0e531ff9",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
