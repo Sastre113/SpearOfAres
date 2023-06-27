@@ -26,7 +26,7 @@
 											"function encryptMessage(message, key) {\r",
 											"    // Generar un vector de inicialización (IV) aleatorio\r",
 											"    const ivHex = '00'.repeat(12); // Crear una cadena hexadecimal de 16 bytes con el valor '00'\r",
-											"    const iv = cryptoJS.enc.Hex.parse(\"\"); // Convertir la cadena hexadecimal en un WordArray        \r",
+											"    const iv = ryptoJS.enc.Hex.parse(\"101112131415161718191a1b1c1d1e1f\"); // Convertir la cadena hexadecimal en un WordArray        \r",
 											"\r",
 											"\r",
 											"    // Definir las opciones de encriptación\r",
@@ -1019,13 +1019,13 @@
 	],
 	"variable": [
 		{
-			"id": "3da4048b-c558-4e63-bab4-2581d348360b",
+			"id": "ab2e5aaf-d3fd-4eae-b28f-d9fd0dc2c544",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "621e93e8-a2a4-4dd2-8193-a45315e7be93",
+			"id": "7aefdde5-c5b4-4d46-ae6d-2ff68cfb17a5",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
