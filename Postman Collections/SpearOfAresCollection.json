@@ -1017,13 +1017,13 @@
 	],
 	"variable": [
 		{
-			"id": "c67ce6b7-b42e-4b65-8378-b2b150cde58f",
+			"id": "b4264507-4877-4125-b513-3764938f843c",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "595916ee-d57f-482f-8bb0-55378995dab8",
+			"id": "3e66711d-d2af-4fe5-87ec-c893fe881e88",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
