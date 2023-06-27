@@ -34,7 +34,7 @@
 											"\r",
 											"  // Convertir el mensaje a un objeto WordArray\r",
 											"  const messageBytes = cryptoJs.enc.Utf8.parse(message);\r",
-											"  console.log(\"hola\")\r",
+											" \r",
 											"  // Definir las opciones de encriptación\r",
 											"  const options = {\r",
 											"    iv: iv,\r",
@@ -44,7 +44,7 @@
 											"\r",
 											"  // Encriptar el mensaje utilizando la clave y las opciones\r",
 											"  const encrypted = cryptoJs.AES.encrypt(messageBytes, keyBytes, options);\r",
-											"\r",
+											" console.log(\"hola\")\r",
 											"  // Obtener el texto cifrado en formato Base64\r",
 											"  const ciphertext = encrypted.ciphertext.toString(cryptoJs.enc.Base64);\r",
 											"\r",
@@ -1025,13 +1025,13 @@
 	],
 	"variable": [
 		{
-			"id": "141ce392-5e88-419a-b8e5-ea646dd910eb",
+			"id": "81034db7-e57a-4eab-aa47-0ddb2bef9c79",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "c35632eb-0a7e-425c-8118-24aa064b397d",
+			"id": "19e7179a-7f21-4661-81b7-08656998be9e",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
