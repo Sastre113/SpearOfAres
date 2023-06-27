@@ -55,7 +55,7 @@
 											"\r",
 											"// Ejemplo de uso\r",
 											"const mensaje = \"Hola, este es un mensaje secreto.\";\r",
-											"const clave = \"EstaEsUnaClaveSecreta\";\r",
+											"const clave = \"NoMeRobesPorFavo\";\r",
 											"\r",
 											"const mensajeEncriptado = encryptMessage(mensaje, clave);\r",
 											"console.log(\"Mensaje encriptado:\", mensajeEncriptado);\r",
@@ -1023,13 +1023,13 @@
 	],
 	"variable": [
 		{
-			"id": "be6b42f5-b365-4af1-8131-cd9da68feaae",
+			"id": "fe8ac15d-301f-4ab5-b531-8946373ed243",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "2a61cc4d-19c0-4bda-85ab-c380945183c1",
+			"id": "add4e966-bf37-408c-9f22-fd6eb0ec1c76",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
