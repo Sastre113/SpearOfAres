@@ -1,6 +1,7 @@
 package spear.of.ares.service;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.UUID;
 
@@ -114,6 +115,13 @@ public class EmpleadoService implements IEmpleadoService {
 		this.empleadoDAO.findAll().forEach(empleadoEntity -> respuesta.getListaEmpleado().add(this.mapEntityToDTO(empleadoEntity)));
 		
 		return respuesta;
+	}
+	
+	@Override
+	public List<String> listarNombresEmpleados() throws AresException {
+		List<String> listaNombres = new ArrayList<>();
+		this.empleadoDAO.findAll().forEach(empleadoEntity -> listaNombres.add(empleadoEntity.getNombre()));
+		return listaNombres;
 	}
 
 	/*

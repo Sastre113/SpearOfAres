@@ -1,5 +1,7 @@
 package spear.of.ares.service;
 
+import java.util.List;
+
 import spear.of.ares.excepcion.AresException;
 import spear.of.ares.model.dto.Empleado.peticion.PeticionInsertarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.peticion.PeticionModificarEmpleado;
@@ -22,5 +24,6 @@ public interface IEmpleadoService {
 	public RespuestaObtenerEmpleadoDTO obtenerEmpleadoPorId(String idEmpleado) throws AresException;
 	public RespuestaEliminarEmpleadoDTO eliminarEmpleado(String idEmpleado) throws AresException;
 	public RespuestaListarEmpleadosDTO listarEmpleados() throws AresException;
+	public List<String> listarNombresEmpleados() throws AresException;
 
 }
