@@ -20,6 +20,9 @@
 									"script": {
 										"id": "14268eda-dfbf-48b3-be62-6eda8aa6b4fa",
 										"exec": [
+											"\r",
+											"\r",
+											"let hashGenerado = \"\";\r",
 											"pm.collectionVariables.set(\"hashGenerado\", hashGenerado);"
 										],
 										"type": "text/javascript"
@@ -984,13 +987,13 @@
 	],
 	"variable": [
 		{
-			"id": "b80f8ccb-8c25-4b49-a351-a110b8915708",
+			"id": "3ba3c342-8b74-48a9-b3bb-f4bb86c6c835",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "e0837797-bdfc-468a-b0a5-6dab0e531ff9",
+			"id": "4345bd5c-280e-446f-b54c-53d787f6f159",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
