@@ -25,7 +25,7 @@
 											"// Definir la función de encriptación\r",
 											"function encryptMessage(message, key) {\r",
 											"  // Generar un vector de inicialización (IV) aleatorio\r",
-											"const iv = cryptoJs.lib.WordArray.create(16);\r",
+											"  const iv = cryptoJs.lib.WordArray.create(16);\r",
 											" iv.fill(0);\r",
 											"\r",
 											"  // Definir las opciones de encriptación\r",
@@ -1018,13 +1018,13 @@
 	],
 	"variable": [
 		{
-			"id": "b3b91985-8776-4a9c-8ff5-12b3622d59b2",
+			"id": "28587040-1075-45bf-8cd9-63c757d2da19",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "354bf9cf-e43f-4be0-a27d-b2621a879575",
+			"id": "60e29702-8c0c-47e1-b3f4-d98cf0f864db",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
