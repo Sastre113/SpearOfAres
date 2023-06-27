@@ -36,7 +36,7 @@
 											"  // Definir las opciones de encriptación\r",
 											"  const options = {\r",
 											"    iv: iv,\r",
-											"    mode: cryptoJs.mode.GCM,\r",
+											"    mode: cryptoJs.mode.CRT,\r",
 											"    padding: cryptoJs.pad.NoPadding,\r",
 											"  };\r",
 											"\r",
@@ -1023,13 +1023,13 @@
 	],
 	"variable": [
 		{
-			"id": "e2f66579-0278-401c-bd2b-6f923887f232",
+			"id": "38d7fe80-add5-4532-adab-eebea9538903",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "f96b8e43-c2c7-4286-87fb-1f1fd774e2cb",
+			"id": "11e90868-de3a-427f-b0ed-4a55ae21bb10",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
