@@ -20,7 +20,13 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "hash",
+										"value": "",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "http://localhost:8080/gestionEmpleado/obtenerEmpleadoPorId?idEmpleado=c059d9ac-7c90-11ec-90d6-0242ac120003",
 									"protocol": "http",
@@ -966,7 +972,7 @@
 	],
 	"variable": [
 		{
-			"id": "b5efb7dc-42ee-4246-988d-9ebdba4c8bd7",
+			"id": "88611349-b2f1-4283-b401-ef9eee12f57b",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
