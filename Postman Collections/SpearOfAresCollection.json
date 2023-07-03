@@ -24,7 +24,12 @@
 											"\r",
 											"// Definir la función de encriptación\r",
 											"function encryptMessage(message, key) {\r",
-											"    const iv = CryptoJS.enc.Hex.parse('100000000000');\r",
+											"    const iv = new Uint8Array([\r",
+											"    0x01, 0x00, 0x00, 0x00,\r",
+											"    0x00, 0x00, 0x00, 0x00,\r",
+											"    0x00, 0x00, 0x00, 0x00,\r",
+											"    0x00, 0x00, 0x00, 0x00\r",
+											"]);\r",
 											"    console.log(\"iv : \" + iv);\r",
 											"\r",
 											"    // Definir las opciones de encriptación\r",
@@ -1017,13 +1022,13 @@
 	],
 	"variable": [
 		{
-			"id": "37f8b649-486a-42a7-9cb2-4a29b5c1e01e",
+			"id": "20bc6414-e841-47b6-9c15-9a6488a08ac7",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "77d784b5-cef4-489e-baa4-9b3871f2173d",
+			"id": "ed648951-82e3-45ce-8f7b-e393dcbfd93b",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
