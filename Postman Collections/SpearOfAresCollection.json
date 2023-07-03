@@ -49,7 +49,7 @@
 											"    const ivText = encrypted.iv.toString(cryptoJs.enc.Base64);\r",
 											"\r",
 											"    console.log(\"ciphertext base64 : \" + ciphertext)\r",
-											"    console.log(\"iv base64 : \" + ivText)\r",
+											"    console.log(\"ivtext base64 : \" + ivText)\r",
 											"    // Devolver el texto cifrado y el IV concatenados con un separador\r",
 											"    return ivText + ciphertext;\r",
 											"}\r",
@@ -1024,13 +1024,13 @@
 	],
 	"variable": [
 		{
-			"id": "577ad709-05b7-4974-9e23-6927ecd301cb",
+			"id": "1412a2f4-c808-4622-9ee8-335e5f4a806a",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "d92b96b0-dc9a-48ae-a265-ee072a097418",
+			"id": "db73734f-24be-4a7f-8684-b766f36ae7c8",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
