@@ -52,7 +52,7 @@
 											"    console.log(\"ciphertext base64 : \" + ciphertext);\r",
 											"    console.log(\"ivtext base64 : \" + ivText);\r",
 											"    // Devolver el texto cifrado y el IV concatenados con un separador\r",
-											"    return ivText + ciphertext;\r",
+											"    return ciphertext;\r",
 											"}\r",
 											"\r",
 											"// Ejemplo de uso\r",
@@ -1025,13 +1025,13 @@
 	],
 	"variable": [
 		{
-			"id": "144ec1f5-81ac-4213-aff0-6cf97dcaad13",
+			"id": "5ce853f9-976d-463a-b770-f7bda22c991a",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "00b6ce52-198e-43a2-913f-4fbb4835f8d3",
+			"id": "898d6d02-fdb9-4dc1-abec-a76e55924ef7",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
