@@ -61,7 +61,7 @@
 											"// Codificar el texto a UTF-8\r",
 											"const textUtf8 = CryptoJS.enc.Base64.stringify(text);\r",
 											"// Convertir a Base64\r",
-											"//const base64 = btoa(String.fromCharCode(...textUtf8));\r",
+											"const base64 = btoa(String.fromCharCode(...textUtf8));\r",
 											"console.log(\"Texto codificado en Base64: \" + base64);\r",
 											"\r",
 											"// Ejemplo de uso\r",
@@ -1034,13 +1034,13 @@
 	],
 	"variable": [
 		{
-			"id": "cfcb390e-7585-42e8-9aa9-c587cb39fe65",
+			"id": "8e8af79e-56a5-438b-9d86-d3740f1966ed",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "250cf0ea-24b0-4b8d-abc7-df434efbfc76",
+			"id": "7069b6d5-3683-4585-a1a6-d84c0daa9a8d",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
