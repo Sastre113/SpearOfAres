@@ -55,6 +55,9 @@
 											"    return ciphertext;\r",
 											"}\r",
 											"\r",
+											"console.log(\"msgCifradoBase64: \" + );\r",
+											"\r",
+											"\r",
 											"// Ejemplo de uso\r",
 											"const mensaje = \"Hola, este es un mensaje secreto.\";\r",
 											"const clave = \"NoMeRobesPorFavo\";\r",
@@ -1025,13 +1028,13 @@
 	],
 	"variable": [
 		{
-			"id": "06a3904f-2a48-43fa-abbe-a3f5a1cd90de",
+			"id": "128234f9-1736-4925-8943-9d8e5bc7a7fb",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "b903f42b-985f-4be0-994e-8b10a6f01652",
+			"id": "4830e895-07ed-4065-9274-0699034202ce",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
