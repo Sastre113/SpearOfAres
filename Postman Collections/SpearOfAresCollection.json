@@ -72,7 +72,9 @@
 											"let mensajeEncriptado = encryptMessage(mensaje, clave);\r",
 											"console.log(\"Mensaje encriptado:\", mensajeEncriptado);\r",
 											"\r",
-											"\r",
+											"mensajeEncriptado = text; \r",
+											"base64Hash = CryptoJS.enc.Utf8.parse(text);\r",
+											"base64 = CryptoJS.enc.Base64.stringify(base64Hash);\r",
 											"\r",
 											"pm.collectionVariables.set(\"hashGenerado\", mensajeEncriptado);"
 										],
@@ -1038,13 +1040,13 @@
 	],
 	"variable": [
 		{
-			"id": "ecdcd56c-86f1-40d6-b511-9f88110277b0",
+			"id": "7c2ad005-9436-46ec-beae-878bf0b42556",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "cb4a6d58-4719-41a3-8e9b-c5f8d748f104",
+			"id": "bc63f560-c3cb-4576-a708-3b1fd21ea902",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
