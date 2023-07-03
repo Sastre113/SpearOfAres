@@ -31,8 +31,6 @@
 											"        0x00, 0x00, 0x00, 0x00\r",
 											"    ]);\r",
 											"\r",
-											"    console.log(\"iv : \" + iv);\r",
-											"\r",
 											"    // Definir las opciones de encriptación\r",
 											"    const options = {\r",
 											"        iv: iv,\r",
@@ -42,13 +40,15 @@
 											"    // Encriptar el mensaje utilizando la clave y las opciones\r",
 											"    const encrypted = cryptoJs.AES.encrypt(message, key, options);\r",
 											"\r",
-											"    console.log(\"Encriptado: \" + encrypted);\r",
 											"    // Obtener el texto cifrado en formato Base64\r",
 											"    const ciphertext = encrypted.ciphertext.toString(cryptoJs.enc.Base64);\r",
 											"\r",
 											"    // Obtener el valor del vector de inicialización (IV) en formato Base64\r",
 											"    const ivText = encrypted.iv.toString(cryptoJs.enc.Base64);\r",
 											"\r",
+											"\r",
+											"    var base64Hash = CryptoJS.enc.Utf8.parse(ciphertext);\r",
+											"    var base64 = CryptoJS.enc.Base64.stringify(base64Hash);\r",
 											"    console.log(\"ciphertext base64 : \" + ciphertext);\r",
 											"    console.log(\"ivtext base64 : \" + ivText);\r",
 											"    // Devolver el texto cifrado y el IV concatenados con un separador\r",
@@ -1033,13 +1033,13 @@
 	],
 	"variable": [
 		{
-			"id": "8386e5e6-cdd0-4d49-a04c-7fb39e3f9abc",
+			"id": "7eda7080-41de-4d47-87f5-bcd9319aa322",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "e80e0715-3af3-4d10-bf5a-eb6f3f81ccc5",
+			"id": "8ac207f4-563d-40bd-bc1f-7ed3747d1f44",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
