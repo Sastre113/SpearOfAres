@@ -24,7 +24,7 @@
 											"\r",
 											"// Definir la función de encriptación\r",
 											"function encryptMessage(message, key) {\r",
-											"    const iv = CryptoJS.enc.Hex.parse('000000000000000000000000');\r",
+											"    const iv = CryptoJS.enc.Hex.parse('100000000000');\r",
 											"\r",
 											"\r",
 											"    // Definir las opciones de encriptación\r",
@@ -1017,13 +1017,13 @@
 	],
 	"variable": [
 		{
-			"id": "d55c24e8-dfe6-42d1-8103-bf28f88f3e6d",
+			"id": "82bd32a2-92c5-41e3-81be-0c79236a9a50",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "54bc19ed-d0f7-4e03-8a59-a70a08c9bf9e",
+			"id": "4de95de1-2c6f-4ef2-a404-a422a8dcc560",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
