@@ -55,7 +55,7 @@
 											"    return ciphertext;\r",
 											"}\r",
 											"\r",
-											"console.log(\"msgCifradoBase64: \" + );\r",
+											"console.log(\"msgCifradoBase64: \" + atob(\"Jn6gKDumJQjYa9kts0J+gxprSvAai7KTig0llGWd\"));\r",
 											"\r",
 											"\r",
 											"// Ejemplo de uso\r",
@@ -1028,13 +1028,13 @@
 	],
 	"variable": [
 		{
-			"id": "128234f9-1736-4925-8943-9d8e5bc7a7fb",
+			"id": "a6886da3-1cdd-4c17-a246-92e83cb7eb91",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "4830e895-07ed-4065-9274-0699034202ce",
+			"id": "7168934f-bb1a-440c-a2dd-cef8d60a3f4c",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
