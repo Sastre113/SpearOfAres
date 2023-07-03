@@ -58,7 +58,9 @@
 											"const text = \"Jn6gKDumJQjYa9kts0J+gxprSvAai7KTig0llGWd\";\r",
 											"\r",
 											"// Codificar el texto a UTF-8\r",
-											"const textUtf8 = CryptoJS.enc.Utf8.parse(text);\r",
+											"var base64Hash = CryptoJS.enc.Utf8.parse(text);\r",
+											"var base64 = CryptoJS.enc.Base64.stringify(base64Hash);\r",
+											"\r",
 											"// Convertir a Base64\r",
 											"const base64 = btoa(String.fromCharCode(...textUtf8));\r",
 											"console.log(\"Texto codificado en Base64: \" + base64);\r",
@@ -1033,13 +1035,13 @@
 	],
 	"variable": [
 		{
-			"id": "238dc8b7-3479-4321-a363-b7acdaf40271",
+			"id": "51984873-ddf5-4035-a255-4f89c916fa97",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "899950af-dabe-43a3-b6e3-c839b2878e4d",
+			"id": "cd2b6bfd-1dfa-47a1-bf3b-e79781c912d3",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
