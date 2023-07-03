@@ -49,6 +49,8 @@
 											"\r",
 											"    var base64Hash = CryptoJS.enc.Utf8.parse(ciphertext);\r",
 											"    var base64 = CryptoJS.enc.Base64.stringify(base64Hash);\r",
+											"\r",
+											"    console.log(\"ciphertext: \" + ciphertext);\r",
 											"    console.log(\"ciphertext base64 : \" + base64);\r",
 											"    console.log(\"ivtext base64 : \" + ivText);\r",
 											"    // Devolver el texto cifrado y el IV concatenados con un separador\r",
@@ -1033,13 +1035,13 @@
 	],
 	"variable": [
 		{
-			"id": "03dd76c0-ef37-48a9-aff5-6f16df859d65",
+			"id": "c767b118-00ae-4fd3-ac44-6c6a8ec66547",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "3db3d25b-e059-44c4-b890-8ad55ce4226b",
+			"id": "f906c982-258f-4bba-b4db-2299e30f01b9",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
