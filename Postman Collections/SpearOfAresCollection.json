@@ -37,6 +37,7 @@
 											"        padding: cryptoJs.pad.NoPadding\r",
 											"    };\r",
 											"\r",
+											"    const cipher = crypto.createCipheriv('aes-256-gcm', key, iv);\r",
 											"    // Encriptar el mensaje utilizando la clave y las opciones\r",
 											"    const encrypted = cryptoJs.AES.encrypt(message, key, options);\r",
 											"\r",
@@ -1041,13 +1042,13 @@
 	],
 	"variable": [
 		{
-			"id": "f54e5a96-1e1e-4030-b92d-bf128ba012aa",
+			"id": "665ba1e1-8c93-4331-95fe-b2e90457ef4a",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "147939c8-2ecd-470b-8ffd-47e18e88c536",
+			"id": "0405d7e7-cafc-4c17-bd69-3dd4b649b47b",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
