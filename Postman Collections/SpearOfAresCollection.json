@@ -46,7 +46,7 @@
 											"    const ciphertext = encrypted.ciphertext.toString(cryptoJs.enc.Base64);\r",
 											"\r",
 											"    // Obtener el valor del vector de inicialización (IV) en formato Base64\r",
-											"    const ivText = iv.toString(cryptoJs.enc.Base64);\r",
+											"    const ivText = encrypted.iv.toString(cryptoJs.enc.Base64);\r",
 											"\r",
 											"    // Devolver el texto cifrado y el IV concatenados con un separador\r",
 											"    return ivText + \":\" +ciphertext;\r",
@@ -1022,13 +1022,13 @@
 	],
 	"variable": [
 		{
-			"id": "0f678415-0d83-4b35-a1a7-afd512485246",
+			"id": "9bd1c189-4a29-48b1-a19b-141615095b6d",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "08eb3131-779d-4c24-b87f-896d2b3f40c9",
+			"id": "31c3820b-7128-49c9-ae82-5433d39ebcf9",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
