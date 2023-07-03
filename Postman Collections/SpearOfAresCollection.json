@@ -24,7 +24,7 @@
 											"\r",
 											"// Definir la función de encriptación\r",
 											"function encryptMessage(message, key) {\r",
-											"    var iv = new Uint8Array([\r",
+											"    let iv = new Uint8Array([\r",
 											"        0x01, 0x00, 0x00, 0x00,\r",
 											"        0x00, 0x00, 0x00, 0x00,\r",
 											"        0x00, 0x00, 0x00, 0x00,\r",
@@ -1026,13 +1026,13 @@
 	],
 	"variable": [
 		{
-			"id": "fd144ea2-675b-4ae0-8d26-25d16bf855f5",
+			"id": "73fab8d2-7fa1-465a-8546-72e66d7539f6",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "6c2e4733-f9e3-4106-880c-822176bd25ae",
+			"id": "2c812d19-7e2f-4420-bcf0-05e7f1de52f3",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
