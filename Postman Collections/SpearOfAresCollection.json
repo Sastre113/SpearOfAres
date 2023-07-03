@@ -31,7 +31,7 @@
 											"        0x00, 0x00, 0x00, 0x00\r",
 											"    ]);\r",
 											"\r",
-											"    iv = CryptoJS.lib.WordArray.create([0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]);\r",
+											"    iv = cryptoJs.lib.WordArray.create([0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]);\r",
 											"    console.log(\"iv : \" + iv);\r",
 											"\r",
 											"    // Definir las opciones de encriptación\r",
@@ -1034,13 +1034,13 @@
 	],
 	"variable": [
 		{
-			"id": "a32c06cf-981e-4735-b13f-78f9aeca81a8",
+			"id": "320334e4-0f3e-4cdb-8183-2f613524b42a",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "7f715588-05a3-48ee-b8dc-228df64146f7",
+			"id": "36b22b49-5cfe-4ae1-aada-61aa746bd6b8",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
