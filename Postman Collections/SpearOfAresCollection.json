@@ -21,6 +21,7 @@
 										"id": "14268eda-dfbf-48b3-be62-6eda8aa6b4fa",
 										"exec": [
 											"const cryptoJs = require(\"crypto-js\");\r",
+											"const crypto = require('crypto');\r",
 											"\r",
 											"// Definir la función de encriptación\r",
 											"function encryptMessage(message, key) {\r",
@@ -1041,13 +1042,13 @@
 	],
 	"variable": [
 		{
-			"id": "17e6e590-1298-49f0-bc26-ff62ca84ccc4",
+			"id": "3bca0ae8-d094-4ddc-9dfa-0fe283e42ddc",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "f25d13f1-be98-4dd2-bc72-c22f080562db",
+			"id": "4a78e08c-1f49-4ca6-9b77-2a6694ddcf26",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
