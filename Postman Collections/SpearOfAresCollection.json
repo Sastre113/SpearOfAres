@@ -43,6 +43,7 @@
 											"    // Encriptar el mensaje utilizando la clave y las opciones\r",
 											"    const encrypted = cryptoJs.AES.encrypt(message, key, options);\r",
 											"\r",
+											"    console.log(\"Encriptado: \"encrypted);\r",
 											"    // Obtener el texto cifrado en formato Base64\r",
 											"    const ciphertext = encrypted.ciphertext.toString(cryptoJs.enc.Base64);\r",
 											"\r",
@@ -55,8 +56,14 @@
 											"    return ciphertext;\r",
 											"}\r",
 											"\r",
-											"console.log(\"msgCifradoBase64: \" + atob(\"Jn6gKDumJQjYa9kts0J+gxprSvAai7KTig0llGWd\"));\r",
+											"const text = \"Jn6gKDumJQjYa9kts0J+gxprSvAai7KTig0llGWd\";\r",
 											"\r",
+											"// Codificar el texto a UTF-8\r",
+											"const utf8encoder = new TextEncoder();\r",
+											"const textUtf8 = utf8encoder.encode(text);\r",
+											"// Convertir a Base64\r",
+											"const base64 = btoa(String.fromCharCode(...textUtf8));\r",
+											"console.log(\"Texto codificado en Base64: \" + base64);\r",
 											"\r",
 											"// Ejemplo de uso\r",
 											"const mensaje = \"Hola, este es un mensaje secreto.\";\r",
@@ -1028,13 +1035,13 @@
 	],
 	"variable": [
 		{
-			"id": "192dc4bd-f331-4a80-a432-3815450c37ca",
+			"id": "cfe0a564-fa57-4f8a-8ec4-812d890d4e3b",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "d4bbd872-aea1-4ba6-923a-f04464841671",
+			"id": "97b990bc-c4c8-4801-a5e1-3d87b626878b",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
