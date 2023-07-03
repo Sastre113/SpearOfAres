@@ -43,7 +43,7 @@
 											"    // Encriptar el mensaje utilizando la clave y las opciones\r",
 											"    const encrypted = cryptoJs.AES.encrypt(message, key, options);\r",
 											"\r",
-											"    console.log(\"Encriptado: \"encrypted);\r",
+											"    console.log(\"Encriptado: \" + encrypted);\r",
 											"    // Obtener el texto cifrado en formato Base64\r",
 											"    const ciphertext = encrypted.ciphertext.toString(cryptoJs.enc.Base64);\r",
 											"\r",
@@ -1035,13 +1035,13 @@
 	],
 	"variable": [
 		{
-			"id": "cfe0a564-fa57-4f8a-8ec4-812d890d4e3b",
+			"id": "5e2e74a5-a469-44fe-8525-82bf0baabac8",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "97b990bc-c4c8-4801-a5e1-3d87b626878b",
+			"id": "a509bc64-ac06-4d59-9658-1bd2d6284753",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
