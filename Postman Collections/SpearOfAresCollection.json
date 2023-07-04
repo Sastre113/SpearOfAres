@@ -34,6 +34,7 @@
 											"    // Definir las opciones de encriptación\r",
 											"    const options = {\r",
 											"        iv: iv,\r",
+											"        mode: cryptoJs.mode.CRS\r",
 											"        padding: cryptoJs.pad.NoPadding\r",
 											"    };\r",
 											"\r",
@@ -45,25 +46,12 @@
 											"    return cipherBase64;\r",
 											"}\r",
 											"\r",
-											"const text = \"Jn6gKDumJQjYa9kts0J+gxprSvAai7KTig0llGWd\";\r",
-											"\r",
-											"// Convertir a Base64\r",
-											"var base64Hash = CryptoJS.enc.Utf8.parse(text);\r",
-											"var base64 = CryptoJS.enc.Base64.stringify(base64Hash);\r",
-											"console.log(\"Texto codificado en Base64Hash: \" + base64Hash);\r",
-											"console.log(\"Texto codificado en Base64: \" + base64);\r",
-											"\r",
 											"// Ejemplo de uso\r",
 											"const mensaje = \"Hola, este es un mensaje secreto.\";\r",
 											"const clave = \"NoMeRobesPorFavo\";\r",
 											"\r",
 											"let mensajeEncriptado = encryptMessage(mensaje, clave);\r",
 											"console.log(\"Mensaje encriptado:\", mensajeEncriptado);\r",
-											"\r",
-											"base64Hash = CryptoJS.enc.Utf8.parse(text);\r",
-											"base64 = CryptoJS.enc.Base64.stringify(base64Hash);\r",
-											"mensajeEncriptado = base64;\r",
-											"\r",
 											"pm.collectionVariables.set(\"hashGenerado\", mensajeEncriptado);"
 										],
 										"type": "text/javascript"
@@ -1028,13 +1016,13 @@
 	],
 	"variable": [
 		{
-			"id": "43c946f9-9ba0-404b-ab7a-a873c6bb0254",
+			"id": "886d3ca4-87f9-4ff9-93ac-85e445e0c972",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "685e103e-2468-47fe-84f0-15088b245bb9",
+			"id": "3e3511f7-585c-4546-b6ef-7becb2c2f58e",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
