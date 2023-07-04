@@ -40,13 +40,9 @@
 											"    // Encriptar el mensaje utilizando la clave y las opciones\r",
 											"    const encrypted = cryptoJs.AES.encrypt(message, key, options);\r",
 											"    var cipherUtf8 = CryptoJS.enc.Utf8.parse(encrypted.ciphertext);\r",
-											"    var base64 = CryptoJS.enc.Base64.stringify(cipherUtf8);\r",
+											"    var cipherBase64 = CryptoJS.enc.Base64.stringify(cipherUtf8);\r",
 											"\r",
-											"    console.log(\"ciphertext: \" + ciphertext);\r",
-											"    console.log(\"ciphertext base64 : \" + base64);\r",
-											"    console.log(\"ivtext base64 : \" + ivText);\r",
-											"    // Devolver el texto cifrado y el IV concatenados con un separador\r",
-											"    return base64;\r",
+											"    return cipherBase64;\r",
 											"}\r",
 											"\r",
 											"const text = \"Jn6gKDumJQjYa9kts0J+gxprSvAai7KTig0llGWd\";\r",
@@ -1032,13 +1028,13 @@
 	],
 	"variable": [
 		{
-			"id": "47234257-5b80-40e0-83dc-198c6ca8f3a4",
+			"id": "c55b9018-f86f-43b5-a699-c80fb939719c",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "39b5c8ce-2792-4563-b65b-1bdac7bd4557",
+			"id": "05a05887-4f10-4717-a51c-bbf5b3fd4e54",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
