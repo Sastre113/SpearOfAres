@@ -39,6 +39,8 @@
 											"\r",
 											"    // Encriptar el mensaje utilizando la clave y las opciones\r",
 											"    const encrypted = cryptoJs.AES.encrypt(message, key, options);\r",
+											"\r",
+											"     console.log(encrypted);\r",
 											"    var cipherUtf8 = CryptoJS.enc.Utf8.parse(encrypted.ciphertext);\r",
 											"    var cipherBase64 = CryptoJS.enc.Base64.stringify(cipherUtf8);\r",
 											"\r",
@@ -50,7 +52,7 @@
 											"\r",
 											"// Ejemplo de uso\r",
 											"const mensaje = \"Hola, este es un mensaje secreto.\";\r",
-											"const clave = \"NoMeRobesPorFavo\";\r",
+											"const clave = \"NoMeRobesPor\";\r",
 											"\r",
 											"let mensajeEncriptado = encryptMessage(mensaje, clave);\r",
 											"console.log(\"Mensaje encriptado:\", mensajeEncriptado);\r",
@@ -1018,13 +1020,13 @@
 	],
 	"variable": [
 		{
-			"id": "e5d45cde-ae45-47f3-bec9-d62407918bf2",
+			"id": "70ff9d3f-b452-4467-ac2b-3a84e1fd2520",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "f8ec0683-6986-47c0-855c-b48a4429b67b",
+			"id": "1bfdf32c-2f7d-4eaf-808f-f5289739c56d",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
