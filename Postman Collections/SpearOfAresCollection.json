@@ -27,14 +27,13 @@
 											"    let iv = new Uint8Array([\r",
 											"        0x01, 0x00, 0x00, 0x00,\r",
 											"        0x00, 0x00, 0x00, 0x00,\r",
-											"        0x00, 0x00, 0x00, 0x00,\r",
 											"        0x00, 0x00, 0x00, 0x00\r",
 											"    ]);\r",
 											"\r",
 											"    // Definir las opciones de encriptación\r",
 											"    const options = {\r",
 											"        iv: iv,\r",
-											"        mode: cryptoJs.mode.CBC ,\r",
+											"        mode: cryptoJs.mode.CBC,\r",
 											"        padding: cryptoJs.pad.NoPadding\r",
 											"    };\r",
 											"\r",
@@ -1016,13 +1015,13 @@
 	],
 	"variable": [
 		{
-			"id": "fca4b7b7-5c46-49fe-906e-a507a84b40ed",
+			"id": "0b25e0a7-6004-4d5e-aa63-0bd35a9183ef",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "d39a8f4c-54df-4f47-a9aa-d28ce30e1b1e",
+			"id": "f7d3e20c-2d1f-4c6f-add7-ac2bb96e1afe",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
