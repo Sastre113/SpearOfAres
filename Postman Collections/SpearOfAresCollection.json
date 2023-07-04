@@ -42,6 +42,9 @@
 											"    var cipherUtf8 = CryptoJS.enc.Utf8.parse(encrypted.ciphertext);\r",
 											"    var cipherBase64 = CryptoJS.enc.Base64.stringify(cipherUtf8);\r",
 											"\r",
+											"    console.log(\"cipherUtf8 : \" + cipherUtf8);\r",
+											"    console.log(\"cipherBase64 : \" + cipherBase64);\r",
+											"\r",
 											"    return cipherBase64;\r",
 											"}\r",
 											"\r",
@@ -1015,13 +1018,13 @@
 	],
 	"variable": [
 		{
-			"id": "5ca63b38-c1ce-4ea5-b028-55e89aaf9e17",
+			"id": "b3615da4-cde4-4579-8ce5-f5f1aa36f18d",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "908253f5-258f-4afc-bc73-b113cd4f5c77",
+			"id": "318cc3bf-f8db-42fc-afdb-b30a5420a927",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
