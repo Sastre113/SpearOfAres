@@ -20,6 +20,7 @@ import spear.of.ares.model.dto.Empleado.respuesta.RespuestaListarEmpleadosDTO;
 import spear.of.ares.model.dto.Empleado.respuesta.RespuestaModificarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.respuesta.RespuestaObtenerEmpleadoDTO;
 import spear.of.ares.model.entity.TbEmpleado;
+import spear.of.ares.repository.IEmpleadoRep;
 import spear.of.ares.repository.IEmpleadoRepository;
 import spear.of.ares.utils.AresNotificacion;
 import spear.of.ares.utils.AresUtils;
@@ -36,6 +37,8 @@ public class EmpleadoService implements IEmpleadoService {
 
 	@Autowired
 	private IEmpleadoRepository empleadoDAO;
+	@Autowired
+	private IEmpleadoRep empleadoRepo;
 	
 	@Override
 	public RespuestaInsertarEmpleadoDTO insertarEmpleado(PeticionInsertarEmpleadoDTO peticionDTO) throws AresException {
@@ -58,7 +61,10 @@ public class EmpleadoService implements IEmpleadoService {
 		}
 		
 		RespuestaObtenerEmpleadoDTO respuesta = AresNotificacion.OK.construir(RespuestaObtenerEmpleadoDTO.class);
-		respuesta.setEmpleadoDTO(this.mapEntityToDTO(this.empleadoDAO.findById(idEmpleado).orElseThrow()));
+		
+		//TbEmpleado empleado = empleadoRepo.findByIdEmpleado(idEmpleado);
+		TbEmpleado empleado = this.empleadoDAO.findById(idEmpleado).orElseThrow();
+		respuesta.setEmpleadoDTO(this.mapEntityToDTO(empleado));
 		
 		return respuesta;
 	}
@@ -112,6 +118,7 @@ public class EmpleadoService implements IEmpleadoService {
 	public RespuestaListarEmpleadosDTO listarEmpleados() throws AresException {
 		RespuestaListarEmpleadosDTO respuesta = AresNotificacion.OK.construir(RespuestaListarEmpleadosDTO.class);
 		respuesta.setListaEmpleado(new ArrayList<EmpleadoDTO>());
+		
 		this.empleadoDAO.findAll().forEach(empleadoEntity -> respuesta.getListaEmpleado().add(this.mapEntityToDTO(empleadoEntity)));
 		
 		return respuesta;

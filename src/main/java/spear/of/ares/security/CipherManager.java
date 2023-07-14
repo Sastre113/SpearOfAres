@@ -32,7 +32,7 @@ public class CipherManager {
 	public CipherManager() {
 		this.SECRET_KEY = "NoMeRobesPorFavo";
 		this.IV = new byte[] {
-			    0x00, 0x00, 0x00, 0x00,
+			    0x01, 0x00, 0x00, 0x00,
 			    0x00, 0x00, 0x00, 0x00,
 			    0x00, 0x00, 0x00, 0x00
 			};
@@ -40,10 +40,25 @@ public class CipherManager {
 	}
 	
 	public static void mostrarHash(HttpServletRequest request) {
-		String hash = request.getHeader("hash");
+		String hashBase64 = request.getHeader("hash");
 		CipherManager cipherManager = new CipherManager();
+		
+		
+		System.out.println("Hash recibido: " + hashBase64); 
+		String hash = new String(Base64.getDecoder().decode(hashBase64));
+		System.out.println("Hash quitado base64: " + hash); 
+		
+		
 		try {
+			
+			
+			String msgCifrado = cipherManager.encriptar("Mensaje oculto");
+			String msgCifradoBase64 = Base64.getEncoder().encodeToString(msgCifrado.getBytes(StandardCharsets.UTF_8));
+			String msgRecibidoCifrado = new String(Base64.getDecoder().decode(msgCifradoBase64));
+			String msgDescifrado = cipherManager.desencriptar(msgRecibidoCifrado);
+			
 			System.out.println(cipherManager.desencriptar(hash));
+			
 		} catch (InvalidKeyException | NoSuchAlgorithmException | NoSuchPaddingException
 				| InvalidAlgorithmParameterException | IllegalBlockSizeException | BadPaddingException e) {
 			// TODO Auto-generated catch block
@@ -59,28 +74,25 @@ public class CipherManager {
 	}
 	
 	public String desencriptar(String msgEncriptado) throws InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
-		ByteBuffer byteBuffer = ByteBuffer.wrap(msgEncriptado.getBytes());
-		byte[] iv = new byte[12];
-		byteBuffer.get(iv);
-		byte[] encrypted = new byte[byteBuffer.remaining()];
-        byteBuffer.get(encrypted);
-		Cipher cipher = this.getDesencriptador(iv);
-		byte[] msgBytes = cipher.doFinal(encrypted);
-		return new String(msgBytes, StandardCharsets.UTF_8);
+		//byte [] msgBytes = Base64.getDecoder().decode(msgEncriptado.getBytes());
+		Cipher cipher = this.getDesencriptador();
+		cipher.updateAAD(msgEncriptado.getBytes());
+		byte[] msgDescifrado = cipher.doFinal(msgEncriptado.getBytes());
+		return new String(msgDescifrado, StandardCharsets.UTF_8);
 	}
 
 	
 	private Cipher getEncriptador() throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, InvalidAlgorithmParameterException {
-		return this.generarCipher(Cipher.ENCRYPT_MODE, this.IV);
+		return this.generarCipher(Cipher.ENCRYPT_MODE);
 	}
 	
-	private Cipher getDesencriptador(byte [] iv) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, InvalidAlgorithmParameterException {
-		return this.generarCipher(Cipher.DECRYPT_MODE, iv);
+	private Cipher getDesencriptador() throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, InvalidAlgorithmParameterException {
+		return this.generarCipher(Cipher.DECRYPT_MODE);
 	}
 	
-	private Cipher generarCipher(int mode, byte[] iv) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, InvalidAlgorithmParameterException {
+	private Cipher generarCipher(int mode) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, InvalidAlgorithmParameterException {
 		Cipher cipher = Cipher.getInstance(ALGORITHM);
-		GCMParameterSpec parameterSpec = new GCMParameterSpec(128, iv);
+		GCMParameterSpec parameterSpec = new GCMParameterSpec(128, this.IV);
 		SecretKeySpec keySpec = new SecretKeySpec(SECRET_KEY.getBytes(), "AES");
 		cipher.init(mode, keySpec, parameterSpec);
 		

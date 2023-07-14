@@ -1,14 +1,8 @@
 package spear.of.ares.controller;
 
 
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
-import javax.crypto.BadPaddingException;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +26,7 @@ import spear.of.ares.model.dto.Empleado.respuesta.RespuestaInsertarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.respuesta.RespuestaListarEmpleadosDTO;
 import spear.of.ares.model.dto.Empleado.respuesta.RespuestaModificarEmpleadoDTO;
 import spear.of.ares.model.dto.Empleado.respuesta.RespuestaObtenerEmpleadoDTO;
+import spear.of.ares.security.CipherDos;
 import spear.of.ares.security.CipherManager;
 import spear.of.ares.service.IEmpleadoService;
 
@@ -69,7 +64,19 @@ public class EmpleadoController {
 
 	@GetMapping(path = "/obtenerEmpleadoPorId", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<RespuestaObtenerEmpleadoDTO> obtenerEmpleadoPorId(HttpServletRequest request, @RequestParam String idEmpleado) {
+		/*CipherDos cihp = new CipherDos();
+		
+		String [] arry = new String[1];
+		arry[0] = request.getHeader("hash");
+		
+		try {
+			cihp.main(arry);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		CipherManager.mostrarHash(request);
+		*/
 		try {
 			return ResponseEntity.ok(this.gestionEmpleadoService.obtenerEmpleadoPorId(idEmpleado));	
 		} catch (AresException e) {

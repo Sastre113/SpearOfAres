@@ -6,9 +6,14 @@ package spear.of.ares.model.entity;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.NamedAttributeNode;
+import javax.persistence.NamedEntityGraph;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -20,6 +25,15 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "TB_EMPLEADO")
+@NamedEntityGraph(
+		name = "empleado-entity-graph",
+		attributeNodes = {
+				@NamedAttributeNode("dni"),
+				@NamedAttributeNode("nombre"),
+				@NamedAttributeNode("fechaNacimiento"),
+				@NamedAttributeNode("relEmpresaEmpleado")
+		}
+)
 public class TbEmpleado {
 
 	@Id
