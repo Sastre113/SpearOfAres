@@ -78,7 +78,7 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8080/gestionEmpleado/obtenerEmpleadoPorId?idEmpleado=c059d9ac-7c90-11ec-90d6-0242ac120003",
+									"raw": "http://localhost:8080/gestionEmpleado/obtenerEmpleadoPorId?idEmpleado=c464174c-7c90-11ec-90d6-0242ac120003",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -91,7 +91,13 @@
 									"query": [
 										{
 											"key": "idEmpleado",
-											"value": "c059d9ac-7c90-11ec-90d6-0242ac120003"
+											"value": "c059d9ac-7c90-11ec-90d6-0242ac120003",
+											"disabled": true
+										},
+										{
+											"key": "idEmpleado",
+											"value": "c464174c-7c90-11ec-90d6-0242ac120003",
+											"type": "text"
 										}
 									]
 								},
@@ -1022,13 +1028,13 @@
 	],
 	"variable": [
 		{
-			"id": "f2817a9f-61b7-40fb-a03a-78a9a5e5524e",
+			"id": "eff5b981-c7f0-4ae8-9846-be055a29aacc",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "3c5d8380-663e-49b0-a843-caa79ff12882",
+			"id": "55b79c9c-2f68-4d42-a8e6-a30b14a08bdc",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
