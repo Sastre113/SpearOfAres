@@ -1028,13 +1028,13 @@
 	],
 	"variable": [
 		{
-			"id": "29a9b650-a684-4f16-9f81-2ab0ba0646c0",
+			"id": "20074eb0-0c1a-4729-9517-22751ad7fead",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "3eb3644a-8f5f-4781-b563-725a4518633d",
+			"id": "95ec3aa9-ad09-419a-a97c-3f67af568b84",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
