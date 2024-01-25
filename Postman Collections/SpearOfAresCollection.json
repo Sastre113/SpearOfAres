@@ -210,7 +210,35 @@
 						}
 					],
 					"id": "114e86d7-06eb-4e85-b3e1-0a8ed2eddba3",
-					"description": "Servicios relacionados con la búsqueda de empleados"
+					"description": "Servicios relacionados con la búsqueda de empleados",
+					"auth": {
+						"type": "bearer",
+						"bearer": {
+							"token": "sldlllasd"
+						}
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9eb5e3c7-5918-4c70-bab9-48adcea28f18",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "5eb5e7a1-6274-4c4e-bc84-52df5d88d15c",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "Gestión",
@@ -1028,13 +1056,11 @@
 	],
 	"variable": [
 		{
-			"id": "9ac21905-e99d-4b10-aa03-551a25a4d33d",
 			"key": "baseUrl",
 			"value": "localhost:8080",
 			"type": "string"
 		},
 		{
-			"id": "5ce17add-2c46-4deb-9fb1-d930a7d73e32",
 			"key": "hashGenerado",
 			"value": "",
 			"type": "string"
