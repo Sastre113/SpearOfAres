@@ -140,6 +140,95 @@
 							]
 						},
 						{
+							"name": "PathVariable: ObtenerEmpleadoById",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "14268eda-dfbf-48b3-be62-6eda8aa6b4fa",
+										"exec": [
+											"const cryptoJs = require(\"crypto-js\");\r",
+											"\r",
+											"// Definir la función de encriptación\r",
+											"function encryptMessage(message, key) {\r",
+											"    let iv = new Uint8Array([\r",
+											"        0x01, 0x00, 0x00, 0x00,\r",
+											"        0x00, 0x00, 0x00, 0x00,\r",
+											"        0x00, 0x00, 0x00, 0x00\r",
+											"    ]);\r",
+											"\r",
+											"    // Definir las opciones de encriptación\r",
+											"    const options = {\r",
+											"        iv: iv,\r",
+											"        mode: cryptoJs.mode.CBC,\r",
+											"        padding: cryptoJs.pad.NoPadding\r",
+											"    };\r",
+											"\r",
+											"    // Encriptar el mensaje utilizando la clave y las opciones\r",
+											"    const encrypted = cryptoJs.AES.encrypt(message, key, options);\r",
+											"\r",
+											"     console.log(encrypted);\r",
+											"    var cipherUtf8 = CryptoJS.enc.Utf8.parse(encrypted.ciphertext);\r",
+											"    var cipherBase64 = CryptoJS.enc.Base64.stringify(cipherUtf8);\r",
+											"\r",
+											"    console.log(\"cipherUtf8 : \" + cipherUtf8);\r",
+											"    console.log(\"cipherBase64 : \" + cipherBase64);\r",
+											"\r",
+											"    return cipherBase64;\r",
+											"}\r",
+											"\r",
+											"// Ejemplo de uso\r",
+											"const mensaje = \"Hola, este es un mensaje secreto.\";\r",
+											"const clave = \"NoMeRobesPor\";\r",
+											"\r",
+											"let mensajeEncriptado = encryptMessage(mensaje, clave);\r",
+											"console.log(\"Mensaje encriptado:\", mensajeEncriptado);\r",
+											"\r",
+											"mensajeEncriptado = 'S74RhzK68fQHXo7eQtf5oC0UwXQjXNJQVqYLWNFONXcR7rSvzza4mn5RaX1LPUTsNQ==';\r",
+											"pm.collectionVariables.set(\"hashGenerado\", mensajeEncriptado);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "3e4eba84-90c0-4761-9171-94cc2c31c13c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "hash",
+										"value": "{{hashGenerado}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/gestionEmpleado/obtenerEmpleadoPorId/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gestionEmpleado",
+										"obtenerEmpleadoPorId",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "c059d9ac-7c90-11ec-90d6-0242ac120003",
+											"description": "Id del empleado"
+										}
+									]
+								},
+								"description": "Petición que permite recuperar los datos de un empleado mediante el idEmpleado."
+							},
+							"response": []
+						},
+						{
 							"name": "ListarEmpleados",
 							"id": "47fcbde0-ed45-4681-b1ed-0bd02bfaf993",
 							"protocolProfileBehavior": {
